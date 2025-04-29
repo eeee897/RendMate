@@ -19,7 +19,7 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
             <div className={`${!collapsed ? 'border-b border-b-slate-300 shadow-sm' : ''} flex gap-x-3 p-2.5 items-center`}>
                 <img src={logo} alt="RentMate Logo" className="w-10 h-10" />
                 {!collapsed && (
-                    <p className="text-xl font-bold text-slate-900 transition-colors dark:text-slate-50">
+                    <p className="text-xl font-bold text-darkViolet transition-colors dark:text-slate-50">
                         RentMate
                     </p>
                 )}
