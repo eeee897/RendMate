@@ -40,9 +40,9 @@ const AppLayout = () => {
                     collapsed={collapsed}
                     setCollapsed={setCollapsed}
                 />
-                <div className="h-[calc(100vh-60px)] overflow-y-auto overflow-x-hidden p-6">
+                <main className="h-[calc(100vh-60px)] overflow-y-auto overflow-x-hidden p-6">
                     <Outlet />
-                </div>
+                </main>
             </div>
         </div>
     );

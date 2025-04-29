@@ -4,7 +4,7 @@ import { navbarLinks } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 
 import logo from '@/assets/rentmate_logo.png';
-import { LogOut } from "lucide-react"; // or any icon you prefer
+import { LogOut } from "lucide-react";
 
 export const Sidebar = forwardRef(({ collapsed }, ref) => {
     return (
@@ -46,18 +46,12 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                 ))}
             </div>
 
-            {/* Bottom section - logout */}
-            <div className="p-3 border-t border-slate-200 dark:border-slate-700">
+            <div className="p-3 border-t border-slate-200  dark:border-slate-700">
                 <button
                     className={cn(
                         "sidebar-item w-full",
                         collapsed && "md:w-[45px] justify-center"
-                    )}
-                    onClick={() => {
-                        // handle logout here
-                        console.log("Logout clicked");
-                    }}
-                >
+                    )}>
                     <LogOut size={22} className="flex-shrink-0" />
                     {!collapsed && <p className="whitespace-nowrap">Logout</p>}
                 </button>
