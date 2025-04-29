@@ -1,12 +1,13 @@
 import React from 'react'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { AppLayout, ItemsFeedPage, StatusPage, MessagePage, SwitchRolePage, NeedHelpPage, MyItemsPage, HistoryPage } from '../pages/index'
+import { AppLayout, ItemsFeedPage, StatusPage, MessagePage, SwitchRolePage, NeedHelpPage, MyItemsPage, HistoryPage, ErrorElement, NotFound } from '../pages/index'
 
 export default function Router() {
     const router = createBrowserRouter([
         {
             path: '/',
             element: <AppLayout />,
+            errorElement: <ErrorElement />,
             children: [
                 {
                     index: true,
@@ -47,7 +48,7 @@ export default function Router() {
         },
         {
             path: '*',
-            element: <div>404</div>
+            element: <NotFound />
         }
     ])
 
