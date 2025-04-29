@@ -1,27 +1,18 @@
-import { Plus } from 'lucide-react'
 import React from 'react'
 import ItemsList from '../ui/ItemsList'
-import Modal from '../ui/modal/Modal'
-import CreateEditItemModal from '../ui/modal/CreateEditItemModal'
+import ItemsFeedOperation from '../ui/ItemsFeedOperation'
+import Searchbar from '../ui/Searchbar'
+import { items } from '@/utils/constants'
 
 export default function ItemsFeedPage() {
     return (
         <section className='flex flex-col gap-2'>
             <h1 className="title">Available Items</h1>
-            <div className='flex items-center justify-end gap-2'>
-                <Modal>
-                    <Modal.Opens open={'create-modal'}>
-                        <button className='flex items-center gap-2 px-4 p-2.5 bg-primary rounded-full hover:bg-cyan-500 cursor-pointer transition duration-300 text-white'>
-                            <Plus /> <span className='text-white font-bold'>Add new Item</span>
-                        </button>
-                    </Modal.Opens>
-
-                    <Modal.Window name={'create-modal'}>
-                        <CreateEditItemModal />
-                    </Modal.Window>
-                </Modal>
+            <div className='md:flex items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2 justify-between flex-col-2'>
+                <Searchbar />
+                <ItemsFeedOperation />
             </div>
-            <ItemsList />
+            <ItemsList items={items} />
         </section>
     )
 }

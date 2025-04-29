@@ -3,8 +3,8 @@ import { BadgePlus, Settings, XIcon } from 'lucide-react';
 import ImageDropDown from '../ImageDropDown';
 import { cn } from '@/utils/cn'
 
-export default function CreateEditItemModal({ item = {}, onCloseModal }) {
-    const { id, ...editValues } = item
+export default function CreateEditItemModal({ itemToEdit = {}, onCloseModal }) {
+    const { id, ...editValues } = itemToEdit
     const isEditSession = Boolean(id)
     return (
         <div className={`p-6 md:w-[750px] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden w-[450px] max-h-[95vh] bg-slate-100 flex overflow-y-scroll flex-col space-y-2 dark:bg-slate-900 dark:border-slate-700 transition-transform duration-300 dark:text-slate-50 rounded-lg shadow-lg relative`}>

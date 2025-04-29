@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { AppLayout, ItemsFeedPage, StatusPage, MessagePage, SwitchRolePage, NeedHelpPage, HistoryPage } from '../pages/index'
+import { AppLayout, ItemsFeedPage, StatusPage, MessagePage, SwitchRolePage, NeedHelpPage, MyItemsPage, HistoryPage } from '../pages/index'
 
 export default function Router() {
     const router = createBrowserRouter([
@@ -15,6 +15,10 @@ export default function Router() {
                 {
                     path: '/items-feed',
                     element: <ItemsFeedPage />
+                },
+                {
+                    path: '/my-items',
+                    element: <MyItemsPage />
                 },
                 {
                     path: '/status',

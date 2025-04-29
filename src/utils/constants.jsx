@@ -1,4 +1,4 @@
-import { LayoutList, Hourglass, MessageSquareWarning, History, ArrowLeftRight, Headset } from 'lucide-react'
+import { LayoutList, Hourglass, MessageSquareWarning, History, ArrowLeftRight, Headset, ShoppingBag } from 'lucide-react'
 import Dike from '@/assets/item_images/bike.JPG'
 import Adidas from '@/assets/item_images/adidas.jpg'
 import Calculator from '@/assets/item_images/calculator.jpg'
@@ -15,8 +15,13 @@ export const navbarLinks = [
         links: [
             {
                 label: 'ItemsFeed',
-                icon: LayoutList,
+                icon: ShoppingBag,
                 path: '/items-feed'
+            },
+            {
+                label: "My Items",
+                icon: LayoutList,
+                path: "/my-items",
             },
             {
                 label: "Status",
@@ -34,7 +39,7 @@ export const navbarLinks = [
                 path: "/history",
             },
             {
-                label: "Switch to Renters",
+                label: "Switch to Lender",
                 icon: ArrowLeftRight,
                 path: "/switch-role",
             },
@@ -59,6 +64,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 4.5,
+        ownerId: true
     },
     {
         id: 2,
@@ -66,11 +72,12 @@ export const items = [
         description: 'Own every step — Adidas shoes that move with you.',
         image: Adidas,
         rentalPrice: 150,
-        extras: [],
+        extras: null,
         deposit: 0,
         location: 'MFU',
         status: 'Available',
         rating: 2.5,
+        ownerId: false
     },
     {
         id: 3,
@@ -78,11 +85,12 @@ export const items = [
         description: 'Calculator for your Math needs.',
         image: Calculator,
         rentalPrice: 100,
-        extras: [],
+        extras: null,
         deposit: 0,
         location: 'MFU',
         status: 'Available',
         rating: 4.0,
+        ownerId: false
     },
     {
         id: 4,
@@ -95,6 +103,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 5.0,
+        ownerId: false
     },
     {
         id: 5,
@@ -107,6 +116,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 5.0,
+        ownerId: false
     },
     {
         id: 6,
@@ -114,11 +124,12 @@ export const items = [
         description: 'Razor for everyone.',
         image: Mouse,
         rentalPrice: 100,
-        extras: [],
+        extras: null,
         deposit: 0,
         location: 'MFU',
-        status: 'Available',
+        status: 'Taken',
         rating: 4.0,
+        ownerId: false
     },
     {
         id: 7,
@@ -131,6 +142,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 5.0,
+        ownerId: false
     },
     {
         id: 8,
@@ -143,6 +155,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 4.5,
+        ownerId: false
     },
     {
         id: 9,
@@ -155,6 +168,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 2.5,
+        ownerId: false
     },
     {
         id: 10,
@@ -167,6 +181,7 @@ export const items = [
         location: 'MFU',
         status: 'Available',
         rating: 5.0,
+        ownerId: true
     },
 ]
 
