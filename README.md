@@ -1,1 +1,1 @@
-# RendMate
+# RentMate

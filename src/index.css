@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+    --font-sans: 'Poppins', 'sans-serif';
+    --color-primary: #2ACFCF;
+    --color-secondary: #EDEABB,
+    --color-cyanLight: #9AE3E3;
+    --color-darkViolet: #3B3054;
+    --color-red: #F46262;
+    --color-grayishViolet: #BFBFBF;
+    --color-veryDarkBlue: #35323E;
+    --color-veryDarkViolet: #232127;
+}
+
+@layer base {
+    body {
+        @apply [scrollbar-color:_#cbd5e1_transparent] dark:[scrollbar-color:_#334155_transparent];
+    }
+}
+
+@layer components {
+    .sidebar-group {
+        @apply flex flex-col w-full gap-y-2;
+    }
+
+    .sidebar-group-title {
+        @apply overflow-hidden text-sm font-medium text-ellipsis text-slate-600 dark:text-slate-400;
+    }
+
+    .sidebar-item {
+        @apply flex h-[40px] w-full flex-shrink-0 items-center gap-x-3 rounded-lg p-3 text-base font-medium text-slate-900 transition-colors hover:bg-blue-50 dark:text-slate-50 dark:hover:bg-blue-950;
+        &.active {
+            @apply bg-primary text-slate-50 dark:bg-blue-600;
+        }
+    }
+
+    .title {
+        @apply text-3xl font-semibold transition-colors text-slate-900 dark:text-slate-50;
+    }
+
+    .btn-ghost {
+        @apply flex items-center justify-center flex-shrink-0 h-10 p-2 transition-colors rounded-lg gap-x-2 text-slate-400 hover:bg-cyanLight cursor-pointer hover:text-slate-50 dark:hover:bg-blue-950 dark:hover:text-slate-300;
+    }
+
+    .link {
+        @apply text-base font-medium transition-colors text-slate-900 hover:underline dark:text-slate-50;
+    }
+
+    .input {
+        @apply hidden h-10 flex-shrink-0 items-center gap-x-2 rounded-lg border duration-200 border-slate-300 px-2 text-base text-slate-900 transition-colors has-[input:focus]:border-primary md:flex md:w-auto lg:w-80 dark:border-slate-700 dark:text-slate-50 dark:focus:border-blue-600;
+    }
+
+    .card {
+        @apply flex flex-col p-4 transition-colors bg-white border rounded-lg gap-y-4 border-slate-300 dark:border-slate-700 dark:bg-slate-900;
+    }
+
+    .card-header {
+        @apply flex items-center gap-x-2;
+    }
+
+    .card-title {
+        @apply font-medium transition-colors text-slate-900 dark:text-slate-50;
+    }
+
+    .card-body {
+        @apply flex flex-col p-4 rounded-lg gap-y-2;
+    }
+}
