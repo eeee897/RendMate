@@ -1,4 +1,9 @@
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
 export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }) {
+    const navigate = useNavigate();
+
     let confirm;
     if (type === 'logout') confirm = { title: "Logout", subTitle: 'logout' }
     if (type === 'delete') confirm = { title: "Delete", subTitle: `delete "${name}"` }
@@ -13,7 +18,15 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
                     Cancel
                 </button>
                 <button
-                    onClick={onCloseModal}
+                    onClick={
+                        type === 'logout' ? () => {
+                            navigate('/auth')
+                            onCloseModal()
+                        } : () => {
+                            toast.success('Action performed successfully.')
+                            onCloseModal()
+                        }
+                    }
                     type='submit'
                     className={`${type === 'logout' ? 'bg-primary border-cyan-500 hover:bg-cyan-500 hover:border-cyan-500' : 'bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700'} px-4 py-2 rounded-lg  text-white font-bold border cursor-pointer transition duration-300`}>
                     Confrim

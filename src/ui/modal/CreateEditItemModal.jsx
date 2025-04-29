@@ -2,10 +2,12 @@
 import { BadgePlus, Settings, XIcon } from 'lucide-react';
 import ImageDropDown from '../ImageDropDown';
 import { cn } from '@/utils/cn'
+import toast from 'react-hot-toast';
 
 export default function CreateEditItemModal({ itemToEdit = {}, onCloseModal }) {
     const { id, ...editValues } = itemToEdit
     const isEditSession = Boolean(id)
+
     return (
         <div className={`p-6 md:w-[750px] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden w-[450px] max-h-[95vh] bg-slate-100 flex overflow-y-scroll flex-col space-y-2 dark:bg-slate-900 dark:border-slate-700 transition-transform duration-300 dark:text-slate-50 rounded-lg shadow-lg relative`}>
             <button type='button' onClick={onCloseModal} className='absolute top-5 right-5 cursor-pointer hover:border hover:border-primary border border-transparent rounded-lg p-1 transition duration-300'>
@@ -125,7 +127,13 @@ export default function CreateEditItemModal({ itemToEdit = {}, onCloseModal }) {
                 <button onClick={onCloseModal} type='button' className='px-4 py-2 border rounded-lg font-bold text-gray-400 border-gray-400 cursor-pointer hover:bg-black hover:text-slate-50 transition duration-300 hover:border-black'>
                     Cancel
                 </button>
-                <button onClick={onCloseModal} type='submit' className='px-4 py-2 rounded-lg bg-primary text-white font-bold border border-primary cursor-pointer hover:bg-cyan-500 transition duration-300 hover:border-cyan-500'>
+                <button
+                    type='submit'
+                    onClick={() => {
+                        toast.success(isEditSession ? 'Item edited successfully.' : 'Item created successfully.')
+                        onCloseModal()
+                    }}
+                    className='px-4 py-2 rounded-lg bg-primary text-white font-bold border border-primary cursor-pointer hover:bg-cyan-500 transition duration-300 hover:border-cyan-500'>
                     {isEditSession ? 'Edit Item' : 'Create Item'}
                 </button>
             </div>
