@@ -1,7 +1,20 @@
 import { Search } from 'lucide-react'
-import React from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 export default function Searchbar() {
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const onHandleSearch = (value) => {
+        searchParams.set('search', value)
+        setSearchParams(searchParams)
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            onHandleSearch(e.target.value)
+        }
+    }
+
     return (
         <div className="input">
             <Search
@@ -9,6 +22,7 @@ export default function Searchbar() {
                 className="text-slate-300"
             />
             <input
+                onKeyDown={handleKeyDown}
                 autoComplete="off"
                 type="text"
                 name="search"

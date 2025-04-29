@@ -9,7 +9,6 @@ import ConfirmationModal from './modal/ConfirmationModal'
 export default function Item({ item }) {
     return (
         <Modal>
-
             <div className='p-2 bg-slate-50 flex items-center gap-2.5 rounded-xl border border-slate-300'>
                 {/* Image */}
                 <div className='w-64 h-full bg-cyanLight rounded-s-lg'>
