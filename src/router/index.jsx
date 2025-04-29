@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { AppLayout, ItemsFeedPage, StatusPage, MessagePage, SwitchRolePage, NeedHelpPage, MyItemsPage, HistoryPage, ErrorElement, NotFound } from '../pages/index'
+import { AppLayout, ItemsFeedPage, StatusPage, MessagePage, SwitchRolePage, NeedHelpPage, MyItemsPage, HistoryPage, ErrorElement, NotFound, AuthPage } from '../pages/index'
 
 export default function Router() {
     const router = createBrowserRouter([
@@ -45,6 +45,7 @@ export default function Router() {
         },
         {
             path: '/auth',
+            element: <AuthPage />
         },
         {
             path: '*',

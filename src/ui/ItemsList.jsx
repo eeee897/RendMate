@@ -2,6 +2,8 @@ import React from 'react'
 import Item from './Item'
 import { useSearchParams } from 'react-router-dom'
 import Menus from './menu/Menus'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
+import empty from '@/assets/animations/empty.lottie'
 
 export default function ItemsList({ items }) {
     const [searchParams] = useSearchParams()
@@ -31,6 +33,18 @@ export default function ItemsList({ items }) {
     const normalize = (str) => str.toLowerCase().replace(/\s+/g, '')
     const searchedItems = sortedItems.filter(item =>
         normalize(item.name).includes(normalize(searchValue))
+    )
+
+    if (!searchedItems.length) return (
+        <div className='flex items-center justify-center flex-col mt-12'>
+            <DotLottieReact
+                src={empty}
+                loop
+                autoplay
+                style={{ width: '500px', height: '300px' }}
+            />
+            <h1 className='text-lg sm:text-xl md:text-2xl text-darkViolet font-bold'>Oops. No items found...</h1>
+        </div>
     )
 
     return (

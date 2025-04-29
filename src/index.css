@@ -2,7 +2,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme{
+@theme {
     --font-sans: 'Poppins', 'sans-serif';
     --color-primary: #2ACFCF;
     --color-secondary: #EDEABB,
@@ -17,15 +17,23 @@
     --animate-slideDown: slideDown 0.3s ease-out forwards;
 
     @keyframes slideUp {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
-    
+
     @keyframes slideDown {
         from {
             transform: translateY(0);
             opacity: 1;
         }
+
         to {
             transform: translateY(20px);
             opacity: 0;
@@ -50,6 +58,7 @@
 
     .sidebar-item {
         @apply flex h-[40px] w-full flex-shrink-0 items-center gap-x-3 rounded-lg p-3 text-base font-medium text-[#3B3054] transition-colors hover:bg-blue-50 dark:text-slate-50 dark:hover:bg-blue-950 cursor-pointer;
+
         &.active {
             @apply bg-primary text-slate-50 dark:bg-blue-600;
         }
@@ -72,7 +81,7 @@
     }
 
     .table {
-        @apply h-full w-full text-slate-900 
+        @apply h-full w-full text-slate-900
     }
 
     .table-header {
@@ -84,10 +93,34 @@
     }
 
     .table-head {
-        @apply h-12 px-4 text-start 
+        @apply h-12 px-4 text-start
     }
 
     .table-cell {
         @apply w-fit whitespace-nowrap p-4 font-medium
+    }
+
+    .cus-btn {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+
+    .cus-btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #9AE3E3;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .cus-btn:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
