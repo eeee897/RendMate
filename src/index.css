@@ -101,15 +101,15 @@
     }
 
     .table-header {
-        @apply sticky top-0 bg-slate-100 border-b border-slate-200 transition-[background] z-40 whitespace-nowrap dark:bg-slate-800 dark:text-slate-50
+        @apply sticky top-0 bg-[#3B3054] border-b border-slate-200 transition-[background] z-40 whitespace-nowrap dark:bg-slate-800 dark:text-slate-50
     }
 
     .table-row {
-        @apply transition-colors border-b bg-white border-slate-200 last:border-none dark:border-slate-700
+        @apply transition-colors border-b bg-white border-[#BFBFBF] last:border-none dark:border-slate-700
     }
 
     .table-head {
-        @apply h-16 px-4 text-start 
+        @apply h-16 px-4 text-start text-slate-50
     }
 
     .table-cell {

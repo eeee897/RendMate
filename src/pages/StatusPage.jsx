@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react'
 import { dummyStatusData } from '../utils/constants'
-import StatusOperations from '../ui/StatusOperations'
+import StatusOperations from '../ui/operations/StatusOperations'
 
 export default function StatusPage() {
     return (
@@ -9,15 +9,17 @@ export default function StatusPage() {
             <div className='flex justify-end items-center'>
                 <StatusOperations />
             </div>
-            <div className="relative w-full overflow-auto rounded-lg border border-slate-300 [scrollbar-width:_thin]">
+            <div className="relative w-full overflow-auto rounded-lg border border-grayishViolet [scrollbar-width:_thin]">
                 <table className="table">
                     <thead className="table-header">
-                        <th className="table-head">ITEM</th>
-                        <th className="table-head">RENTER</th>
-                        <th className="table-head">REQUESTED ON</th>
-                        <th className="table-head">DURATION</th>
-                        <th className="table-head">AMOUNT</th>
-                        <th className="table-head">STATUS</th>
+                        <tr>
+                            <th className="table-head">ITEM</th>
+                            <th className="table-head">RENTER</th>
+                            <th className="table-head">REQUESTED ON</th>
+                            <th className="table-head">DURATION</th>
+                            <th className="table-head">AMOUNT</th>
+                            <th className="table-head">STATUS</th>
+                        </tr>
                     </thead>
                     <tbody className="table-body">
                         {dummyStatusData.map((status) => (

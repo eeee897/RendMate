@@ -26,7 +26,7 @@ export default function Item({ item }) {
                         <h1 className='font-bold text-darkViolet sm:text-xl text-lg md:text-2xl'>{item.name}</h1>
 
                         <div className='flex items-center gap-0.5'>
-                            <span className={`${item.status === 'Available' ? 'bg-green-600' : 'bg-yellow-600'} text-[11px] md:text-xs rounded-lg px-2 py-0.5 text-white`}>{item.status}</span>
+                            <span className={`${item.usage === 'Available' ? 'bg-green-600' : 'bg-yellow-600'} text-[11px] md:text-xs rounded-lg px-2 py-0.5 text-white`}>{item.usage}</span>
                             {item.ownerId && <Menus.Toggle id={item.id} />}
 
                             <Menus.List id={item.id}>

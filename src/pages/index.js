@@ -1,7 +1,7 @@
 export { default as AppLayout } from './layout/AppLayout'
 export { default as ItemsFeedPage } from './ItemsFeedPage'
 export { default as StatusPage } from './StatusPage'
-export { default as MessagePage } from './MessagePage'
+export { default as ChatsPage } from './ChatsPage'
 export { default as SwitchRolePage } from './SwitchRolePage'
 export { default as NeedHelpPage } from './NeedHelpPage'
 export { default as HistoryPage } from './HistoryPage'

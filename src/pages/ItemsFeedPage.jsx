@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemsList from '../ui/ItemsList'
-import ItemsFeedOperation from '../ui/ItemsFeedOperation'
+import ItemsFeedOperation from '../ui/operations/ItemsFeedOperation'
 import Searchbar from '../ui/Searchbar'
 import { items } from '@/utils/constants'
 

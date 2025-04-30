@@ -9,6 +9,7 @@ import Myat from '@/assets/item_images/myat.png'
 import SoundBox from '@/assets/item_images/soundbox.jpg'
 import Tent from '@/assets/item_images/tent.jpg'
 import VR from '@/assets/item_images/VR.jpg'
+import NPC from '@/assets/item_images/npc.jpg'
 
 export const navbarLinks = [
     {
@@ -34,9 +35,9 @@ export const navbarLinks = [
                 path: "/history",
             },
             {
-                label: "Message",
+                label: "Chats",
                 icon: MessageSquareWarning,
-                path: "/message",
+                path: "/chats",
             },
             {
                 label: "Switch to Lender",
@@ -293,6 +294,103 @@ export const dummyStatusData = [
         status: 'Pending',
         receieved: false,
         totalPrice: 400,
+    },
+]
+
+export const chatsData = [
+    {
+        id: 1,
+        message: 'Ok then I will take it',
+        name: 'Swam Yi Phyo',
+        image: NPC,
+        date: '1h'
+    },
+    {
+        id: 2,
+        message: 'Ok then I will take it',
+        name: 'Swam Yi Phyo',
+        image: NPC,
+        date: '1h'
+    },
+    {
+        id: 3,
+        message: 'Ok then I will take it',
+        name: 'Swam Yi Phyo',
+        image: NPC,
+        date: '1h'
+    },
+]
+
+export const messages = [
+    {
+        id: 1,
+        message: 'Hello',
+        isYou: false,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 2,
+        message: 'Hi',
+        isYou: true,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 3,
+        message: 'I want to rent that dike.',
+        isYou: false,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 4,
+        message: '250 THB per day',
+        isYou: true,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 5,
+        message: 'How many days? 1 day - 250, 1 month - 2000',
+        isYou: true,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 6,
+        message: '1 month',
+        isYou: false,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 7,
+        message: 'Okay',
+        isYou: true,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 8,
+        message: 'You have to transfer deposit 50 THB',
+        isYou: true,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 9,
+        message: 'Thank you',
+        isYou: true,
+        date: '1h ago',
+        image: NPC
+    },
+    {
+        id: 10,
+        message: 'Ok then I will take it',
+        isYou: false,
+        date: '1h ago',
+        image: NPC
     },
 ]
 

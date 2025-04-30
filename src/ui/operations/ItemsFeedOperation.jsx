@@ -1,6 +1,6 @@
 import React from 'react'
-import Filter from './filter/Filter'
-import SortBy from './filter/SortBy'
+import Filter from '../filter/Filter'
+import SortBy from '../filter/SortBy'
 
 export default function ItemsFeedOperation() {
     return (
