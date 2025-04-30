@@ -7,6 +7,7 @@ export default function Filter({ filterField, options }) {
 
     const handleClick = (value) => {
         searchParams.set(filterField, value)
+        searchParams.set('page', 1)
         setSearchParams(searchParams)
     }
 
@@ -14,7 +15,7 @@ export default function Filter({ filterField, options }) {
         <div className="p-[5px] border shadow-sm border-slate-300 rounded-lg flex items-center gap-2">
             {
                 options.map(opt => (
-                    <button 
+                    <button
                         key={opt.label}
                         disabled={opt.value === currentValue}
                         onClick={() => handleClick(opt.value)}

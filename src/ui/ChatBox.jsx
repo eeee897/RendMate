@@ -4,7 +4,7 @@ import { PlusCircle, SendHorizonal, XCircleIcon } from 'lucide-react'
 
 export default function ChatBox({ chatClose }) {
     return (
-        <div className="w-full md:w-2/3 flex flex-col h-fit border border-grayishViolet rounded-lg">
+        <div className="w-full md:w-2/3 flex flex-col h-full border border-grayishViolet rounded-lg">
             {/* Header */}
             <div className="flex items-center justify-between gap-2 shadow-md p-3">
                 <div className='flex items-center gap-2'>
@@ -18,7 +18,7 @@ export default function ChatBox({ chatClose }) {
             </div>
 
             {/* Messages */}
-            <div className="max-h-[420px] overflow-y-auto p-3 space-y-2">
+            <div className="flex-1 overflow-y-auto p-3 space-y-2">
                 {messages.map(msg => (
                     <div key={msg.id}>
                         <div className="flex items-center gap-2">
@@ -39,9 +39,9 @@ export default function ChatBox({ chatClose }) {
             </div>
 
             {/* Input */}
-            <div className="p-3">
+            <div className="p-3 border-t border-grayishViolet">
                 <div className="flex items-center gap-2">
-                    <button className="text-primary hover:text-cyan-500 transition">
+                    <button className="text-primary hover:text-cyan-500 transition cursor-pointer">
                         <PlusCircle className="w-6 h-6" />
                     </button>
                     <input
@@ -49,7 +49,7 @@ export default function ChatBox({ chatClose }) {
                         placeholder="Aa"
                         className="w-full px-4 py-2 border rounded-full focus:outline-0 border-grayishViolet focus:border-primary"
                     />
-                    <button className="hover:text-primary transition">
+                    <button className="text-primary hover:text-cyan-500 transition cursor-pointer">
                         <SendHorizonal className="w-6 h-6" />
                     </button>
                 </div>

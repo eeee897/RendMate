@@ -11,6 +11,8 @@ import Tent from '@/assets/item_images/tent.jpg'
 import VR from '@/assets/item_images/VR.jpg'
 import NPC from '@/assets/item_images/npc.jpg'
 
+export const PAGE_SIZE = 8
+
 export const navbarLinks = [
     {
         links: [
