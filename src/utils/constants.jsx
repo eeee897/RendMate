@@ -29,14 +29,14 @@ export const navbarLinks = [
                 path: "/status",
             },
             {
-                label: "Message",
-                icon: MessageSquareWarning,
-                path: "/message",
-            },
-            {
                 label: "History",
                 icon: History,
                 path: "/history",
+            },
+            {
+                label: "Message",
+                icon: MessageSquareWarning,
+                path: "/message",
             },
             {
                 label: "Switch to Lender",
@@ -62,9 +62,10 @@ export const items = [
         extras: ["Helmet", "Lock"],
         deposit: 50,
         location: 'MFU',
-        status: 'Taken',
+        usage: 'Taken',
         rating: 4.5,
-        ownerId: true
+        ownerId: true,
+        condition: 'One Time Used'
     },
     {
         id: 2,
@@ -75,9 +76,10 @@ export const items = [
         extras: null,
         deposit: 0,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 2.5,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 3,
@@ -88,9 +90,10 @@ export const items = [
         extras: null,
         deposit: 0,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 4.0,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 4,
@@ -101,9 +104,10 @@ export const items = [
         extras: ["Extra Battery"],
         deposit: 0,
         location: 'MFU',
-        status: 'Taken',
+        usage: 'Taken',
         rating: 5.0,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 5,
@@ -114,9 +118,10 @@ export const items = [
         extras: ["Love", "Care"],
         deposit: 100,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 5.0,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 6,
@@ -127,9 +132,10 @@ export const items = [
         extras: null,
         deposit: 0,
         location: 'MFU',
-        status: 'Taken',
+        usage: 'Taken',
         rating: 4.0,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 7,
@@ -140,9 +146,10 @@ export const items = [
         extras: ["Love", "Care"],
         deposit: 100,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 5.0,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 8,
@@ -153,9 +160,10 @@ export const items = [
         extras: ["Spotify Premium 3 days"],
         deposit: 50,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 4.5,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 9,
@@ -166,9 +174,10 @@ export const items = [
         extras: ["Sleeping Bag"],
         deposit: 50,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 2.5,
-        ownerId: false
+        ownerId: false,
+        condition: 'One Time Used'
     },
     {
         id: 10,
@@ -179,9 +188,10 @@ export const items = [
         extras: ["Charger", "Headset"],
         deposit: 50,
         location: 'MFU',
-        status: 'Available',
+        usage: 'Available',
         rating: 5.0,
-        ownerId: true
+        ownerId: true,
+        condition: 'One Time Used'
     },
 ]
 

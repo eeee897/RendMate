@@ -6,7 +6,7 @@ export default function ItemsFeedOperation() {
     return (
         <div className="flex gap-2 md:flex-row md:items-center flex-col w-fit">
             <Filter
-                filterField='status'
+                filterField='usage'
                 options={[
                     { value: 'all', label: 'All' },
                     { value: 'available', label: 'Available' },

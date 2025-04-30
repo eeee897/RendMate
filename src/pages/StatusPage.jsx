@@ -1,10 +1,14 @@
-import { PencilLineIcon, Star, TrashIcon } from 'lucide-react'
+import { Star } from 'lucide-react'
 import { dummyStatusData } from '../utils/constants'
+import StatusOperations from '../ui/StatusOperations'
 
 export default function StatusPage() {
     return (
         <section className='flex flex-col gap-2 '>
             <h1 className="title">Status</h1>
+            <div className='flex justify-end items-center'>
+                <StatusOperations />
+            </div>
             <div className="relative w-full overflow-auto rounded-lg border border-slate-300 [scrollbar-width:_thin]">
                 <table className="table">
                     <thead className="table-header">

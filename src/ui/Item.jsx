@@ -1,5 +1,5 @@
 import { ChatBubbleOvalLeftEllipsisIcon, PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline'
-import { BanknotesIcon, CurrencyDollarIcon, HandThumbUpIcon, MapPinIcon, StarIcon } from '@heroicons/react/24/solid'
+import { BanknotesIcon, CurrencyDollarIcon, CubeIcon, HandThumbUpIcon, MapPinIcon, StarIcon } from '@heroicons/react/24/solid'
 import Menus from './menu/Menus'
 import ConfirmationModal from './modal/ConfirmationModal'
 import CreateEditItemModal from './modal/CreateEditItemModal'
@@ -70,8 +70,12 @@ export default function Item({ item }) {
                         <p className='text-[11px] md:text-xs'>Location: {item.location}</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <StarIcon className='w-5 text-yellow-600' />
+                        <StarIcon className='w-5 text-yellow-500' />
                         <p className='text-[11px] md:text-xs'>Rating: {item.rating}</p>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <CubeIcon className='w-5 text-yellow-600' />
+                        <p className='text-[11px] md:text-xs'>Condition: {item.condition}</p>
                     </div>
                     <div className='flex items-center justify-end gap-2'>
 

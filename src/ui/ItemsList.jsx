@@ -9,12 +9,12 @@ export default function ItemsList({ items }) {
     const [searchParams] = useSearchParams()
 
     //? filter
-    const filterValue = searchParams.get('status') || 'all'
+    const filterValue = searchParams.get('usage') || 'all'
 
     let filteredItems;
     if (filterValue === 'all') filteredItems = items
-    if (filterValue === 'available') filteredItems = items?.filter(item => item.status === 'Available')
-    if (filterValue === 'taken') filteredItems = items?.filter(item => item.status === 'Taken')
+    if (filterValue === 'available') filteredItems = items?.filter(item => item.usage === 'Available')
+    if (filterValue === 'taken') filteredItems = items?.filter(item => item.usage === 'Taken')
 
     //? sort
     const sortByValue = searchParams.get('sortBy') || 'sortField-asc'
