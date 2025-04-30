@@ -28,7 +28,7 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
                         }
                     }
                     type='submit'
-                    className={`${type === 'logout' ? 'bg-primary border-cyan-500 hover:bg-cyan-500 hover:border-cyan-500' : 'bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700'} px-4 py-2 rounded-lg  text-white font-bold border cursor-pointer transition duration-300`}>
+                    className={`${type === 'logout' ? 'bg-primary border-primary hover:bg-cyan-500 hover:border-cyan-500' : 'bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700'} px-4 py-2 rounded-lg  text-white font-bold border cursor-pointer transition duration-300`}>
                     Confrim
                 </button>
             </div>

@@ -1,10 +1,10 @@
-import { BanknoteArrowUp, CircleDollarSignIcon, MapPinIcon, MessageSquareMore, Pencil, ThumbsUpIcon, Trash } from 'lucide-react'
-import React from 'react'
+import { ChatBubbleOvalLeftEllipsisIcon, PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline'
+import { BanknotesIcon, CurrencyDollarIcon, HandThumbUpIcon, MapPinIcon, StarIcon } from '@heroicons/react/24/solid'
 import Menus from './menu/Menus'
+import ConfirmationModal from './modal/ConfirmationModal'
+import CreateEditItemModal from './modal/CreateEditItemModal'
 import ImagePreviewModal from './modal/ImagePreviewModal'
 import Modal from './modal/Modal'
-import CreateEditItemModal from './modal/CreateEditItemModal'
-import ConfirmationModal from './modal/ConfirmationModal'
 
 export default function Item({ item }) {
     return (
@@ -21,7 +21,7 @@ export default function Item({ item }) {
                     </Modal.Window>
                 </div>
                 {/* Info */}
-                <div className='flex flex-col gap-1 w-full'>
+                <div className='flex flex-col gap-2 w-full'>
                     <div className='flex items-center justify-between gap-2'>
                         <h1 className='font-bold text-darkViolet sm:text-xl text-lg md:text-2xl'>{item.name}</h1>
 
@@ -31,11 +31,11 @@ export default function Item({ item }) {
 
                             <Menus.List id={item.id}>
                                 <Modal.Opens open='edit-form'>
-                                    <Menus.Button icon={<Pencil className="text-blue-500 w-4 h-4" />}>Edit</Menus.Button>
+                                    <Menus.Button icon={<PencilSquareIcon className="text-blue-500 w-4 h-4" />}>Edit</Menus.Button>
                                 </Modal.Opens>
 
                                 <Modal.Opens open='delete'>
-                                    <Menus.Button icon={<Trash className="text-red-500 w-4 h-4" />}>Delete</Menus.Button>
+                                    <Menus.Button icon={<TrashIcon className="text-red-500 w-4 h-4" />}>Delete</Menus.Button>
                                 </Modal.Opens>
                             </Menus.List>
 
@@ -52,22 +52,26 @@ export default function Item({ item }) {
                     </div>
                     <p className='text-[11px] md:text-xs italic font-thin text-gray-500'>"{item.description}"</p>
                     <div className='flex items-center gap-2'>
-                        <CircleDollarSignIcon className='w-4 text-yellow-600' />
+                        <CurrencyDollarIcon className='w-7 text-yellow-600' />
                         <p className='md:text-xl text-base sm:text-lg font-bold text-darkViolet'>{item.rentalPrice} THB per day</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <ThumbsUpIcon className='w-4 text-blue-500' />
+                        <HandThumbUpIcon className='w-5 text-blue-500' />
                         <p className='text-[11px] md:text-xs'>
                             ExtrasIncluded: {item.extras ? item.extras.map(access => access).join(', ') : '-'}
                         </p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <BanknoteArrowUp className="w-4 text-green-500" />
+                        <BanknotesIcon className="w-5 text-green-500" />
                         <p className='text-[11px] md:text-xs'>Deposit: <span className='font-bold'>{item.deposit}</span> THB</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <MapPinIcon className='w-4 text-red-600' />
+                        <MapPinIcon className='w-5 text-red-600' />
                         <p className='text-[11px] md:text-xs'>Location: {item.location}</p>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <StarIcon className='w-5 text-yellow-600' />
+                        <p className='text-[11px] md:text-xs'>Rating: {item.rating}</p>
                     </div>
                     <div className='flex items-center justify-end gap-2'>
 
@@ -84,7 +88,7 @@ export default function Item({ item }) {
                             </>
                             :
                             <>
-                                <MessageSquareMore className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
+                                <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
                                 <button className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
                                     Rent Now
                                 </button>
