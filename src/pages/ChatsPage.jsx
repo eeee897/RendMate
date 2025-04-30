@@ -1,9 +1,24 @@
-import npc from '@/assets/item_images/npc.jpg'
-import { PlusCircle, SearchIcon, SendHorizonal } from 'lucide-react'
-import React from 'react'
-import { chatsData, messages } from '../utils/constants'
+import { SearchIcon } from 'lucide-react';
+import { useState } from 'react';
+import ChatBox from '../ui/ChatBox';
+import { chatsData } from '../utils/constants';
+import cat from '@/assets/animations/cat.lottie';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function ChatsPage() {
+    const [isActive, setActive] = useState(null);
+    const [showChatBox, setShowChatBox] = useState(false);
+
+    const chatOpen = (value) => {
+        setShowChatBox(true)
+        setActive(value)
+    }
+
+    const chatClose = () => {
+        setShowChatBox(false)
+        setActive(0)
+    }
+
     return (
         <section className="flex flex-col h-fit space-y-3">
             <h1 className="title">Chats</h1>
@@ -24,7 +39,10 @@ export default function ChatsPage() {
                     {/* Chat List */}
                     <div className="space-y-3 overflow-y-auto">
                         {chatsData.map(chat => (
-                            <div key={chat.id} className="flex items-center gap-2 text-darkViolet cursor-pointer hover:bg-gray-200 p-3 rounded-lg">
+                            <div
+                                onClick={() => chatOpen(chat.id)}
+                                key={chat.id}
+                                className={`${isActive === chat.id ? 'bg-gray-200' : ''} flex items-center gap-2 text-darkViolet cursor-pointer hover:bg-gray-200 p-3 rounded-lg`}>
                                 <img src={chat.image} alt="" className="w-12 h-12 rounded-lg" />
                                 <div className="w-full">
                                     <div className="flex items-center justify-between gap-2">
@@ -39,51 +57,21 @@ export default function ChatsPage() {
                 </div>
 
                 {/* Chat Box */}
-                <div className="w-full md:w-2/3 flex flex-col h-fit border border-grayishViolet rounded-lg">
-                    {/* Header */}
-                    <div className="flex items-center gap-2 shadow-md p-3">
-                        <img src={npc} alt="" className="w-14 h-14 rounded-lg" />
-                        <h1 className="font-bold text-xl">Swam Yi Phyo</h1>
-                    </div>
-
-                    {/* Messages */}
-                    <div className="max-h-[420px] overflow-y-auto p-3 space-y-2">
-                        {messages.map(msg => (
-                            <div key={msg.id}>
-                                <div className="flex items-center gap-2">
-                                    {!msg.isYou ? (
-                                        <>
-                                            <img src={msg.image} alt="" className="w-10 h-10 rounded-lg" />
-                                            <p className="bg-gray-200 p-2 font-bold rounded-lg">{msg.message}</p>
-                                        </>
-                                    ) : (
-                                        <div className="flex items-center justify-end w-full">
-                                            <p className="p-2 rounded-lg bg-primary text-slate-50 font-bold">{msg.message}</p>
-                                        </div>
-                                    )}
-                                </div>
-                                {!msg.isYou && <span className="text-xs text-grayishViolet ml-12">{msg.date}</span>}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Input */}
-                    <div className="p-3">
-                        <div className="flex items-center gap-2">
-                            <button className="text-primary hover:text-cyan-500 transition">
-                                <PlusCircle className="w-6 h-6" />
-                            </button>
-                            <input
-                                type="text"
-                                placeholder="Aa"
-                                className="w-full px-4 py-2 border rounded-full focus:outline-0 border-grayishViolet focus:border-primary"
+                {
+                    showChatBox ? <ChatBox chatClose={chatClose} /> :
+                        <div className="w-full md:w-2/3 flex flex-col items-center justify-center gap-2 cursor-pointer">
+                            <DotLottieReact
+                                src={cat}
+                                loop
+                                autoplay
+                                style={{ width: '450px', height: '300px' }}
                             />
-                            <button className="hover:text-primary transition">
-                                <SendHorizonal className="w-6 h-6" />
-                            </button>
+                            <div className='group flex items-center gap-3'>
+                                <span className="transition-transform duration-300 group-hover:-translate-x-2.5 text-xl">←</span>
+                                <h2>Select a chat to start a conversation</h2>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                }
             </div>
         </section>
     )
