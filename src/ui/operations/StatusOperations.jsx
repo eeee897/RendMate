@@ -6,8 +6,8 @@ export default function StatusOperations() {
             <Filter
                 filterField='status'
                 options={[
-                    { value: 'rent', label: 'My Rentals' },
                     { value: 'lend', label: 'Requests Recieved' },
+                    { value: 'rent', label: 'My Rentals' },
                 ]}
             />
         </div>

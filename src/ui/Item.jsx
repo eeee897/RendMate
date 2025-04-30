@@ -5,8 +5,10 @@ import ConfirmationModal from './modal/ConfirmationModal'
 import CreateEditItemModal from './modal/CreateEditItemModal'
 import ImagePreviewModal from './modal/ImagePreviewModal'
 import Modal from './modal/Modal'
+import { Link } from 'react-router-dom'
 
 export default function Item({ item }) {
+
     return (
         <Modal>
             <div className='p-2 bg-slate-50 flex items-center gap-2.5 rounded-xl border border-slate-300'>
@@ -92,7 +94,9 @@ export default function Item({ item }) {
                             </>
                             :
                             <>
-                                <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
+                                <Link to={'/chats'}>
+                                    <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
+                                </Link>
                                 <button className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
                                     Rent Now
                                 </button>

@@ -212,6 +212,8 @@ export const dummyStatusData = [
         status: 'Pending',
         receieved: false,
         totalPrice: 400,
+        isConfirmed: false,
+        mine: false
     },
     {
         id: 2,
@@ -223,9 +225,11 @@ export const dummyStatusData = [
         renterName: 'Swam Yi Phyo',
         requestedOn: 'Mon, May 28 2025',
         duration: 3,
-        status: 'Pending',
-        receieved: false,
+        status: 'Completed',
+        receieved: true,
         totalPrice: 400,
+        isConfirmed: true,
+        mine: false
     },
     {
         id: 3,
@@ -237,9 +241,11 @@ export const dummyStatusData = [
         renterName: 'Swam Yi Phyo',
         requestedOn: 'Mon, May 28 2025',
         duration: 3,
-        status: 'Pending',
+        status: 'Rejected',
         receieved: false,
         totalPrice: 400,
+        isConfirmed: false,
+        mine: false
     },
     {
         id: 4,
@@ -254,6 +260,8 @@ export const dummyStatusData = [
         status: 'Pending',
         receieved: false,
         totalPrice: 400,
+        isConfirmed: true,
+        mine: false
     },
     {
         id: 5,
@@ -268,6 +276,8 @@ export const dummyStatusData = [
         status: 'Pending',
         receieved: false,
         totalPrice: 400,
+        isConfirmed: false,
+        mine: false
     },
     {
         id: 6,
@@ -282,6 +292,8 @@ export const dummyStatusData = [
         status: 'Pending',
         receieved: false,
         totalPrice: 400,
+        isConfirmed: false,
+        mine: false
     },
     {
         id: 7,
@@ -296,6 +308,24 @@ export const dummyStatusData = [
         status: 'Pending',
         receieved: false,
         totalPrice: 400,
+        isConfirmed: false,
+        mine: true
+    },
+    {
+        id: 8,
+        itemId: 1,
+        itemName: 'Dike',
+        itemImage: Dike,
+        itemRating: 4.5,
+        renterId: 1,
+        renterName: 'Swam Yi Phyo',
+        requestedOn: 'Mon, May 28 2025',
+        duration: 3,
+        status: 'Pending',
+        receieved: false,
+        totalPrice: 400,
+        isConfirmed: false,
+        mine: true
     },
 ]
 
