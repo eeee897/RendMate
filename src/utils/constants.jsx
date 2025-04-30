@@ -62,7 +62,7 @@ export const items = [
         extras: ["Helmet", "Lock"],
         deposit: 50,
         location: 'MFU',
-        status: 'Available',
+        status: 'Taken',
         rating: 4.5,
         ownerId: true
     },
@@ -101,7 +101,7 @@ export const items = [
         extras: ["Extra Battery"],
         deposit: 0,
         location: 'MFU',
-        status: 'Available',
+        status: 'Taken',
         rating: 5.0,
         ownerId: false
     },

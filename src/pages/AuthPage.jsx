@@ -4,16 +4,16 @@ import LoginForm from "../ui/forms/LoginForm";
 import { useState } from 'react';
 import RegisterForm from '../ui/forms/RegisterForm';
 import logo from '@/assets/rentmate_logo.png';
-import register from '@/assets/animations/register.lottie';
+import signUp from '@/assets/animations/sign_up.lottie';
 
 export default function AuthPage() {
     const [showLogIn, setShowLogIn] = useState(true);
 
     return (
-        <section className="w-full min-h-screen p-6 flex items-center gap-2">
+        <section className="w-full min-h-screen p-6 flex items-center gap-2 bg-slate-100">
             <div className="w-full md:w-1/3 p-5">
                 <DotLottieReact
-                    src={showLogIn ? login : register}
+                    src={showLogIn ? login : signUp}
                     loop
                     autoplay
                     style={{ width: '700px', height: '400px' }}
