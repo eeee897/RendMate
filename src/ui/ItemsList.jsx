@@ -43,7 +43,7 @@ export default function ItemsList({ items }) {
     const to = from + PAGE_SIZE
     const paginatedItems = searchedItems?.slice(from, to)
 
-    if (!searchedItems.length) return (
+    if (!searchedItems.length || !paginatedItems.length) return (
         <div className='flex items-center justify-center flex-col mt-12'>
             <DotLottieReact
                 src={empty}
