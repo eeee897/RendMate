@@ -244,7 +244,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Brand New'
     },
     {
@@ -258,7 +258,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Brand New'
     },
     {
@@ -272,7 +272,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Brand New'
     },
     {
@@ -286,7 +286,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Used'
     },
     {
@@ -300,7 +300,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Brand New'
     },
     {
@@ -314,7 +314,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Brand New'
     },
     {
@@ -328,7 +328,7 @@ export const items = [
         location: 'MFU',
         usage: 'Available',
         rating: 5.0,
-        ownerId: true,
+        ownerId: false,
         condition: 'Brand New'
     },
 ]
