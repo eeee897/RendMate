@@ -10,6 +10,15 @@ import SoundBox from '@/assets/item_images/soundbox.jpg'
 import Tent from '@/assets/item_images/tent.jpg'
 import VR from '@/assets/item_images/VR.jpg'
 import NPC from '@/assets/item_images/npc.jpg'
+import bake from '@/assets/item_images/bake.jpg'
+import corcs from '@/assets/item_images/corcs.jpg'
+import crocodile from '@/assets/item_images/crocodile.jpg'
+import elvis from '@/assets/item_images/elvis.jpg'
+import north from '@/assets/item_images/north.jpg'
+import ps5 from '@/assets/item_images/ps5.jpg'
+import tralalero from '@/assets/item_images/tralalero.jpg'
+import tuna from '@/assets/item_images/tuna.jpg'
+import coma from '@/assets/item_images/coma.jpg'
 
 export const PAGE_SIZE = 8
 
@@ -68,7 +77,7 @@ export const items = [
         usage: 'Taken',
         rating: 4.5,
         ownerId: true,
-        condition: 'One Time Used'
+        condition: 'Like New'
     },
     {
         id: 2,
@@ -82,7 +91,7 @@ export const items = [
         usage: 'Available',
         rating: 2.5,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'Brand New'
     },
     {
         id: 3,
@@ -110,7 +119,7 @@ export const items = [
         usage: 'Taken',
         rating: 5.0,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'Brand New'
     },
     {
         id: 5,
@@ -124,7 +133,7 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'Never Been Fall In Love'
     },
     {
         id: 6,
@@ -138,7 +147,7 @@ export const items = [
         usage: 'Taken',
         rating: 4.0,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'A Few Times Used'
     },
     {
         id: 7,
@@ -152,7 +161,7 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'Never Been Fall In Love'
     },
     {
         id: 8,
@@ -166,7 +175,7 @@ export const items = [
         usage: 'Available',
         rating: 4.5,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'Brand New'
     },
     {
         id: 9,
@@ -194,7 +203,133 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: true,
-        condition: 'One Time Used'
+        condition: 'Brand New'
+    },
+    {
+        id: 11,
+        name: 'Tralalero Nike Shoe',
+        description: 'Stay up to date with brain root trend.',
+        image: tralalero,
+        rentalPrice: 200,
+        extras: ["regret"],
+        deposit: 50,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 12,
+        name: 'Poly Station',
+        description: 'Let\'s have a great time with your homie',
+        image: ps5,
+        rentalPrice: 1300,
+        extras: ["2 Controllers", "Charger", "Headset"],
+        deposit: 50,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 13,
+        name: 'The North Fake',
+        description: 'The winter is coming.',
+        image: north,
+        rentalPrice: 1000,
+        extras: null,
+        deposit: 150,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 14,
+        name: 'Elvis Shirt',
+        description: 'Get a fine shyt with this',
+        image: elvis,
+        rentalPrice: 400,
+        extras: ["Charger", "Headset"],
+        deposit: 50,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 15,
+        name: 'Crocodile Shirt',
+        description: 'Let\'s go to the zoo.',
+        image: crocodile,
+        rentalPrice: 700,
+        extras: ["Crocodile Toy"],
+        deposit: 50,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 16,
+        name: 'Corcs daily shoes',
+        description: 'GRWM',
+        image: corcs,
+        rentalPrice: 100,
+        extras: ["Jibbitz"],
+        deposit: 0,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Used'
+    },
+    {
+        id: 17,
+        name: 'Bake',
+        description: 'Bake me or be make.',
+        image: bake,
+        rentalPrice: 300,
+        extras: null,
+        deposit: 50,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 18,
+        name: 'Tuna',
+        description: 'TUNA with you.',
+        image: tuna,
+        rentalPrice: 700,
+        extras: null,
+        deposit: 50,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
+    },
+    {
+        id: 19,
+        name: 'Coma Shirt',
+        description: 'For when you’re awake, but only technically. Soft, comfy, and perfect for doing nothing… aggressively.',
+        image: coma,
+        rentalPrice: 200,
+        extras: null,
+        deposit: 0,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: true,
+        condition: 'Brand New'
     },
 ]
 
