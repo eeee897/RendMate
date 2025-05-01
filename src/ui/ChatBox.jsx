@@ -1,6 +1,7 @@
 import npc from '@/assets/item_images/npc.jpg'
 import { PlusCircle, XCircleIcon } from 'lucide-react'
 import { messages } from '../utils/constants'
+import toast from 'react-hot-toast'
 
 export default function ChatBox({ chatClose }) {
     return (
@@ -49,7 +50,7 @@ export default function ChatBox({ chatClose }) {
                         placeholder="Aa"
                         className="w-full px-4 py-2 border rounded-full focus:outline-0 border-grayishViolet focus:border-primary"
                     />
-                    <button className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0  cursor-pointer">
+                    <button type='button' onClick={() => toast.success('Message sent successfully.')} className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0  cursor-pointer">
                         Send
                     </button>
                 </div>
