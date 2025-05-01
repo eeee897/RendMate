@@ -3,7 +3,7 @@ import { SearchIcon } from 'lucide-react'
 
 export default function ChatsList({ chatOpen, isActive }) {
     return (
-        <div className="w-full md:w-1/3 flex flex-col h-full border-r border-grayishViolet overflow-hidden">
+        <div className="w-full md:w-1/3 flex flex-col h-full md:border-r border-grayishViolet overflow-hidden">
             {/* Search */}
             <div className="relative mb-3 pr-3 pt-3 pb-3">
                 <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />

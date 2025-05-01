@@ -21,7 +21,7 @@ export default function ChatsPage() {
     return (
         <section className="flex flex-col h-[calc(100vh-110px)]">
             <Title text="Chats" />
-            <div className="flex flex-1 gap-4 overflow-hidden">
+            <div className="flex flex-col md:flex-row gap-4 overflow-hidden">
                 <ChatsList isActive={isActive} chatOpen={chatOpen} />
                 {showChatBox ? <ChatBox chatClose={chatClose} /> : <SelectChat />}
             </div>
