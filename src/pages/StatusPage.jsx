@@ -1,7 +1,6 @@
 import StatusOperations from '../ui/operations/StatusOperations'
 import StatusTable from '../ui/tables/StatusTable'
 import Title from '../ui/Title'
-import Pagination from '@/ui/paginations/Pagination'
 
 export default function StatusPage() {
     return (
@@ -11,7 +10,6 @@ export default function StatusPage() {
                 <StatusOperations />
             </div>
             <StatusTable />
-            <Pagination count={24} />
         </section>
     )
 }

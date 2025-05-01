@@ -27,7 +27,7 @@ export default function Pagination({ count }) {
 
     return (
         <div className='flex items-center justify-between gap-2'>
-            <p>Showing <span className='font-bold'>1</span> to <span className='font-bold'>10</span> of <span className='font-bold'>{count}</span> results</p>
+            <p>Showing <span className='font-bold'>{(currentPage - 1) * PAGE_SIZE + 1}</span> to <span className='font-bold'>{isLast ? count : currentPage * PAGE_SIZE}</span> of <span className='font-bold'>{count}</span> results</p>
             <div className='flex items-center gap-2'>
                 <button
                     disabled={isFirst}

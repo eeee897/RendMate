@@ -11,7 +11,7 @@ import Tent from '@/assets/item_images/tent.jpg'
 import VR from '@/assets/item_images/VR.jpg'
 import NPC from '@/assets/item_images/npc.jpg'
 
-export const PAGE_SIZE = 8
+export const PAGE_SIZE = 4
 
 export const navbarLinks = [
     {
@@ -266,12 +266,12 @@ export const dummyStatusData = [
     {
         id: 5,
         itemId: 1,
-        itemName: 'Dike',
-        itemImage: Dike,
+        itemName: 'Calculator',
+        itemImage: Calculator,
         itemRating: 4.5,
         renterId: 1,
-        renterName: 'Swam Yi Phyo',
-        requestedOn: 'Mon, May 28 2025',
+        renterName: 'Fisheeesh',
+        requestedOn: 'Mon, May 30 2025',
         duration: 3,
         status: 'Pending',
         receieved: false,
@@ -282,8 +282,8 @@ export const dummyStatusData = [
     {
         id: 6,
         itemId: 1,
-        itemName: 'Dike',
-        itemImage: Dike,
+        itemName: 'Adidas Shoe',
+        itemImage: Adidas,
         itemRating: 4.5,
         renterId: 1,
         renterName: 'Swam Yi Phyo',
@@ -298,12 +298,12 @@ export const dummyStatusData = [
     {
         id: 7,
         itemId: 1,
-        itemName: 'Dike',
-        itemImage: Dike,
+        itemName: 'VR',
+        itemImage: VR,
         itemRating: 4.5,
         renterId: 1,
-        renterName: 'Swam Yi Phyo',
-        requestedOn: 'Mon, May 28 2025',
+        renterName: 'Bheem',
+        requestedOn: 'Tue, May 29 2025',
         duration: 3,
         status: 'Pending',
         receieved: false,
@@ -314,12 +314,12 @@ export const dummyStatusData = [
     {
         id: 8,
         itemId: 1,
-        itemName: 'Dike',
-        itemImage: Dike,
+        itemName: 'Rent Boyfriend',
+        itemImage: Kyaw,
         itemRating: 4.5,
         renterId: 1,
-        renterName: 'Swam Yi Phyo',
-        requestedOn: 'Mon, May 28 2025',
+        renterName: 'Globark Destoryer',
+        requestedOn: 'Wed, May 30 2025',
         duration: 3,
         status: 'Pending',
         receieved: false,

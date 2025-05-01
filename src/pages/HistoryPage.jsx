@@ -1,5 +1,4 @@
 import HistoryOperations from "../ui/operations/HistoryOperations";
-import Pagination from "../ui/paginations/Pagination";
 import HistoryTable from "../ui/tables/HistoryTable";
 import Title from "../ui/Title";
 
@@ -11,7 +10,6 @@ export default function HistoryPage() {
                 <HistoryOperations />
             </div>
             <HistoryTable />
-            <Pagination count={24} />
         </section>
     )
 }
