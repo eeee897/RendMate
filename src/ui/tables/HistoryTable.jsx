@@ -3,6 +3,8 @@ import { dummyStatusData, PAGE_SIZE } from '../../utils/constants'
 import { Star } from 'lucide-react'
 import Pagination from '../paginations/Pagination'
 import { useSearchParams } from 'react-router-dom'
+import Modal from '../modal/Modal'
+import ReviewModal from '../modal/ReviewModal'
 
 export default function HistoryTable() {
     const [searchParams] = useSearchParams()
@@ -68,9 +70,17 @@ export default function HistoryTable() {
                                     </div>
                                 </td>
                                 <td className="table-cell">
-                                    <button className="bg-primary px-4 rounded-lg cursor-pointer hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500 text-white font-bold py-1">
-                                        Review
-                                    </button>
+                                    <Modal>
+                                        <Modal.Opens open={'review'}>
+                                            <button type='button' className="bg-primary px-4 rounded-lg cursor-pointer hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500 text-white font-bold py-1">
+                                                Review
+                                            </button>
+                                        </Modal.Opens>
+
+                                        <Modal.Window name={'review'}>
+                                            <ReviewModal item={status} />
+                                        </Modal.Window>
+                                    </Modal>
                                 </td>
                             </tr>
                         ))}

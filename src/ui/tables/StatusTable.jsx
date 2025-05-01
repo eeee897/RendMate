@@ -3,6 +3,7 @@ import React from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { dummyStatusData, PAGE_SIZE } from '../../utils/constants'
 import Pagination from '../paginations/Pagination'
+import toast from 'react-hot-toast'
 
 export default function StatusTable() {
     const [searchParams] = useSearchParams()
@@ -108,10 +109,10 @@ export default function StatusTable() {
                                                         }
                                                     </> :
                                                     <>
-                                                        <button className="bg-green-600 rounded-lg cursor-pointer hover:bg-green-700 border-b-[3px] border-b-green-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-green-700 text-white font-bold py-1">
+                                                        <button onClick={() => toast.success('Action performed successfully.')} className="bg-green-600 rounded-lg cursor-pointer hover:bg-green-700 border-b-[3px] border-b-green-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-green-700 text-white font-bold py-1">
                                                             Accept
                                                         </button>
-                                                        <button className="bg-red-600 rounded-lg cursor-pointer hover:bg-red-700 border-b-[3px] border-b-red-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-red-700 text-white font-bold py-1">
+                                                        <button onClick={() => toast.success('Action performed successfully.')} className="bg-red-600 rounded-lg cursor-pointer hover:bg-red-700 border-b-[3px] border-b-red-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-red-700 text-white font-bold py-1">
                                                             Reject
                                                         </button>
                                                     </>
