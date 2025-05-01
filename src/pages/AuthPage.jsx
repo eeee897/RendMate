@@ -10,16 +10,16 @@ export default function AuthPage() {
     const [showLogIn, setShowLogIn] = useState(true);
 
     return (
-        <section className="w-full min-h-screen p-6 flex items-center gap-2 bg-slate-100">
-            <div className="w-full md:w-1/3 p-5">
+        <section className="w-full flex flex-col justify-center min-h-screen p-6 md:flex-row items-center gap-2 bg-slate-100">
+            <div className="hidden xl:block w-full xl:w-1/3 ">
                 <DotLottieReact
                     src={showLogIn ? login : signUp}
                     loop
                     autoplay
-                    style={{ width: '700px', height: '400px' }}
+                    style={{ width: '600px', height: '400px' }}
                 />
             </div>
-            <div className="w-full md:w-2/3 mx-auto">
+            <div className="w-full xl:w-2/3 mx-auto">
                 <div className="flex flex-col space-y-2 max-w-md mx-auto mb-4">
                     <div className='flex items-center gap-2'>
                         <img src={logo} alt="rentmade_logo" className="w-12 h-12" />
