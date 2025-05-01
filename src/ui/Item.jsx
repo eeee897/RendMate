@@ -97,9 +97,9 @@ export default function Item({ item }) {
                                 <Link to={'/chats'}>
                                     <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
                                 </Link>
-                                <button className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
+                                <Link to={'/status'} className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
                                     Rent Now
-                                </button>
+                                </Link>
                             </>
                         }
                     </div>
