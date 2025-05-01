@@ -4,6 +4,8 @@ import { useSearchParams } from 'react-router-dom'
 import Menus from './menu/Menus'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import empty from '@/assets/animations/empty.lottie'
+import NumberPagination from './paginations/NumberPagination'
+import { PAGE_SIZE } from '../utils/constants'
 
 export default function ItemsList({ items }) {
     const [searchParams] = useSearchParams()
@@ -35,6 +37,12 @@ export default function ItemsList({ items }) {
         normalize(item.name).includes(normalize(searchValue))
     )
 
+    //? pagination
+    const page = Number(searchParams.get("page")) || 1
+    const from = (page - 1) * PAGE_SIZE
+    const to = from + PAGE_SIZE
+    const paginatedItems = searchedItems?.slice(from, to)
+
     if (!searchedItems.length) return (
         <div className='flex items-center justify-center flex-col mt-12'>
             <DotLottieReact
@@ -51,11 +59,12 @@ export default function ItemsList({ items }) {
         <Menus>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
                 {
-                    searchedItems?.map(item => (
+                    paginatedItems?.map(item => (
                         <Item key={item.id} item={item} />
                     ))
                 }
             </div>
+            <NumberPagination count={searchedItems.length} />
         </Menus>
     )
 }

@@ -1,8 +1,8 @@
+import { items } from '@/utils/constants'
 import React from 'react'
 import ItemsList from '../ui/ItemsList'
 import ItemsFeedOperation from '../ui/operations/ItemsFeedOperation'
 import Searchbar from '../ui/Searchbar'
-import { items } from '@/utils/constants'
 import Title from '../ui/Title'
 
 export default function ItemsFeedPage() {
