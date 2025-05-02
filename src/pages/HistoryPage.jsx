@@ -7,7 +7,7 @@ export default function HistoryPage() {
         <section className='flex flex-col gap-2 '>
             <Title text={'History'} />
             <div className="flex items-center justify-end">
-                <HistoryOperations />
+                {/* <HistoryOperations /> */}
             </div>
             <HistoryTable />
         </section>
