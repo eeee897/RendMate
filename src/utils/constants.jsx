@@ -26,7 +26,7 @@ export const navbarLinks = [
     {
         links: [
             {
-                label: 'ItemsFeed',
+                label: 'ItemsNewFeed',
                 icon: ShoppingBag,
                 path: '/items-feed'
             },
@@ -51,7 +51,7 @@ export const navbarLinks = [
                 path: "/chats",
             },
             {
-                label: "Switch to Lender",
+                label: "Switch to Renter",
                 icon: ArrowLeftRight,
                 path: "/switch-role",
             },
