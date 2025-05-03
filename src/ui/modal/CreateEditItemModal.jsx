@@ -141,7 +141,7 @@ export default function CreateEditItemModal({ itemToEdit = {}, onCloseModal }) {
                 />
             </div>
             <div className='flex items-center justify-center gap-2 mt-3'>
-                <button onClick={onCloseModal} type='button' className='px-4 py-2 border rounded-lg font-bold text-gray-400 border-gray-400 cursor-pointer hover:bg-black hover:text-slate-50 transition duration-300 hover:border-black'>
+                <button onClick={onCloseModal} type='button' className='px-4 py-2 border rounded-lg font-bold text-darkViolet border-gray-400 cursor-pointer hover:bg-darkViolet hover:text-slate-50 transition duration-300 hover:border-darkViolet'>
                     Cancel
                 </button>
                 <button

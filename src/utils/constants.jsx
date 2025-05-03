@@ -19,6 +19,7 @@ import ps5 from '@/assets/item_images/ps5.jpg'
 import tralalero from '@/assets/item_images/tralalero.jpg'
 import tuna from '@/assets/item_images/tuna.jpg'
 import coma from '@/assets/item_images/coma.jpg'
+import jordan from '@/assets/item_images/jordan.jpg'
 
 export const PAGE_SIZE = 8
 
@@ -364,6 +365,20 @@ export const items = [
         description: 'For when you’re awake, but only technically. Soft, comfy, and perfect for doing nothing… aggressively.',
         image: coma,
         rentalPrice: 200,
+        extras: null,
+        deposit: 0,
+        location: 'MFU',
+        usage: 'Available',
+        rating: 5.0,
+        ownerId: false,
+        condition: 'Brand New'
+    },
+    {
+        id: 20,
+        name: 'Air Jordan 11',
+        description: 'JORDAN can hoop 3 points......',
+        image: jordan,
+        rentalPrice: 2000,
         extras: null,
         deposit: 0,
         location: 'MFU',

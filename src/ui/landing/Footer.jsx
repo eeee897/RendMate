@@ -32,35 +32,35 @@ export default function Footer() {
                     <div className="flex flex-col items-center w-full md:items-start">
                         <div className="mb-5 font-bold text-white capitalize">Resources</div>
                         <div className="flex flex-col items-center space-y-3 md:items-start">
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">Blogs</Link>
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">Developers</Link>
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">Support</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">Blogs</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">Developers</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">Support</Link>
                         </div>
                     </div>
 
                     <div className="flex flex-col items-center w-full md:items-start">
                         <div className="mb-5 font-bold text-white capitalize">Company</div>
                         <div className="flex flex-col items-center space-y-3 md:items-start">
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">About</Link>
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">Our team</Link>
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">Careers</Link>
-                            <Link to={'/comming-soon'} className="capitalize text-grayishViolet hover:text-primary">Contact</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">About</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">Our team</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">Careers</Link>
+                            <Link to={'/coming-soon'} className="capitalize text-grayishViolet hover:text-primary">Contact</Link>
                         </div>
                     </div>
                 </div>
 
 
                 <div className="flex items-center space-x-6">
-                    <Link to={'/comming-soon'} className="">
+                    <Link to={'/coming-soon'} className="">
                         <img src={facebook} alt="" className="ficon" />
                     </Link>
-                    <Link to={'/comming-soon'} className="">
+                    <Link to={'/coming-soon'} className="">
                         <img src={instagram} alt="" className="ficon" />
                     </Link>
-                    <Link to={'/comming-soon'} className="">
+                    <Link to={'/coming-soon'} className="">
                         <img src={twitter} alt="" className="ficon" />
                     </Link>
-                    <Link to={'/comming-soon'} className="">
+                    <Link to={'/coming-soon'} className="">
                         <img src={pinterest} alt="" className="ficon" />
                     </Link>
                 </div>

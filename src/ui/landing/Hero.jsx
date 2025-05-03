@@ -66,7 +66,7 @@ export default function Hero() {
                     <input
                         type="text"
                         placeholder="🔍 Browse Items..."
-                        className="w-full px-6 py-3 lg:py-4 text-xl text-darkViolet placeholder:text-darkViolet bg-slate-100 border border-yellow-500 rounded-full focus:outline-0"
+                        className="w-full px-6 py-3 lg:py-4 text-base lg:text-xl text-darkViolet placeholder:text-darkViolet bg-slate-100 border border-yellow-500 rounded-full focus:outline-0"
                     />
                 </div>
             </div>

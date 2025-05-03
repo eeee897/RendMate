@@ -1,15 +1,33 @@
+import default_profile from "@/assets/default_profile.jpg";
+import { MoonIcon } from "@heroicons/react/24/outline";
 import { ChevronsLeft } from "lucide-react";
+import { CiUser } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 export const Header = ({ collapsed, setCollapsed }) => {
     return (
         <header className="relative z-10 flex h-[60px] items-center justify-between bg-white px-4 shadow-md transition-colors dark:bg-slate-900">
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center justify-between gap-x-3">
                 <button
                     className="btn-ghost size-10"
                     onClick={() => setCollapsed(!collapsed)}
                 >
                     <ChevronsLeft className={collapsed && "rotate-180"} />
                 </button>
+            </div>
+            <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                    <img src={default_profile} alt="profile_image" className="w-8 h-8 rounded-full border border-slate-300" />
+                    <h3 className="font-medium text-darkViolet">Fisheeesh</h3>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Link to={'/app/account'} className="btn-ghost">
+                        <CiUser className="size-6 text-darkViolet" />
+                    </Link>
+                    <button className="btn-ghost">
+                        <MoonIcon className="size-5 text-darkViolet" />
+                    </button>
+                </div>
             </div>
         </header>
     );

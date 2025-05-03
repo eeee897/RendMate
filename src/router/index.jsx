@@ -13,6 +13,8 @@ import {
     NotFound,
     AuthPage,
     WelcomePage,
+    ComingSoonPage,
+    ProfilePage
 } from '../pages/index';
 import { useApp } from '@/context/AppContextProvider'
 
@@ -61,7 +63,15 @@ export default function Router() {
                     path: 'need-help',
                     element: <NeedHelpPage />,
                 },
+                {
+                    path: 'account',
+                    element: <ProfilePage />
+                }
             ],
+        },
+        {
+            path: '/coming-soon',
+            element: <ComingSoonPage />
         },
         {
             path: '/auth',
