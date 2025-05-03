@@ -28,37 +28,37 @@ export const navbarLinks = [
             {
                 label: 'ItemsNewFeed',
                 icon: ShoppingBag,
-                path: '/items-feed'
+                path: 'items-feed'
             },
             {
                 label: "My Items",
                 icon: LayoutList,
-                path: "/my-items",
+                path: "my-items",
             },
             {
                 label: "Status",
                 icon: Hourglass,
-                path: "/status",
+                path: "status",
             },
             {
                 label: "History",
                 icon: History,
-                path: "/history",
+                path: "history",
             },
             {
                 label: "Chats",
                 icon: MessageSquareWarning,
-                path: "/chats",
+                path: "chats",
             },
             {
                 label: "Switch to Renter",
                 icon: ArrowLeftRight,
-                path: "/switch-role",
+                path: "switch-role",
             },
             {
                 label: "Need Help",
                 icon: Headset,
-                path: "/need-help",
+                path: "need-help",
             },
         ],
     }
@@ -75,7 +75,7 @@ export const items = [
         deposit: 50,
         location: 'MFU',
         usage: 'Taken',
-        rating: 4.5,
+        rating: 3.0,
         ownerId: true,
         condition: 'Like New'
     },
@@ -131,7 +131,7 @@ export const items = [
         deposit: 100,
         location: 'MFU',
         usage: 'Available',
-        rating: 5.0,
+        rating: 3.0,
         ownerId: false,
         condition: 'Never Been Fall In Love'
     },

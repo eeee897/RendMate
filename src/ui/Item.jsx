@@ -25,7 +25,7 @@ export default function Item({ item }) {
                 {/* Info */}
                 <div className='flex flex-col gap-2 w-full'>
                     <div className='flex items-center justify-between gap-2'>
-                        <h1 className='font-bold text-darkViolet sm:text-xl text-lg md:text-2xl'>{item.name}</h1>
+                        <h1 className='font-bold text-start text-darkViolet sm:text-xl text-lg md:text-2xl'>{item.name}</h1>
 
                         <div className='flex items-center gap-0.5'>
                             <span className={`${item.usage === 'Available' ? 'bg-green-600' : 'bg-yellow-600'} text-[11px] md:text-xs rounded-lg px-2 py-0.5 text-white`}>{item.usage}</span>
@@ -52,7 +52,7 @@ export default function Item({ item }) {
                             </Modal.Window>
                         </div>
                     </div>
-                    <p className='text-[11px] md:text-xs italic font-thin text-gray-500'>"{item.description}"</p>
+                    <p className='text-[11px] text-start md:text-xs italic font-thin text-gray-500'>"{item.description}"</p>
                     <div className='flex items-center gap-2'>
                         <CurrencyDollarIcon className='w-7 text-yellow-600' />
                         <p className='md:text-xl text-base sm:text-lg font-bold text-darkViolet'>{item.rentalPrice} THB per day</p>
@@ -94,10 +94,10 @@ export default function Item({ item }) {
                             </>
                             :
                             <>
-                                <Link to={'/chats'}>
+                                <Link to={'/app/chats'}>
                                     <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
                                 </Link>
-                                <Link to={'/status'} className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
+                                <Link to={'/app/status'} className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
                                     Rent Now
                                 </Link>
                             </>

@@ -5,9 +5,12 @@ import { useState } from 'react';
 import RegisterForm from '../ui/forms/RegisterForm';
 import logo from '@/assets/rentmate_logo.png';
 import signUp from '@/assets/animations/sign_up.lottie';
+import { useSearchParams } from 'react-router-dom';
 
 export default function AuthPage() {
-    const [showLogIn, setShowLogIn] = useState(true);
+    const [searchParams] = useSearchParams()
+
+    const [showLogIn, setShowLogIn] = useState(searchParams.get('signup') === 'true' ? false : true);
 
     return (
         <section className="w-full flex flex-col justify-center min-h-screen p-6 md:flex-row items-center gap-2 bg-slate-100">

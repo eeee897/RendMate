@@ -45,6 +45,10 @@
     body {
         @apply [scrollbar-color:_#cbd5e1_transparent] dark:[scrollbar-color:_#334155_transparent];
     }
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
 }
 
 @layer components {
@@ -138,5 +142,9 @@
     .cus-btn:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+    
+    .ficon:hover{
+        filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%);
     }
 }
