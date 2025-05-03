@@ -1,13 +1,18 @@
 import { forwardRef } from "react";
 import { NavLink } from "react-router-dom";
-import { navbarLinks } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 import ConfirmationModal from "./modal/ConfirmationModal";
 import logo from '@/assets/rentmate_logo.png';
 import { LogOut } from "lucide-react";
 import Modal from "./modal/Modal";
+import { navbarLinksLender, navbarLinksRenter } from "../utils/constants";
+import { useApp } from '@/context/AppContextProvider'
 
 export const Sidebar = forwardRef(({ collapsed }, ref) => {
+    const { isRenter } = useApp()
+
+    const sideBarLinks = isRenter ? navbarLinksLender : navbarLinksRenter
+
     return (
         <aside
             ref={ref}
@@ -28,7 +33,7 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
 
             {/* Top section - nav links */}
             <div className="flex w-full flex-col gap-y-4 overflow-y-auto overflow-x-hidden p-3 [scrollbar-width:_thin] flex-grow">
-                {navbarLinks.map((navbarLink, index) => (
+                {sideBarLinks.map((navbarLink, index) => (
                     <nav
                         key={index}
                         className={cn("sidebar-group", collapsed && "md:items-center")}

@@ -1,6 +1,7 @@
 import { Eye, EyeOff } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Spinner from '@/ui/Spinner';
 
 export default function LoginForm() {
     const navigate = useNavigate()
@@ -12,7 +13,7 @@ export default function LoginForm() {
         setIsLoggingIn(true);
         setTimeout(() => {
             setIsLoggingIn(false);
-            navigate('/')
+            navigate('/app')
         }, 2000)
     }
 
@@ -52,10 +53,7 @@ export default function LoginForm() {
                 <span className="text-xs text-gray-400 hover:text-gray-900 cursor-pointer transform duration-300">Forgot Passoword?</span>
             </div>
             <button disabled={isLoggingIn} type='submit' className="bg-primary disabled:cursor-not-allowed flex justify-center items-center gap-2 w-full font-bold text-white rounded-md px-6 py-2 cursor-pointer hover:bg-cyan-500 transition duration-300">
-                {isLoggingIn && <svg className="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>}
+                {isLoggingIn && <Spinner />}
                 <span>{isLoggingIn ? 'Logging In...' : 'Log In'}</span>
             </button>
         </form>

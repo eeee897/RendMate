@@ -1,17 +1,62 @@
-import comingSoon from '@/assets/animations/comming_soon.lottie'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
+import cat from '@/assets/animations/cat.lottie';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useApp } from '@/context/AppContextProvider'
+import { useState } from 'react';
+import Spinner from '../ui/Spinner';
+import { useNavigate } from 'react-router-dom';
 
 export default function SwitchRolePage() {
+    const { isRenter, dispatch } = useApp()
+    const navigate = useNavigate()
+    const [isSwitching, setIsSwitching] = useState(false)
+
+    const onHandleClick = async () => {
+        setIsSwitching(true)
+        await new Promise(resolve => setTimeout(resolve, 3000))
+        dispatch({ type: 'app/swithRole' })
+        navigate('/app')
+        setIsSwitching(false)
+    }
+
     return (
-        <section className='flex flex-col gap-2'>
-            <div className='flex items-center justify-center mt-24'>
+        <section className='flex flex-col gap-6 items-center justify-center mt-16 text-center px-4'>
+            <div className='w-full max-w-md'>
                 <DotLottieReact
-                    style={{ width: '50%' }}
-                    src={comingSoon}
+                    style={{ width: '100%' }}
+                    src={cat}
                     loop
                     autoplay
                 />
             </div>
+
+            <div className='max-w-md'>
+                <h2 className='text-2xl font-bold text-darkViolet mb-2'>
+                    Ready to switch?
+                </h2>
+                <p className='text-gray-600 mb-6'>
+                    {
+                        isRenter ? (
+                            <>
+                                Switch Back to Renter to be able to browse and search items, request rentals and payments, and manage your rental history.
+                            </>
+                        ) : (
+                            <>
+                                By switching your role, you'll be able to list your own items for rent, manage rental requests, and track your earnings as a <strong>Lender</strong>.
+                            </>
+                        )
+                    }
+                </p>
+                <button
+                    disabled={isSwitching}
+                    onClick={onHandleClick}
+                    type='button'
+                    className="text-white disabled:cursor-not-allowed bg-primary rounded-full px-6 font-bold py-3 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer"
+                >
+                    {
+                        isSwitching ? <Spinner /> : <>Switch to {isRenter ? 'Renter' : 'Lender'}</>
+                    }
+                </button>
+            </div>
         </section>
-    )
+    );
 }

@@ -22,7 +22,7 @@ import coma from '@/assets/item_images/coma.jpg'
 
 export const PAGE_SIZE = 8
 
-export const navbarLinks = [
+export const navbarLinksRenter = [
     {
         links: [
             {
@@ -30,6 +30,47 @@ export const navbarLinks = [
                 icon: ShoppingBag,
                 path: 'items-feed'
             },
+            // {
+            //     label: "My Items",
+            //     icon: LayoutList,
+            //     path: "my-items",
+            // },
+            {
+                label: "Status",
+                icon: Hourglass,
+                path: "status",
+            },
+            {
+                label: "History",
+                icon: History,
+                path: "history",
+            },
+            {
+                label: "Chats",
+                icon: MessageSquareWarning,
+                path: "chats",
+            },
+            {
+                label: "Switch to Lender",
+                icon: ArrowLeftRight,
+                path: "switch-role",
+            },
+            {
+                label: "Need Help",
+                icon: Headset,
+                path: "need-help",
+            },
+        ],
+    }
+];
+export const navbarLinksLender = [
+    {
+        links: [
+            // {
+            //     label: 'ItemsNewFeed',
+            //     icon: ShoppingBag,
+            //     path: 'items-feed'
+            // },
             {
                 label: "My Items",
                 icon: LayoutList,
