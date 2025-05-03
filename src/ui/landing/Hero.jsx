@@ -64,11 +64,10 @@ export default function Hero() {
                     <h1 className='lg:hidden text-5xl font-black text-white text-center'>Rent and Lend <br /> your item easily</h1>
                 </div>
                 <div className='flex relative pb-64 items-center justify-center max-w-md mx-auto'>
-                    <SearchIcon className="absolute left-5 top-5 text-darkViolet w-5 h-5 " />
                     <input
                         type="text"
-                        placeholder="Browse Items..."
-                        className="w-full pl-12 pr-5 py-3 lg:py-4 text-xl bg-slate-100 border placeholder:text-yellow-500 border-yellow-500 rounded-full text-yellow-500 focus:outline-0"
+                        placeholder="🔍 Browse Items..."
+                        className="w-full px-6 py-3 lg:py-4 text-xl text-darkViolet placeholder:text-darkViolet bg-slate-100 border border-yellow-500 rounded-full focus:outline-0"
                     />
                 </div>
             </div>
