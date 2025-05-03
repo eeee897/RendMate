@@ -6,7 +6,7 @@
     --font-sans: 'Poppins', 'sans-serif';
     --color-primary: #2ACFCF;
     --color-secondary: #EDEABB,
-    --color-cyanLight: #9AE3E3;
+        --color-cyanLight: #9AE3E3;
     --color-darkViolet: #3B3054;
     --color-red: #F46262;
     --color-grayishViolet: #BFBFBF;
@@ -45,6 +45,7 @@
     body {
         @apply [scrollbar-color:_#cbd5e1_transparent] dark:[scrollbar-color:_#334155_transparent];
     }
+
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 100px;
@@ -101,7 +102,7 @@
     }
 
     .table {
-        @apply h-full w-full text-slate-900 border-slate-300 
+        @apply h-full w-full text-slate-900 border-slate-300
     }
 
     .table-header {
@@ -143,8 +144,58 @@
         transform: scaleX(1);
         transform-origin: bottom left;
     }
-    
-    .ficon:hover{
+
+    .ficon:hover {
         filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%);
     }
+}
+
+.hero {
+    background-image: url('./assets/hero_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    transform: rotate(0);
+    transition: all 0.4s
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }

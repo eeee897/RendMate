@@ -1,17 +1,13 @@
-import hero from '@/assets/hero_image.png';
 import logo from '@/assets/rentmate_logo.png';
 import { SearchIcon } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
+    const [isMobMenuOpen, setIsMobMenuOpen] = useState(false);
+
     return (
-        <section
-            id='home'
-            style={{
-                backgroundImage: `url(${hero})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-            }}>
+        <section id='home' className='hero'>
             <nav className="max-w-[1380px] px-4 py-6 mx-auto">
                 <div className="flex items-center justify-between">
                     <div className='flex items-center gap-2'>
@@ -28,24 +24,51 @@ export default function Hero() {
 
                     <div className="items-center hidden space-x-6 font-bold lg:flex text-grayishViolet">
                         <Link to={'/auth'} className="text-veryDarkViolet cursor-pointer">Login</Link>
-                        <Link to={'/auth?signup=true'} className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0  cursor-pointer">
+                        <Link to={'/auth?signup=true'} className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">
                             Sign Up
                         </Link>
                     </div>
+
+                    <div className="lg:hidden flex items-center mt-2">
+                        <button
+                            onClick={() => setIsMobMenuOpen(!isMobMenuOpen)}
+                            className={`hamburger ${isMobMenuOpen ? 'open' : ''}`}
+                            type="button"
+                        >
+                            <span className="hamburger-top bg-slate-900 dark:bg-slate-50"></span>
+                            <span className="hamburger-middle bg-slate-900 dark:bg-slate-50"></span>
+                            <span className="hamburger-bottom bg-slate-900 dark:bg-slate-50"></span>
+                        </button>
+                    </div>
+                    {
+                        isMobMenuOpen && (
+                            <div id="menu" className="absolute lg:hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100">
+                                <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
+                                    <a href="#home" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Home</a>
+                                    <a href="#popular" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Popular</a>
+                                    <a href="#features" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Features</a>
+                                    <a href="#contact" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Contact</a>
+                                    <Link to="/auth" onClick={() => setIsMobMenuOpen(false)} className="w-full pt-6 text-center border-t border-gray-400">Login</Link>
+                                    <Link to="/auth?signup=true" onClick={() => setIsMobMenuOpen(false)} className="w-full text-center bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[4px] hover:border-t-[4px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">Sign Up</Link>
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </nav>
 
             {/* content */}
-            <div className='max-w-[1380px] px-4 pt-24 pb-32 mx-auto'>
-                <div className='flex justify-end items-center mb-32'>
-                    <h1 className='text-5xl font-bold text-darkViolet max-w-sm text-end'>Rent and Lend your item <br /> easily</h1>
+            <div className='max-w-[1380px] px-4 pt-28 lg:pb-32 mx-auto'>
+                <div className='flex lg:justify-end justify-center items-center mb-16 lg:mb-32'>
+                    <h1 className='hidden lg:block text-5xl font-bold text-white max-w-sm text-end'>Rent and Lend your item <br /> easily</h1>
+                    <h1 className='lg:hidden text-5xl font-black text-white text-center'>Rent and Lend <br /> your item easily</h1>
                 </div>
                 <div className='flex relative pb-64 items-center justify-center max-w-md mx-auto'>
                     <SearchIcon className="absolute left-5 top-5 text-darkViolet w-5 h-5 " />
                     <input
                         type="text"
                         placeholder="Browse Items..."
-                        className="w-full pl-12 pr-5 py-4 text-xl bg-slate-100 border placeholder:text-yellow-500 border-yellow-500 rounded-full text-yellow-500 focus:outline-0"
+                        className="w-full pl-12 pr-5 py-3 lg:py-4 text-xl bg-slate-100 border placeholder:text-yellow-500 border-yellow-500 rounded-full text-yellow-500 focus:outline-0"
                     />
                 </div>
             </div>
