@@ -1,8 +1,8 @@
-import default_profile from "@/assets/default_profile.jpg";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import { ChevronsLeft } from "lucide-react";
 import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import Profile from "./Profile";
 
 export const Header = ({ collapsed, setCollapsed }) => {
     return (
@@ -16,10 +16,7 @@ export const Header = ({ collapsed, setCollapsed }) => {
                 </button>
             </div>
             <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                    <img src={default_profile} alt="profile_image" className="w-8 h-8 rounded-full border border-slate-300" />
-                    <h3 className="font-medium text-darkViolet">Fisheeesh</h3>
-                </div>
+                <Profile />
                 <div className="flex items-center gap-2">
                     <Link to={'/app/account'} className="btn-ghost">
                         <CiUser className="size-6 text-darkViolet" />

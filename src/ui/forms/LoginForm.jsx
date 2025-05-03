@@ -24,7 +24,7 @@ export default function LoginForm() {
 
     const onLoginUser = async (data) => {
         await new Promise(resolve => setTimeout(resolve, 2000))
-        dispatch({ type: 'app/log-in', payload: data })
+        dispatch({ type: 'app/log-in', payload: { ...data, username: 'Fisheeesh' } })
         navigate('/app')
     }
 

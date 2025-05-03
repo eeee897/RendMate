@@ -1,8 +1,10 @@
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { useApp } from "../../context/AppContextProvider";
 
 export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }) {
     const navigate = useNavigate();
+    const { dispatch } = useApp()
 
     let confirm;
     if (type === 'logout') confirm = { title: "Logout", subTitle: 'logout' }
@@ -14,13 +16,14 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
             <h1 className={`${type === 'logout' ? 'text-primary' : 'text-red-600'} font-bold text-2xl border-b border-gray-200 pb-4 mb-4`}>{confirm.title} Confirmation.</h1>
             <p className='text-darkViolet font-medium text-lg'>Are you sure you want to {confirm.subTitle}?</p>
             <div className='flex items-center justify-end gap-2 mt-6'>
-                <button onClick={onCloseModal} type='button' className='px-4 py-2 border rounded-lg font-bold text-gray-400 border-gray-400 cursor-pointer hover:bg-black hover:text-slate-50 transition duration-300 hover:border-black'>
+                <button onClick={onCloseModal} type='button' className='px-4 py-2 border rounded-lg font-bold text-darkViolet border-gray-400 cursor-pointer hover:bg-darkViolet hover:text-slate-50 transition duration-300 hover:border-darkViolet'>
                     Cancel
                 </button>
                 <button
                     onClick={
                         type === 'logout' ? () => {
-                            navigate('/auth')
+                            dispatch({ type: 'app/log-out' })
+                            navigate('/')
                             onCloseModal()
                         } : () => {
                             toast.success('Action performed successfully.')

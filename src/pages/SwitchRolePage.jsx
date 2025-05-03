@@ -61,7 +61,10 @@ export default function SwitchRolePage() {
                     className="text-white disabled:cursor-not-allowed bg-primary rounded-full px-6 font-bold py-3 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer"
                 >
                     {
-                        isSwitching ? <Spinner /> : <>Switch to Lender</>
+                        isSwitching ?
+                            <div className='flex items-center gap-2'>
+                                <Spinner /> Please wait...
+                            </div> : <>Switch to Lender</>
                     }
                 </button> :
                     <button
@@ -71,7 +74,10 @@ export default function SwitchRolePage() {
                         className="text-white disabled:cursor-not-allowed bg-primary rounded-full px-6 font-bold py-3 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer"
                     >
                         {
-                            isSwitching ? <Spinner /> : <>Switch to Renter</>
+                            isSwitching ?
+                                <div className='flex items-center gap-2'>
+                                    <Spinner /> Please wait...
+                                </div> : <>Switch to Renter</>
                         }
                     </button>}
             </div>

@@ -3,9 +3,11 @@ import { items } from '../../utils/constants'
 import Menus from '@/ui/menu/Menus'
 import Item from '@/ui/Item'
 import { useNavigate } from 'react-router-dom'
+import { useApp } from '../../context/AppContextProvider'
 
 export default function PopularItems() {
     const navigate = useNavigate()
+    const { isAuthenticated } = useApp()
     const popularItems = items.filter(item => item.rating >= 4.0).slice(0, 3)
 
     return (
@@ -22,7 +24,7 @@ export default function PopularItems() {
             </Menus>
             <button
                 type='button'
-                onClick={() => navigate('/auth')}
+                onClick={() => isAuthenticated ? navigate('/app') : navigate('/auth')}
                 className='text-darkViolet px-6 py-2.5 cursor-pointer hover:text-slate-50 hover:bg-darkViolet transition duration-300 font-bold rounded-full border-[1.5px] border-darkViolet mt-5'>See More</button>
         </section>
     )

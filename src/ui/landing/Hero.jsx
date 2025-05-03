@@ -1,8 +1,11 @@
 import logo from '@/assets/rentmate_logo.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useApp } from '@/context/AppContextProvider'
+import Profile from '../Profile';
 
 export default function Hero() {
+    const { isAuthenticated } = useApp()
     const [isMobMenuOpen, setIsMobMenuOpen] = useState(false);
 
     return (
@@ -22,10 +25,18 @@ export default function Hero() {
                     </div>
 
                     <div className="items-center hidden space-x-6 text-lg font-bold lg:flex text-grayishViolet">
-                        <Link to={'/auth'} className="text-veryDarkViolet cursor-pointer hover:text-white transition duration-300">Login</Link>
-                        <Link to={'/auth?signup=true'} className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">
-                            Sign Up
-                        </Link>
+                        {
+                            isAuthenticated ? (
+                                <Profile />
+                            ) : (
+                                <>
+                                    <Link to={'/auth'} className="text-veryDarkViolet cursor-pointer hover:text-white transition duration-300">Login</Link>
+                                    <Link to={'/auth?signup=true'} className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">
+                                        Sign Up
+                                    </Link>
+                                </>
+                            )
+                        }
                     </div>
 
                     <div className="lg:hidden flex items-center mt-2">
@@ -54,10 +65,10 @@ export default function Hero() {
                         )
                     }
                 </div>
-            </nav>
+            </nav >
 
             {/* content */}
-            <div className='max-w-[1380px] px-4 pt-28 lg:pb-32 mx-auto'>
+            <div className='max-w-[1380px] px-4 pt-28 lg:pb-32 mx-auto' >
                 <div className='flex lg:justify-end justify-center items-center mb-16 lg:mb-32'>
                     <h1 className='hidden lg:block text-5xl font-bold text-white max-w-sm text-end'>Rent and Lend your item <br /> easily</h1>
                     <h1 className='lg:hidden text-5xl font-black text-white text-center'>Rent and Lend <br /> your item easily</h1>
@@ -71,6 +82,6 @@ export default function Hero() {
                 </div>
             </div>
 
-        </section>
+        </section >
     )
 }
