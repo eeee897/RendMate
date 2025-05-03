@@ -14,8 +14,11 @@ import {
     AuthPage,
     WelcomePage,
 } from '../pages/index';
+import { useApp } from '@/context/AppContextProvider'
 
 export default function Router() {
+    const { isRenter } = useApp()
+
     const router = createBrowserRouter([
         {
             path: '/',
@@ -28,7 +31,7 @@ export default function Router() {
             children: [
                 {
                     index: true,
-                    element: <Navigate to="items-feed" replace />
+                    element: !isRenter ? <Navigate to="my-items" replace /> : <Navigate to="items-feed" replace />
                 },
                 {
                     path: 'items-feed',
