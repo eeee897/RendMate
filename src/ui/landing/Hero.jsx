@@ -16,10 +16,10 @@ export default function Hero() {
                     </div>
 
                     <div className="hidden space-x-8 font-bold lg:flex">
-                        <a href="#home" className="text-veryDarkViolet hover:text-slate-50 transition duration-300">Home</a>
-                        <a href="#popular" className="text-veryDarkViolet hover:text-slate-50 transition duration-300">Popular</a>
-                        <a href="#features" className="text-veryDarkViolet hover:text-slate-50 transition duration-300">Features</a>
-                        <a href="#contact" className="text-veryDarkViolet hover:text-slate-50 transition duration-300">Contact</a>
+                        <a href="#home" className="text-white hover:text-darkViolet transition duration-300">Home</a>
+                        <a href="#popular" className="text-white hover:text-darkViolet transition duration-300">Popular</a>
+                        <a href="#features" className="text-white hover:text-darkViolet transition duration-300">Features</a>
+                        <a href="#contact" className="text-white hover:text-darkViolet transition duration-300">Contact</a>
                     </div>
 
                     <div className="items-center hidden space-x-6 font-bold lg:flex text-grayishViolet">
@@ -35,9 +35,9 @@ export default function Hero() {
                             className={`hamburger ${isMobMenuOpen ? 'open' : ''}`}
                             type="button"
                         >
-                            <span className="hamburger-top bg-slate-900 dark:bg-slate-50"></span>
-                            <span className="hamburger-middle bg-slate-900 dark:bg-slate-50"></span>
-                            <span className="hamburger-bottom bg-slate-900 dark:bg-slate-50"></span>
+                            <span className="hamburger-top bg-darkViolet"></span>
+                            <span className="hamburger-middle bg-darkViolet"></span>
+                            <span className="hamburger-bottom bg-darkViolet"></span>
                         </button>
                     </div>
                     {
