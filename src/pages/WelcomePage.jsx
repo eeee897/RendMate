@@ -4,6 +4,7 @@ import PlatformFeatures from '../ui/landing/PlatformFeatures';
 import PopularItems from '../ui/landing/PopularItems';
 import UserRole from '../ui/landing/UserRole';
 import Contact from '../ui/landing/Contact';
+import ScrollTopBtn from '../ui/btns/ScrollToTopBtn';
 
 export default function Welcome() {
     return (
@@ -14,6 +15,7 @@ export default function Welcome() {
             <PlatformFeatures />
             <Contact />
             <Footer />
+            <ScrollTopBtn />
         </main>
     );
 }

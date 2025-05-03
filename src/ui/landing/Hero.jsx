@@ -1,5 +1,4 @@
 import logo from '@/assets/rentmate_logo.png';
-import { SearchIcon } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,14 +14,14 @@ export default function Hero() {
                         <h1 className='text-darkViolet font-bold text-2xl'>RentMate</h1>
                     </Link>
 
-                    <div className="hidden space-x-8 text-xl font-bold lg:flex">
+                    <div className="hidden space-x-8 text-lg font-bold lg:flex">
                         <a href="#home" className="text-white hover:text-darkViolet transition duration-300">Home</a>
                         <a href="#popular" className="text-white hover:text-darkViolet transition duration-300">Popular</a>
                         <a href="#features" className="text-white hover:text-darkViolet transition duration-300">Features</a>
                         <a href="#contact" className="text-white hover:text-darkViolet transition duration-300">Contact</a>
                     </div>
 
-                    <div className="items-center hidden space-x-6 text-xl font-bold lg:flex text-grayishViolet">
+                    <div className="items-center hidden space-x-6 text-lg font-bold lg:flex text-grayishViolet">
                         <Link to={'/auth'} className="text-veryDarkViolet cursor-pointer hover:text-white transition duration-300">Login</Link>
                         <Link to={'/auth?signup=true'} className="text-white bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">
                             Sign Up
