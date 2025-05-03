@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { cn } from "@/utils/cn";
 import ConfirmationModal from "./modal/ConfirmationModal";
 import logo from '@/assets/rentmate_logo.png';
@@ -11,7 +11,7 @@ import { useApp } from '@/context/AppContextProvider'
 export const Sidebar = forwardRef(({ collapsed }, ref) => {
     const { isRenter } = useApp()
 
-    const sideBarLinks = isRenter ? navbarLinksLender : navbarLinksRenter
+    const sideBarLinks = isRenter ? navbarLinksRenter : navbarLinksLender
 
     return (
         <aside
@@ -22,14 +22,14 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                 collapsed ? "max-md:-left-full" : "max-md:left-0",
             )}
         >
-            <div className={`${!collapsed ? 'shadow-md' : ''} flex gap-x-3 p-2.5 items-center`}>
+            <Link to={'/'} className={`${!collapsed ? 'shadow-md' : ''} flex gap-x-3 p-2.5 items-center`}>
                 <img src={logo} alt="RentMate Logo" className="w-10 h-10" />
                 {!collapsed && (
                     <p className="text-xl font-bold text-darkViolet transition-colors dark:text-slate-50">
                         RentMate
                     </p>
                 )}
-            </div>
+            </Link>
 
             {/* Top section - nav links */}
             <div className="flex w-full flex-col gap-y-4 overflow-y-auto overflow-x-hidden p-3 [scrollbar-width:_thin] flex-grow">

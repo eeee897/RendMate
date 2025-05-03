@@ -10,11 +10,19 @@ export default function SwitchRolePage() {
     const navigate = useNavigate()
     const [isSwitching, setIsSwitching] = useState(false)
 
-    const onHandleClick = async () => {
+    const onSwitchLender = async () => {
         setIsSwitching(true)
         await new Promise(resolve => setTimeout(resolve, 3000))
         dispatch({ type: 'app/swithRole' })
-        navigate('/app')
+        navigate('/app/my-items')
+        setIsSwitching(false)
+    }
+
+    const onSwitchRenter = async () => {
+        setIsSwitching(true)
+        await new Promise(resolve => setTimeout(resolve, 3000))
+        dispatch({ type: 'app/swithRole' })
+        navigate('/app/items-feed')
         setIsSwitching(false)
     }
 
@@ -37,25 +45,35 @@ export default function SwitchRolePage() {
                     {
                         isRenter ? (
                             <>
-                                Switch Back to Renter to be able to browse and search items, request rentals and payments, and manage your rental history.
+                                By switching your role, you'll be able to list your own items for rent, manage rental requests, and track your earnings as a <strong>Lender</strong>.
                             </>
                         ) : (
                             <>
-                                By switching your role, you'll be able to list your own items for rent, manage rental requests, and track your earnings as a <strong>Lender</strong>.
+                                Switch Back to Renter to be able to browse and search items, request rentals and payments, and manage your rental history.
                             </>
                         )
                     }
                 </p>
-                <button
+                {isRenter ? <button
                     disabled={isSwitching}
-                    onClick={onHandleClick}
+                    onClick={onSwitchLender}
                     type='button'
                     className="text-white disabled:cursor-not-allowed bg-primary rounded-full px-6 font-bold py-3 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer"
                 >
                     {
-                        isSwitching ? <Spinner /> : <>Switch to {isRenter ? 'Renter' : 'Lender'}</>
+                        isSwitching ? <Spinner /> : <>Switch to Lender</>
                     }
-                </button>
+                </button> :
+                    <button
+                        disabled={isSwitching}
+                        onClick={onSwitchRenter}
+                        type='button'
+                        className="text-white disabled:cursor-not-allowed bg-primary rounded-full px-6 font-bold py-3 hover:bg-cyan-500 border-b-[3px] hover:border-t-[3px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer"
+                    >
+                        {
+                            isSwitching ? <Spinner /> : <>Switch to Renter</>
+                        }
+                    </button>}
             </div>
         </section>
     );

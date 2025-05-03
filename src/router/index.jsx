@@ -31,7 +31,7 @@ export default function Router() {
             children: [
                 {
                     index: true,
-                    element: !isRenter ? <Navigate to="my-items" replace /> : <Navigate to="items-feed" replace />
+                    element: isRenter ? <Navigate to="items-feed" replace /> : <Navigate to="my-items" replace />
                 },
                 {
                     path: 'items-feed',

@@ -4,7 +4,7 @@ import { createContext, useContext, useReducer } from "react"
 const AppContext = createContext()
 
 const initialState = {
-    isRenter: false
+    isRenter: true
 }
 
 const appReducer = (state, action) => {

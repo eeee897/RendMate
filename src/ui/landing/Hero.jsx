@@ -10,10 +10,10 @@ export default function Hero() {
         <section id='home' className='hero'>
             <nav className="max-w-[1380px] px-4 py-6 mx-auto">
                 <div className="flex items-center justify-between">
-                    <div className='flex items-center gap-2'>
+                    <Link to={'/'} className='flex items-center gap-2'>
                         <img src={logo} alt="" />
                         <h1 className='text-darkViolet font-bold text-2xl'>RentMate</h1>
-                    </div>
+                    </Link>
 
                     <div className="hidden space-x-8 font-bold lg:flex">
                         <a href="#home" className="text-white hover:text-darkViolet transition duration-300">Home</a>
