@@ -1,4 +1,4 @@
-import { LayoutList, Hourglass, MessageSquareWarning, History, ArrowLeftRight, Headset, ShoppingBag } from 'lucide-react'
+import { LayoutList, Hourglass, MessageSquareWarning, History, ArrowLeftRight, Headset, ShoppingBag, BookOpen, CreditCard, HelpCircle, Layout, Server, Settings, Shield, Users, } from 'lucide-react'
 import Dike from '@/assets/item_images/bike.JPG'
 import Adidas from '@/assets/item_images/adidas.jpg'
 import Calculator from '@/assets/item_images/calculator.jpg'
@@ -649,5 +649,48 @@ export const messages = [
         image: NPC
     },
 ]
+
+export const helpSections = [
+    {
+        icon: <HelpCircle className="text-purple-500 w-6 h-6" />,
+        title: 'Getting Started',
+        desc: 'Start off on the right foot! Not the left one!',
+    },
+    {
+        icon: <Settings className="text-blue-500 w-6 h-6" />,
+        title: 'Account Settings',
+        desc: 'You’re a special snowflake and so is your account',
+    },
+    {
+        icon: <CreditCard className="text-green-500 w-6 h-6" />,
+        title: 'Billing',
+        desc: 'That feel when you look at your bank account',
+    },
+    {
+        icon: <Layout className="text-pink-500 w-6 h-6" />,
+        title: 'Interface',
+        desc: 'What does this button do?',
+    },
+    {
+        icon: <Shield className="text-red-500 w-6 h-6" />,
+        title: 'Trust & Safety',
+        desc: 'Keep things safe & sound for you and your buddies',
+    },
+    {
+        icon: <BookOpen className="text-indigo-500 w-6 h-6" />,
+        title: 'F.A.Q',
+        desc: 'All you can eat self-serve problem solving',
+    },
+    {
+        icon: <Users className="text-violet-500 w-6 h-6" />,
+        title: 'Community',
+        desc: 'Bringing people together from all over the world',
+    },
+    {
+        icon: <Server className="text-pink-600 w-6 h-6" />,
+        title: 'Server Setup',
+        desc: 'Almost as exciting as interior decorating',
+    },
+];
 
 
