@@ -31,7 +31,7 @@ export default function NeedHelpPage() {
                 />
             </div>
 
-            <div className="max-w-6xl mx-auto">
+            <div className="">
                 <h2 className="text-2xl font-bold text-slate-800 mb-2">
                     Need help? We've got your back
                 </h2>
