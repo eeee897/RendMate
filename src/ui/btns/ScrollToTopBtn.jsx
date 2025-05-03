@@ -8,7 +8,10 @@ export default function ScrollTopBtn({ scrollContainerRef }) {
         const el = scrollContainerRef?.current || window;
 
         const handleScroll = () => {
-            setShowBtn(el.scrollTop > 50 || window.scrollY > 50);
+            const scrollTop = scrollContainerRef?.current
+                ? scrollContainerRef.current.scrollTop
+                : window.scrollY;
+            setShowBtn(scrollTop > 50);
         };
 
         el.addEventListener('scroll', handleScroll);
@@ -16,10 +19,11 @@ export default function ScrollTopBtn({ scrollContainerRef }) {
     }, [scrollContainerRef]);
 
     const scrollToTop = () => {
-        scrollContainerRef?.current?.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+        if (scrollContainerRef?.current) {
+            scrollContainerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     };
 
     return (
