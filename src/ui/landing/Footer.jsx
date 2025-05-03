@@ -4,6 +4,7 @@ import twitter from '@/assets/icon-twitter.svg'
 import pinterest from '@/assets/icon-pinterest.svg'
 import logo from '@/assets/rentmate_logo.png'
 import { Link } from 'react-router-dom'
+import Copyright from '../Copyright'
 
 export default function Footer() {
     return (
@@ -50,19 +51,22 @@ export default function Footer() {
                 </div>
 
 
-                <div className="flex items-center space-x-6">
-                    <Link to={'/coming-soon'} className="">
-                        <img src={facebook} alt="" className="ficon" />
-                    </Link>
-                    <Link to={'/coming-soon'} className="">
-                        <img src={instagram} alt="" className="ficon" />
-                    </Link>
-                    <Link to={'/coming-soon'} className="">
-                        <img src={twitter} alt="" className="ficon" />
-                    </Link>
-                    <Link to={'/coming-soon'} className="">
-                        <img src={pinterest} alt="" className="ficon" />
-                    </Link>
+                <div className='flex flex-col items-center md:items-start gap-4'>
+                    <div className="flex items-center space-x-6">
+                        <Link to={'/coming-soon'} className="">
+                            <img src={facebook} alt="" className="ficon" />
+                        </Link>
+                        <Link to={'/coming-soon'} className="">
+                            <img src={instagram} alt="" className="ficon" />
+                        </Link>
+                        <Link to={'/coming-soon'} className="">
+                            <img src={twitter} alt="" className="ficon" />
+                        </Link>
+                        <Link to={'/coming-soon'} className="">
+                            <img src={pinterest} alt="" className="ficon" />
+                        </Link>
+                    </div>
+                    <Copyright textColor='text-white' />
                 </div>
             </div>
         </footer>

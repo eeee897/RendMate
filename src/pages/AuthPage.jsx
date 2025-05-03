@@ -5,7 +5,7 @@ import { useState } from 'react';
 import RegisterForm from '../ui/forms/RegisterForm';
 import logo from '@/assets/rentmate_logo.png';
 import signUp from '@/assets/animations/sign_up.lottie';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 export default function AuthPage() {
     const [searchParams] = useSearchParams()
@@ -24,12 +24,12 @@ export default function AuthPage() {
             </div>
             <div className="w-full xl:w-2/3 mx-auto">
                 <div className="flex flex-col space-y-2 max-w-md mx-auto mb-4">
-                    <div className='flex items-center gap-2'>
+                    <Link to={'/'} className='flex items-center gap-2'>
                         <img src={logo} alt="rentmade_logo" className="w-12 h-12" />
                         <p className="text-3xl font-bold text-darkViolet transition-colors dark:text-slate-50">
                             RentMate
                         </p>
-                    </div>
+                    </Link>
                     <h1 className="text-primary font-bold text-2xl tracking-wide">
                         {showLogIn ? 'Ready to Rent? Log In Here!' : 'Sign Up to Unlock Great Rentals!'}
                     </h1>

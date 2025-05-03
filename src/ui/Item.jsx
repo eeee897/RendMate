@@ -6,8 +6,10 @@ import CreateEditItemModal from './modal/CreateEditItemModal'
 import ImagePreviewModal from './modal/ImagePreviewModal'
 import Modal from './modal/Modal'
 import { Link } from 'react-router-dom'
+import { useApp } from '../context/AppContextProvider'
 
 export default function Item({ item }) {
+    const { isAuthenticated } = useApp()
 
     return (
         <Modal>
@@ -94,10 +96,10 @@ export default function Item({ item }) {
                             </>
                             :
                             <>
-                                <Link to={'/app/chats'}>
+                                <Link to={isAuthenticated ? '/app/chats' : '/auth'}>
                                     <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
                                 </Link>
-                                <Link to={'/app/status'} className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
+                                <Link to={isAuthenticated ? '/app/status' : '/auth'} className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
                                     Rent Now
                                 </Link>
                             </>

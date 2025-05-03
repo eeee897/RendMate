@@ -7,7 +7,7 @@ export default function StatusPage() {
         <section className='flex flex-col gap-2 '>
             <Title text={'Status'} />
             <div className='flex justify-end items-center'>
-                {/* <StatusOperations /> */}
+                <StatusOperations />
             </div>
             <StatusTable />
         </section>

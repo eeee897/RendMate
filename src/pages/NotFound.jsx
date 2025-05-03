@@ -12,7 +12,7 @@ export default function NotFound() {
                 style={{ width: '700px', height: '400px' }}
             />
             <h1 className='mb-3 max-w-2xl mx-auto'>You’re seeing this page because the page you’re looking for doesn’t exist.</h1>
-            <Link to={'/'} className='bg-primary px-5 hover:bg-cyan-500 transition duration-300 py-2 rounded-full text-white font-bold'>
+            <Link to={-1} className='bg-primary px-5 hover:bg-cyan-500 transition duration-300 py-2 rounded-full text-white font-bold'>
                 &larr; Go Back
             </Link>
         </div>

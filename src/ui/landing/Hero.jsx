@@ -58,8 +58,13 @@ export default function Hero() {
                                     <a href="#popular" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Popular</a>
                                     <a href="#features" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Features</a>
                                     <a href="#contact" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Contact</a>
-                                    <Link to="/auth" onClick={() => setIsMobMenuOpen(false)} className="w-full pt-6 text-center border-t border-gray-400">Login</Link>
-                                    <Link to="/auth?signup=true" onClick={() => setIsMobMenuOpen(false)} className="w-full text-center bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[4px] hover:border-t-[4px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">Sign Up</Link>
+                                    {
+                                        isAuthenticated ?
+                                            <Profile textColor="text-white" /> : <>
+                                                <Link to="/auth" onClick={() => setIsMobMenuOpen(false)} className="w-full pt-6 text-center border-t border-gray-400">Login</Link>
+                                                <Link to="/auth?signup=true" onClick={() => setIsMobMenuOpen(false)} className="w-full text-center bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[4px] hover:border-t-[4px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">Sign Up</Link>
+                                            </>
+                                    }
                                 </div>
                             </div>
                         )

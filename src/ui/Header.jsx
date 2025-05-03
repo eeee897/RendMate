@@ -3,6 +3,7 @@ import { ChevronsLeft } from "lucide-react";
 import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
+import toast from "react-hot-toast";
 
 export const Header = ({ collapsed, setCollapsed }) => {
     return (
@@ -21,7 +22,7 @@ export const Header = ({ collapsed, setCollapsed }) => {
                     <Link to={'/app/account'} className="btn-ghost">
                         <CiUser className="size-6 text-darkViolet" />
                     </Link>
-                    <button className="btn-ghost">
+                    <button type="button" onClick={() => toast.success('Will implement soon.')} className="btn-ghost">
                         <MoonIcon className="size-5 text-darkViolet" />
                     </button>
                 </div>

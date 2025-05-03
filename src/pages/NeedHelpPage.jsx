@@ -3,6 +3,7 @@ import { helpSections } from "../utils/constants";
 import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import support from '@/assets/animations/support.lottie'
+import Copyright from "../ui/Copyright";
 
 export default function NeedHelpPage() {
     return (
@@ -55,7 +56,7 @@ export default function NeedHelpPage() {
             </div>
 
             <div className="md:flex-row flex items-center flex-col justify-between space-y-2 md:space-y-0 md:space-x-2 mt-8">
-                <p>Copyright © {new Date().getFullYear()} RentMate. All rights reserved.</p>
+                <Copyright />
                 <div className="flex items-center gap-2">
                     <p className="font-black text-darkViolet">Other ways to find help: </p>
                     <div className="flex items-center gap-2">
