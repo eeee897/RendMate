@@ -97,7 +97,7 @@ Check out the live version of RentMate:
 1. **Clone the Repository**:
   
    ```bash  
-   git clone https://github.com/eee897/RentMate.git  
+   git clone https://github.com/fisheeesh/rentmate.git  
 3. **Install Dependencies**:
    ```bash  
    npm install
@@ -108,4 +108,4 @@ Check out the live version of RentMate:
    ```bash  
    npm run build
 ## License
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](LICENSE).
