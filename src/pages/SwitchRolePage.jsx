@@ -4,8 +4,10 @@ import { useApp } from '@/context/AppContextProvider'
 import { useState } from 'react';
 import Spinner from '../ui/Spinner';
 import { useNavigate } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function SwitchRolePage() {
+    usePageTitle('Switch Role')
     const { isRenter, dispatch } = useApp()
     const navigate = useNavigate()
     const [isSwitching, setIsSwitching] = useState(false)

@@ -4,8 +4,11 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import support from '@/assets/animations/support.lottie'
 import Copyright from "../ui/Copyright";
+import usePageTitle from "../hooks/usePageTitle";
 
 export default function NeedHelpPage() {
+    usePageTitle('Need Help')
+
     return (
         <section className="">
             <div className="flex items-center flex-col-reverse lg:flex-row justify-between gap-4 bg-white p-6 md:p-10 rounded-lg shadow text-center mb-12">

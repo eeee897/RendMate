@@ -1,10 +1,10 @@
-import facebook from '@/assets/icon-facebook.svg'
-import instagram from '@/assets/icon-instagram.svg'
-import twitter from '@/assets/icon-twitter.svg'
-import pinterest from '@/assets/icon-pinterest.svg'
-import logo from '@/assets/rentmate_logo.png'
+import facebook from '@/assets/socials/icon-facebook.svg'
+import instagram from '@/assets/socials/icon-instagram.svg'
+import twitter from '@/assets/socials/icon-twitter.svg'
+import pinterest from '@/assets/socials/icon-pinterest.svg'
 import { Link } from 'react-router-dom'
 import Copyright from '../Copyright'
+import Logo from '../Logo'
 
 export default function Footer() {
     return (
@@ -13,8 +13,7 @@ export default function Footer() {
                 className="container flex flex-col items-center justify-between mx-auto space-y-16 md:flex-row md:space-y-0 md:items-start">
 
                 <div className='flex items-center gap-2'>
-                    <img src={logo} alt="" />
-                    <h1 className='text-2xl font-bold text-white'>RentMate</h1>
+                    <Logo textColor='text-white' />
                 </div>
 
 

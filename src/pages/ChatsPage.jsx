@@ -3,8 +3,10 @@ import ChatBox from '../ui/ChatBox';
 import ChatsList from '../ui/ChatsList';
 import SelectChat from '../ui/SelectChat';
 import Title from '../ui/Title';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function ChatsPage() {
+    usePageTitle('Chats')
     const [isActive, setActive] = useState(null);
     const [showChatBox, setShowChatBox] = useState(false);
 

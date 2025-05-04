@@ -1,21 +1,22 @@
-import logo from '@/assets/rentmate_logo.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '@/context/AppContextProvider'
 import Profile from '../Profile';
+import Logo from '../Logo';
 
 export default function Hero() {
     const { isAuthenticated } = useApp()
     const [isMobMenuOpen, setIsMobMenuOpen] = useState(false);
 
+    useEffect(() => {
+
+    }, [])
+
     return (
         <section id='home' className='hero'>
             <nav className="max-w-[1380px] px-4 py-6 mx-auto">
                 <div className="flex items-center justify-between">
-                    <Link to={'/'} className='flex items-center gap-2'>
-                        <img src={logo} alt="" />
-                        <h1 className='text-darkViolet font-bold text-2xl'>RentMate</h1>
-                    </Link>
+                    <Logo textColor='text-white' />
 
                     <div className="hidden space-x-8 text-lg font-bold lg:flex">
                         <a href="#home" className="text-white hover:text-darkViolet transition duration-300">Home</a>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function ProfilePage() {
+    usePageTitle('Account')
     const [fullName, setFullName] = useState('');
     const [avatar, setAvatar] = useState(null);
     const [password, setPassword] = useState('');
