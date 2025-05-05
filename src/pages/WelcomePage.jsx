@@ -8,7 +8,7 @@ import ScrollTopBtn from '../ui/btns/ScrollToTopBtn';
 
 export default function Welcome() {
     return (
-        <main className='bg-slate-100'>
+        <main className='bg-slate-100 dark:bg-[#1a191d]'>
             <Hero />
             <PopularItems />
             <UserRole />

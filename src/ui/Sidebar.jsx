@@ -17,7 +17,7 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
         <aside
             ref={ref}
             className={cn(
-                "fixed z-[100] flex h-full w-[240px] flex-col overflow-x-hidden border-r border-slate-200 bg-white [transition:_width_300ms_cubic-bezier(0.4,_0,_0.2,_1),_left_300ms_cubic-bezier(0.4,_0,_0.2,_1),_background-color_150ms_cubic-bezier(0.4,_0,_0.2,_1),_border_150ms_cubic-bezier(0.4,_0,_0.2,_1)] dark:border-slate-700 dark:bg-slate-900",
+                "fixed z-[100] flex h-full w-[240px] flex-col overflow-x-hidden border-r border-slate-200 bg-white [transition:_width_300ms_cubic-bezier(0.4,_0,_0.2,_1),_left_300ms_cubic-bezier(0.4,_0,_0.2,_1),_background-color_150ms_cubic-bezier(0.4,_0,_0.2,_1),_border_150ms_cubic-bezier(0.4,_0,_0.2,_1)] dark:border-veryDarkBlue dark:bg-veryDarkViolet",
                 collapsed ? "md:w-[70px] md:items-center" : "md:w-[240px]",
                 collapsed ? "max-md:-left-full" : "max-md:left-0",
             )}
@@ -52,7 +52,7 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                 ))}
             </div>
 
-            <div className="p-3 border-t border-slate-200  dark:border-slate-700">
+            <div className="p-3 border-t border-slate-200  dark:border-veryDarkBlue">
                 <Modal>
                     <Modal.Opens open={'logout'}>
                         <button

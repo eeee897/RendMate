@@ -5,7 +5,7 @@ export default function Logo({ textColor = 'text-darkViolet' }) {
     return (
         <Link to={'/'} className='flex items-center gap-2'>
             <img src={logo} alt="rentmade_logo" className="w-12 h-12" />
-            <p className={`${textColor} text-2xl font-bold transition-colors`}>
+            <p className={`${textColor} text-2xl font-bold transition-colors dark:text-slate-50`}>
                 RentMate
             </p>
         </Link>

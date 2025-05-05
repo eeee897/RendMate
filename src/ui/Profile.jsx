@@ -8,7 +8,7 @@ export default function Profile({ textColor = 'text-darkViolet' }) {
     return (
         <Link to={'/app'} className="flex items-center gap-2">
             <img src={default_profile} alt="profile_image" className="w-8 h-8 rounded-full border border-slate-300" />
-            <h3 className={`${textColor} font-medium hover:text-primary transition duration-300`}>{user.username || 'User'}</h3>
+            <h3 className={`${textColor} font-medium text-darkViolet dark:text-slate-50 hover:text-primary transition duration-300`}>{user.username || 'User'}</h3>
         </Link>
     )
 }

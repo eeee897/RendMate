@@ -31,14 +31,14 @@ export default function LoginForm() {
     return (
         <form onSubmit={handleSubmit(onLoginUser)} className="space-y-4 flex flex-col max-w-md mx-auto">
             <div className="flex flex-col space-y-2">
-                <label htmlFor="email" className="text-darkViolet">Email <span className="text-red-600">*</span></label>
+                <label htmlFor="email" className="text-darkViolet dark:text-grayishViolet">Email <span className="text-red-600">*</span></label>
                 <input
                     disabled={isSubmitting}
                     id="email"
                     {...register('email')}
                     type="text"
                     placeholder="Enter your email"
-                    className={cn(errors.email ? 'border-red-600 focus:border-red-600' : 'border-slate-300 focus:border-primary', ' disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0 ')}
+                    className={cn(errors.email ? 'border-red-600 focus:border-red-600' : 'border-slate-300 dark:border-veryDarkBlue dark:focus:border-darkViolet focus:border-primary', ' dark:text-grayishViolet disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0')}
                 />
                 {
                     errors.email &&
@@ -49,7 +49,7 @@ export default function LoginForm() {
                 }
             </div>
             <div className="flex flex-col space-y-2">
-                <label htmlFor="password" className="text-darkViolet">
+                <label htmlFor="password" className="text-darkViolet dark:text-grayishViolet">
                     Password <span className="text-red-600">*</span>
                 </label>
 
@@ -60,12 +60,12 @@ export default function LoginForm() {
                         {...register('password')}
                         type={isVisible ? 'text' : 'password'}
                         placeholder="Enter your password"
-                        className={cn(errors.password ? 'border-red-600 focus:border-red-600' : 'border-slate-300 focus:border-primary', ' disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0 ')}
+                        className={cn(errors.password ? 'border-red-600 focus:border-red-600' : 'border-slate-300 dark:border-veryDarkBlue dark:focus:border-darkViolet focus:border-primary', ' dark:text-grayishViolet disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0')}
                     />
                     <button
                         onClick={() => setIsVisible(prev => !prev)}
                         type="button"
-                        className="absolute cursor-pointer right-3 top-3 text-slate-400"
+                        className="absolute cursor-pointer right-3 top-3 text-slate-400 dark:text-grayishViolet"
                     >
                         {isVisible ? <Eye className={cn('w-5 h-5', errors.password && 'text-red-600')} /> : <EyeOff className={cn('w-5 h-5', errors.password && 'text-red-600')} />}
                     </button>
@@ -79,7 +79,7 @@ export default function LoginForm() {
                 </div>
             </div>
             <div className="flex justify-end items-center">
-                <span className="text-xs text-gray-400 hover:text-gray-900 cursor-pointer transform duration-300">Forgot Passoword?</span>
+                <span className="text-xs text-gray-400 hover:text-gray-900 dark:hover:text-slate-300 cursor-pointer transform duration-300">Forgot Passoword?</span>
             </div>
             <button disabled={isSubmitting} type='submit' className="bg-primary disabled:cursor-not-allowed flex justify-center items-center gap-2 w-full font-bold text-white rounded-md px-6 py-2 cursor-pointer hover:bg-cyan-500 transition duration-300">
                 {isSubmitting && <Spinner />}

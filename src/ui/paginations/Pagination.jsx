@@ -26,14 +26,14 @@ export default function Pagination({ count }) {
     if (totalPage === 1) return null
 
     return (
-        <div className='flex items-center justify-between gap-2'>
+        <div className='flex items-center justify-between gap-2 dark:text-slate-50'>
             <p>Showing <span className='font-bold'>{(currentPage - 1) * PAGE_SIZE + 1}</span> to <span className='font-bold'>{isLast ? count : currentPage * PAGE_SIZE}</span> of <span className='font-bold'>{count}</span> results</p>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 '>
                 <button
                     disabled={isFirst}
                     onClick={prevPage}
                     type='button'
-                    className='flex px-2 disabled:cursor-not-allowed disabled:hover:bg-slate-100 disabled:hover:text-darkViolet transition duration-300 py-1 rounded-md hover:bg-primary hover:text-white text-darkViolet font-bold items-center gap-2 cursor-pointer'
+                    className='flex px-2 dark:disabled:hover:bg-[#1a191d] dark:disabled:hover:text-slate-50 dark:text-slate-50 disabled:cursor-not-allowed disabled:hover:bg-slate-100 disabled:hover:text-darkViolet transition duration-300 py-1 rounded-md hover:bg-primary hover:text-white text-darkViolet font-bold items-center gap-2 cursor-pointer'
                 >
                     <ChevronLeft />
                     Previous
@@ -42,7 +42,7 @@ export default function Pagination({ count }) {
                     disabled={isLast}
                     onClick={nextPage}
                     type='button'
-                    className='flex px-2 disabled:cursor-not-allowed disabled:hover:bg-slate-100 disabled:hover:text-darkViolet transition duration-300 py-1 rounded-md hover:bg-primary hover:text-white text-darkViolet font-bold items-center gap-2 cursor-pointer'
+                    className='flex px-2 dark:disabled:hover:bg-[#1a191d] dark:disabled:hover:text-slate-50 dark:text-slate-50 disabled:cursor-not-allowed disabled:hover:bg-slate-100 disabled:hover:text-darkViolet transition duration-300 py-1 rounded-md hover:bg-primary hover:text-white text-darkViolet font-bold items-center gap-2 cursor-pointer'
                 >
                     Next
                     <ChevronRight />

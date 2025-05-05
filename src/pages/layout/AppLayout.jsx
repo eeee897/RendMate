@@ -27,7 +27,7 @@ const AppLayout = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-slate-100 transition-colors dark:bg-slate-950">
+            <div className="min-h-screen bg-slate-100 transition-colors dark:bg-[#1a191d]">
                 <div
                     className={cn(
                         "pointer-events-none fixed inset-0 -z-10 bg-black opacity-0 transition-opacity",

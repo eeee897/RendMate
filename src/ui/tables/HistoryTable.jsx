@@ -17,7 +17,7 @@ export default function HistoryTable() {
 
     return (
         <>
-            <div className="relative w-full overflow-auto rounded-lg border border-grayishViolet [scrollbar-width:_thin]">
+            <div className="relative w-full overflow-auto rounded-lg border dark:border-veryDarkBlue border-grayishViolet [scrollbar-width:_thin]">
                 <table className="table">
                     <thead className="table-header">
                         <tr>

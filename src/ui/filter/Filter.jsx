@@ -12,7 +12,7 @@ export default function Filter({ filterField, options }) {
     }
 
     return (
-        <div className="p-[5px] border shadow-sm border-slate-300 rounded-lg flex items-center gap-2">
+        <div className="p-[5px] border shadow-sm border-slate-300 dark:border-veryDarkBlue rounded-lg flex items-center gap-2">
             {
                 options.map(opt => (
                     <button
@@ -20,7 +20,7 @@ export default function Filter({ filterField, options }) {
                         disabled={opt.value === currentValue}
                         onClick={() => handleClick(opt.value)}
                         type="button"
-                        className={`${currentValue === opt.value && 'bg-primary text-white'} hover:bg-primary hover:text-white transition duration-300 disabled:cursor-not-allowed px-2 font-medium rounded-md cursor-pointer`}
+                        className={`${currentValue === opt.value && 'bg-primary text-white'} dark:text-slate-50 hover:bg-primary hover:text-white transition duration-300 disabled:cursor-not-allowed px-2 font-medium rounded-md cursor-pointer`}
                     >
                         {opt.label}
                     </button>

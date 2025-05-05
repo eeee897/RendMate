@@ -40,10 +40,10 @@ export default function SwitchRolePage() {
             </div>
 
             <div className='max-w-md'>
-                <h2 className='text-2xl font-bold text-darkViolet mb-2'>
+                <h2 className='text-2xl font-bold text-darkViolet mb-2 dark:text-slate-50'>
                     Ready to switch?
                 </h2>
-                <p className='text-gray-600 mb-6'>
+                <p className='text-gray-600 mb-6 dark:text-grayishViolet'>
                     {
                         isRenter ? (
                             <>

@@ -12,11 +12,11 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
     if (type === 'disabled') confirm = { title: "Disable", subTitle: `disable "${name}"` }
 
     return (
-        <div className='bg-slate-50 p-5 rounded-lg w-[450px]'>
-            <h1 className={`${type === 'logout' ? 'text-primary' : 'text-red-600'} font-bold text-2xl border-b border-gray-200 pb-4 mb-4`}>{confirm.title} Confirmation.</h1>
-            <p className='text-darkViolet font-medium text-lg'>Are you sure you want to {confirm.subTitle}?</p>
+        <div className='bg-slate-50 p-5 rounded-lg w-[450px] dark:bg-veryDarkViolet'>
+            <h1 className={`${type === 'logout' ? 'text-primary' : 'text-red-600'} font-bold text-2xl dark:border-veryDarkBlue  border-b border-gray-200 pb-4 mb-4`}>{confirm.title} Confirmation.</h1>
+            <p className='text-darkViolet font-medium text-lg dark:text-slate-50'>Are you sure you want to {confirm.subTitle}?</p>
             <div className='flex items-center justify-end gap-2 mt-6'>
-                <button onClick={onCloseModal} type='button' className='px-4 py-2 border rounded-lg font-bold text-darkViolet border-gray-400 cursor-pointer hover:bg-darkViolet hover:text-slate-50 transition duration-300 hover:border-darkViolet'>
+                <button onClick={onCloseModal} type='button' className='px-4 py-2 dark:border-gray-500 border rounded-lg dark:text-slate-50 font-bold text-darkViolet border-gray-400 cursor-pointer hover:bg-darkViolet hover:text-slate-50 transition duration-300 hover:border-darkViolet'>
                     Cancel
                 </button>
                 <button

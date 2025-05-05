@@ -31,14 +31,14 @@ export default function RegisterForm() {
     return (
         <form onSubmit={handleSubmit(onRegisterUser)} className="space-y-4 flex flex-col max-w-md mx-auto">
             <div className="flex flex-col space-y-2">
-                <label htmlFor="fullName" className="text-darkViolet">FullName <span className="text-red-600">*</span></label>
+                <label htmlFor="fullName" className="text-darkViolet dark:text-grayishViolet">FullName <span className="text-red-600">*</span></label>
                 <input
                     disabled={isSubmitting}
                     id="fullName"
                     {...register('username')}
                     type="text"
                     placeholder="Enter your full name"
-                    className={cn(errors.username ? 'border-red-600 focus:border-red-600' : 'border-slate-300 focus:border-primary', ' disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0 ')}
+                    className={cn(errors.username ? 'border-red-600 focus:border-red-600' : 'border-slate-300 dark:border-veryDarkBlue dark:focus:border-darkViolet focus:border-primary', ' dark:text-grayishViolet disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0')}
                 />
                 {
                     errors.username &&
@@ -49,14 +49,14 @@ export default function RegisterForm() {
                 }
             </div>
             <div className="flex flex-col space-y-2">
-                <label htmlFor="email" className="text-darkViolet">Email <span className="text-red-600">*</span></label>
+                <label htmlFor="email" className="text-darkViolet dark:text-grayishViolet">Email <span className="text-red-600">*</span></label>
                 <input
                     disabled={isSubmitting}
                     id="email"
                     {...register('email')}
                     type="email"
                     placeholder="Enter your email"
-                    className={cn(errors.email ? 'border-red-600 focus:border-red-600' : 'border-slate-300 focus:border-primary', ' disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0 ')}
+                    className={cn(errors.email ? 'border-red-600 focus:border-red-600' : 'border-slate-300 dark:border-veryDarkBlue dark:focus:border-darkViolet focus:border-primary', ' dark:text-grayishViolet disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0')}
                 />
                 {
                     errors.email &&
@@ -67,7 +67,7 @@ export default function RegisterForm() {
                 }
             </div>
             <div className="flex flex-col space-y-2">
-                <label htmlFor="password" className="text-darkViolet">
+                <label htmlFor="password" className="text-darkViolet dark:text-grayishViolet">
                     Password <span className="text-red-600">*</span>
                 </label>
 
@@ -78,12 +78,12 @@ export default function RegisterForm() {
                         {...register('password')}
                         type={isVisible ? 'text' : 'password'}
                         placeholder="Enter your password"
-                        className={cn(errors.password ? 'border-red-600 focus:border-red-600' : 'border-slate-300 focus:border-primary', ' disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0 ')}
+                        className={cn(errors.password ? 'border-red-600 focus:border-red-600' : 'border-slate-300 dark:border-veryDarkBlue dark:focus:border-darkViolet focus:border-primary', ' dark:text-grayishViolet disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0')}
                     />
                     <button
                         onClick={() => setIsVisible(prev => !prev)}
                         type="button"
-                        className="absolute cursor-pointer right-3 top-3 text-slate-400"
+                        className="absolute cursor-pointer right-3 top-3 text-slate-400 dark:text-grayishViolet"
                     >
                         {isVisible ? <Eye className="w-5 h-5" /> : <EyeOff className="w-5 h-5" />}
                     </button>
@@ -97,7 +97,7 @@ export default function RegisterForm() {
                 </div>
             </div>
             <div className="flex flex-col space-y-2">
-                <label htmlFor="confirmPassword" className="text-darkViolet">
+                <label htmlFor="confirmPassword" className="text-darkViolet dark:text-grayishViolet">
                     Confirm Password <span className="text-red-600">*</span>
                 </label>
 
@@ -108,12 +108,12 @@ export default function RegisterForm() {
                         {...register('passwordConfirm')}
                         type={isVisible ? 'text' : 'password'}
                         placeholder="Repeat your password"
-                        className={cn(errors.passwordConfirm ? 'border-red-600 focus:border-red-600' : 'border-slate-300 focus:border-primary', ' disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0 ')}
+                        className={cn(errors.passwordConfirm ? 'border-red-600 focus:border-red-600' : 'border-slate-300 dark:border-veryDarkBlue dark:focus:border-darkViolet focus:border-primary', ' dark:text-grayishViolet disabled:cursor-not-allowed w-full px-3 py-2 transition-all duration-500 border rounded-md focus:outline-0')}
                     />
                     <button
                         onClick={() => setIsVisible(prev => !prev)}
                         type="button"
-                        className="absolute cursor-pointer right-3 top-3 text-slate-400"
+                        className="absolute cursor-pointer right-3 top-3 text-slate-400 dark:text-grayishViolet"
                     >
                         {isVisible ? <Eye className="w-5 h-5" /> : <EyeOff className="w-5 h-5" />}
                     </button>

@@ -26,7 +26,7 @@ export default function NumberPagination({ count }) {
             <button
                 onClick={prevPage}
                 disabled={isFirst}
-                className={`flex w-7 h-7 items-center justify-center border rounded-md text-sm font-bold 
+                className={`flex w-7 h-7 disabled:border-gray-600 items-center justify-center border rounded-md text-sm font-bold 
                     ${isFirst ? "cursor-not-allowed text-gray-400 border-gray-300" : "cursor-pointer border-gray-600 text-gray-600 hover:bg-primary hover:text-white hover:border-primary"}`}
             >
                 <ChevronLeft className="w-4 h-4" />
@@ -37,7 +37,7 @@ export default function NumberPagination({ count }) {
                     <span
                         key={page}
                         onClick={() => goToPage(page)}
-                        className={`h-7 w-7 flex items-center justify-center rounded-md text-sm font-bold border 
+                        className={`h-7 w-7 flex dark:text-slate-50  items-center justify-center rounded-md text-sm font-bold border 
                             ${page === currentPage
                                 ? "bg-primary text-white border-primary"
                                 : "text-gray-600 border-gray-600 cursor-pointer hover:bg-primary hover:text-white hover:border-primary"
@@ -51,7 +51,7 @@ export default function NumberPagination({ count }) {
             <button
                 onClick={nextPage}
                 disabled={isLast}
-                className={`flex w-7 h-7 items-center justify-center border rounded-md text-sm font-bold 
+                className={`flex w-7 h-7 disabled:border-gray-600 items-center justify-center border rounded-md text-sm font-bold 
                     ${isLast ? "cursor-not-allowed text-gray-400 border-gray-300" : "cursor-pointer border-gray-600 text-gray-600 hover:bg-primary hover:text-white hover:border-primary"}`}
             >
                 <ChevronRight className="w-4 h-4" />

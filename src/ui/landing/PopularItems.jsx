@@ -12,9 +12,9 @@ export default function PopularItems() {
 
     return (
         <section id='popular' className="max-w-[1380px] px-4 mx-auto py-16 text-center">
-            <h3 className="text-4xl font-bold mb-10 text-darkViolet">Our popular items</h3>
+            <h3 className="text-4xl font-bold mb-10 text-darkViolet dark:text-slate-50">Our popular items</h3>
             <Menus>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {
                         popularItems?.map(item => (
                             <Item key={item.id} item={item} />
@@ -25,7 +25,7 @@ export default function PopularItems() {
             <button
                 type='button'
                 onClick={() => isAuthenticated ? navigate('/app') : navigate('/auth')}
-                className='text-darkViolet px-6 py-2.5 cursor-pointer hover:text-slate-50 hover:bg-darkViolet transition duration-300 font-bold rounded-full border-[1.5px] border-darkViolet mt-5'>See More</button>
+                className='text-darkViolet px-6 py-2.5 dark:border-veryDarkBlue dark:hover:border-darkViolet dark:text-grayishViolet cursor-pointer hover:text-slate-50 hover:bg-darkViolet transition duration-300 font-bold rounded-full border-[1.5px] border-darkViolet mt-5'>See More</button>
         </section>
     )
 }

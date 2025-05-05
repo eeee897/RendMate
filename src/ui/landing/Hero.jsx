@@ -1,8 +1,9 @@
+import { useApp } from '@/context/AppContextProvider';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useApp } from '@/context/AppContextProvider'
-import Profile from '../Profile';
 import Logo from '../Logo';
+import Profile from '../Profile';
+import UserPanel from '../UserPanel';
 
 export default function Hero() {
     const { isAuthenticated } = useApp()
@@ -28,7 +29,7 @@ export default function Hero() {
                     <div className="items-center hidden space-x-6 text-lg font-bold lg:flex text-grayishViolet">
                         {
                             isAuthenticated ? (
-                                <Profile />
+                                <UserPanel />
                             ) : (
                                 <>
                                     <Link to={'/auth'} className="text-veryDarkViolet cursor-pointer hover:text-white transition duration-300">Login</Link>

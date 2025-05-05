@@ -13,11 +13,11 @@ export default function Item({ item }) {
 
     return (
         <Modal>
-            <div className='p-2 bg-slate-50 flex items-center gap-2.5 rounded-xl border border-slate-300'>
+            <div className='p-2 bg-slate-50 flex dark:text-slate-50 gap-2.5 rounded-xl border border-slate-300 dark:bg-veryDarkViolet dark:border-veryDarkBlue'>
                 {/* Image */}
-                <div className='w-64 h-full bg-cyanLight rounded-s-lg'>
+                <div className='w-64 bg-cyan-500 rounded-s-lg'>
                     <Modal.Opens open={'image-preview'}>
-                        <img src={item.image} className='object-center h-full cursor-pointer hover:scale-105 transition duration-300 rounded-s-lg' alt={`${item.name}_image`} />
+                        <img src={item.image} className='w-full h-full object-center cursor-pointer hover:scale-105 transition duration-300 rounded-s-lg' alt={`${item.name}_image`} />
                     </Modal.Opens>
 
                     <Modal.Window name={'image-preview'} padding={false}>
@@ -27,7 +27,7 @@ export default function Item({ item }) {
                 {/* Info */}
                 <div className='flex flex-col gap-2 w-full'>
                     <div className='flex items-center justify-between gap-2'>
-                        <h1 className='font-bold text-start text-darkViolet sm:text-xl text-lg md:text-2xl'>{item.name}</h1>
+                        <h1 className='font-bold text-start text-darkViolet dark:text-slate-50 sm:text-xl text-lg md:text-2xl'>{item.name}</h1>
 
                         <div className='flex items-center gap-0.5'>
                             <span className={`${item.usage === 'Available' ? 'bg-green-600' : 'bg-yellow-600'} text-[11px] md:text-xs rounded-lg px-2 py-0.5 text-white`}>{item.usage}</span>
@@ -54,10 +54,10 @@ export default function Item({ item }) {
                             </Modal.Window>
                         </div>
                     </div>
-                    <p className='text-[11px] text-start md:text-xs italic font-thin text-gray-500'>"{item.description}"</p>
+                    <p className='text-[11px] text-start md:text-xs italic dark:text-grayishViolet font-thin text-gray-500'>"{item.description}"</p>
                     <div className='flex items-center gap-2'>
-                        <CurrencyDollarIcon className='w-7 text-yellow-600' />
-                        <p className='md:text-xl text-base sm:text-lg font-bold text-darkViolet'>{item.rentalPrice} THB per day</p>
+                        <CurrencyDollarIcon className='w-5 lg:w-7 text-yellow-600' />
+                        <p className='lg:text-xl truncate text-start text-lg font-bold text-darkViolet dark:text-slate-50'>{item.rentalPrice} THB per day</p>
                     </div>
                     <div className='flex items-center gap-2'>
                         <HandThumbUpIcon className='w-5 text-blue-500' />
@@ -97,7 +97,7 @@ export default function Item({ item }) {
                             :
                             <>
                                 <Link to={isAuthenticated ? '/app/chats' : '/auth'}>
-                                    <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
+                                    <ChatBubbleOvalLeftEllipsisIcon className='w-7 h-7 hover:bg-slate-300 text-darkViolet dark:bg-grayishViolet transition duration-200 p-1.5 bg-slate-200 rounded-full cursor-pointer' />
                                 </Link>
                                 <Link to={isAuthenticated ? '/app/status' : '/auth'} className='px-4 p-1.5 bg-primary rounded-full text-sm hover:bg-cyan-500 border-b-[3px] border-b-cyan-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-cyan-500'>
                                     Rent Now
