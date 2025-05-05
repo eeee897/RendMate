@@ -33,10 +33,10 @@ export default function ImageDropDown() {
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
                 onClick={() => inputRef.current.click()}
-                className="flex flex-col items-center justify-center h-56 px-22 mb-4 border border-primary border-dashed rounded-md cursor-pointer bg-slate-100 dark:bg-slate-700 dark:text-slate-50"
+                className="flex flex-col items-center justify-center h-56 px-22 mb-4 border border-primary border-dashed rounded-md cursor-pointer bg-slate-100 dark:bg-veryDarkViolet dark:text-slate-50"
             >
-                <Image className="mb-2 text-gray-400 size-25" />
-                <p className="text-sm text-gray-600 dark:text-slate-50">
+                <Image className="mb-2 text-gray-400 size-25 dark:text-grayishViolet" />
+                <p className="text-sm text-gray-600 dark:text-grayishViolet">
                     <span className='text-red-600'>*</span> Upload Image or <span className="text-primary underline">choose file </span>
                 </p>
                 <input

@@ -47,7 +47,7 @@ const List = ({ id, children }) => {
 
     return createPortal(
         <ul
-            className="fixed z-50 border rounded-md shadow-md bg-slate-50 border-slate-300 dark:bg-slate-900 dark:border-slate-700"
+            className="fixed z-50 border rounded-md shadow-md bg-slate-50 border-slate-300 dark:bg-veryDarkViolet dark:border-veryDarkBlue"
             style={{
                 top: position?.y,
                 right: position?.x,
@@ -70,7 +70,7 @@ const Button = ({ icon, children, onClick }) => {
     }
 
     return <li>
-        <button type="button" className="flex items-center cursor-pointer w-full gap-2 px-4 py-1 text-sm transition-all duration-200 border-none dark:text-slate-50 hover:rounded-md bg-none dark:hover:bg-slate-600 hover:bg-gray-100 " onClick={handleClick}>
+        <button type="button" className="flex items-center cursor-pointer w-full gap-2 px-4 py-1 text-sm transition-all duration-200 border-none dark:text-slate-50 hover:rounded-sm bg-none dark:hover:bg-veryDarkBlue hover:bg-gray-200 " onClick={handleClick}>
             {icon}
             <span>{children}</span>
         </button>

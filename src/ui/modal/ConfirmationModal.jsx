@@ -12,7 +12,7 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
     if (type === 'disabled') confirm = { title: "Disable", subTitle: `disable "${name}"` }
 
     return (
-        <div className='bg-slate-50 p-5 rounded-lg w-[450px] dark:bg-veryDarkViolet'>
+        <div className='bg-slate-50 p-5 rounded-lg lg:w-[450px] dark:bg-veryDarkViolet'>
             <h1 className={`${type === 'logout' ? 'text-primary' : 'text-red-600'} font-bold text-2xl dark:border-veryDarkBlue  border-b border-gray-200 pb-4 mb-4`}>{confirm.title} Confirmation.</h1>
             <p className='text-darkViolet font-medium text-lg dark:text-slate-50'>Are you sure you want to {confirm.subTitle}?</p>
             <div className='flex items-center justify-end gap-2 mt-6'>
