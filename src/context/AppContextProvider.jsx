@@ -6,7 +6,8 @@ const AppContext = createContext()
 const initialState = {
     user: {},
     isAuthenticated: false,
-    isRenter: true
+    isRenter: true,
+    isVerified: false
 }
 
 const appReducer = (state, action) => {
@@ -15,6 +16,8 @@ const appReducer = (state, action) => {
             return { ...state, user: action.payload, isAuthenticated: true }
         case "app/swithRole":
             return { ...state, isRenter: !state.isRenter }
+        case 'app/verified':
+            return { ...state, isVerified: true }
         case "app/log-out":
             return initialState
         default:
@@ -23,10 +26,10 @@ const appReducer = (state, action) => {
 }
 
 export default function AppContextProvider({ children }) {
-    const [{ user, isAuthenticated, isRenter }, dispatch] = useReducer(appReducer, initialState)
+    const [{ user, isAuthenticated, isRenter, isVerified }, dispatch] = useReducer(appReducer, initialState)
 
     return (
-        <AppContext.Provider value={{ user, isAuthenticated, isRenter, dispatch }}>
+        <AppContext.Provider value={{ user, isAuthenticated, isRenter, isVerified, dispatch }}>
             {children}
         </AppContext.Provider>
     )

@@ -23,7 +23,7 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
                     onClick={
                         type === 'logout' ? () => {
                             dispatch({ type: 'app/log-out' })
-                            navigate('/')
+                            navigate('/', { replace: true })
                             onCloseModal()
                         } : () => {
                             toast.success('Action performed successfully.')

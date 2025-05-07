@@ -36,7 +36,7 @@ const Window = ({ children, name }) => {
 
     const modalRef = useClickOutside(() => {
         if (!isClosing) closeWithAnimation()
-    })
+    },)
 
     if (openName !== name && !isClosing) return null
 

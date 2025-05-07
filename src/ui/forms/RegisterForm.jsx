@@ -25,7 +25,7 @@ export default function RegisterForm() {
     const onRegisterUser = async (data) => {
         await new Promise(resolve => setTimeout(resolve, 2000))
         dispatch({ type: 'app/log-in', payload: data })
-        navigate('/app')
+        navigate('/app', { replace: true })
     }
 
     return (

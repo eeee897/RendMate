@@ -81,7 +81,7 @@ Accessible only when the user is authenticated:
 - [ ] Full Supabase backend (auth, real-time DB, storage).
 - [ ] Review and rating system improvement.
 - [ ] Admin panel for platform moderation.
-- [✔️] Dark/Light mode toggle.
+- [ ✔️ ] Dark/Light mode toggle.
 
 ---
 

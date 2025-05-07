@@ -15,7 +15,7 @@ export default function Item({ item }) {
         <Modal>
             <div className='p-2 bg-slate-50 flex dark:text-slate-50 gap-2.5 rounded-xl border border-slate-300 dark:bg-veryDarkViolet dark:border-veryDarkBlue'>
                 {/* Image */}
-                <div className='w-64 bg-cyan-500 rounded-s-lg'>
+                <div className='w-64 bg-grayishViolet rounded-s-lg'>
                     <Modal.Opens open={'image-preview'}>
                         <img src={item.image} className='w-full h-full object-center cursor-pointer hover:scale-105 transition duration-300 rounded-s-lg' alt={`${item.name}_image`} />
                     </Modal.Opens>

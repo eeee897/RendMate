@@ -19,7 +19,7 @@ import {
 import { useApp } from '@/context/AppContextProvider'
 
 export default function Router() {
-    const { isRenter } = useApp()
+    const { isRenter, isAuthenticated } = useApp()
 
     const router = createBrowserRouter([
         {
@@ -28,7 +28,7 @@ export default function Router() {
         },
         {
             path: '/app',
-            element: <AppLayout />,
+            element: isAuthenticated ? <AppLayout /> : <Navigate to="/auth" replace />,
             errorElement: <ErrorElement />,
             children: [
                 {

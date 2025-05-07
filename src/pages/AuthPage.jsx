@@ -1,18 +1,26 @@
 import login from '@/assets/animations/login.lottie';
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import LoginForm from "../ui/forms/LoginForm";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import RegisterForm from '../ui/forms/RegisterForm';
 import Logo from '@/ui/Logo'
 import signUp from '@/assets/animations/sign_up.lottie';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import usePageTitle from '../hooks/usePageTitle';
+import { useApp } from '../context/AppContextProvider';
 
 export default function AuthPage() {
     usePageTitle('Auth')
+    const { isAuthenticated } = useApp();
+    const navigate = useNavigate()
     const [searchParams] = useSearchParams()
 
     const [showLogIn, setShowLogIn] = useState(searchParams.get('signup') === 'true' ? false : true);
+
+    useEffect(() => {
+        if (isAuthenticated) navigate('/app', { replace: true });
+    }, [isAuthenticated, navigate]);
+
 
     return (
         <section className="w-full flex flex-col justify-center min-h-screen p-6 md:flex-row items-center gap-2 dark:bg-[#1a191d] bg-slate-100">
