@@ -35,7 +35,7 @@ export default function VerificationProcessModal({ onCloseModal }) {
                             {currentStep > step.id ? '✓' : step.id}
                         </div>
                         {/* Step Label */}
-                        <p className="mt-2 text-[10px] sm:text-xs text-center text-darkViolet dark:text-grayishViolet font-bold">{step.label}</p>
+                        <p className="mt-2 text-[8px] md:text-xs text-center text-darkViolet dark:text-grayishViolet font-bold">{step.label}</p>
 
                         {/* Connector Line */}
                         {idx < steps.length - 1 && (
@@ -70,7 +70,7 @@ export default function VerificationProcessModal({ onCloseModal }) {
                             src={celebrate}
                             loop
                             autoplay
-                            style={{ width: '350px', height: '200px' }}
+                            style={{ width: '300px', height: '180px' }}
                         />
                         <div>
                             <h2 className="text-2xl font-bold text-green-600">Verification Completed.</h2>

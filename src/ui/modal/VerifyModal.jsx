@@ -17,7 +17,7 @@ export default function VerifyModal() {
                 src={verify}
                 loop
                 autoplay
-                style={{ width: '350px', height: '200px' }}
+                style={{ width: '300px', height: '220px' }}
             />
             <h1 className='text-2xl text-darkViolet dark:text-white font-bold'>Verify your account.</h1>
             <p className='max-w-xs text-sm mx-auto dark:text-grayishViolet text-veryDarkBlue text-center pb-4'>

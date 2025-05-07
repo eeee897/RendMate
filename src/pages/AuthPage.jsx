@@ -35,7 +35,7 @@ export default function AuthPage() {
             <div className="w-full xl:w-2/3 mx-auto">
                 <div className="flex flex-col space-y-2 max-w-md mx-auto mb-4">
                     <Logo />
-                    <h1 className="text-primary font-bold text-2xl tracking-wide">
+                    <h1 className="text-primary font-bold text-lg md:text-2xl tracking-wide">
                         {showLogIn ? 'Ready to Rent? Log In Here!' : 'Sign Up to Unlock Great Rentals!'}
                     </h1>
                 </div>
