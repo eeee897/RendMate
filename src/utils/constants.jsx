@@ -1,4 +1,4 @@
-import { LayoutList, Hourglass, MessageSquareWarning, History, ArrowLeftRight, Headset, ShoppingBag, BookOpen, CreditCard, HelpCircle, Layout, Server, Settings, Shield, Users, } from 'lucide-react'
+import { LayoutList, Hourglass, MessageSquareWarning, History, ArrowLeftRight, Headset, ShoppingBag, BookOpen, CreditCard, HelpCircle, Layout, Server, Settings, Shield, Users, LayoutDashboard, } from 'lucide-react'
 import Dike from '@/assets/item_images/bike.JPG'
 import Adidas from '@/assets/item_images/adidas.jpg'
 import Calculator from '@/assets/item_images/calculator.jpg'
@@ -31,11 +31,6 @@ export const navbarLinksRenter = [
                 icon: ShoppingBag,
                 path: 'items-feed'
             },
-            // {
-            //     label: "My Items",
-            //     icon: LayoutList,
-            //     path: "my-items",
-            // },
             {
                 label: "Status",
                 icon: Hourglass,
@@ -67,11 +62,11 @@ export const navbarLinksRenter = [
 export const navbarLinksLender = [
     {
         links: [
-            // {
-            //     label: 'ItemsNewFeed',
-            //     icon: ShoppingBag,
-            //     path: 'items-feed'
-            // },
+            {
+                label: 'Dashboard',
+                icon: LayoutDashboard,
+                path: 'dashboard'
+            },
             {
                 label: "My Items",
                 icon: LayoutList,
@@ -119,7 +114,8 @@ export const items = [
         usage: 'Taken',
         rating: 3.0,
         ownerId: true,
-        condition: 'Like New'
+        condition: 'Like New',
+        status: 'Normal'
     },
     {
         id: 2,
@@ -133,7 +129,8 @@ export const items = [
         usage: 'Available',
         rating: 2.5,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 3,
@@ -147,7 +144,8 @@ export const items = [
         usage: 'Available',
         rating: 4.0,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'One Time Used',
+        status: 'Normal'
     },
     {
         id: 4,
@@ -161,7 +159,8 @@ export const items = [
         usage: 'Taken',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 5,
@@ -175,7 +174,8 @@ export const items = [
         usage: 'Available',
         rating: 3.0,
         ownerId: false,
-        condition: 'Never Been Fall In Love'
+        condition: 'Never Been Fall In Love',
+        status: 'Normal'
     },
     {
         id: 6,
@@ -189,7 +189,8 @@ export const items = [
         usage: 'Taken',
         rating: 4.0,
         ownerId: false,
-        condition: 'A Few Times Used'
+        condition: 'A Few Times Used',
+        status: 'Normal'
     },
     {
         id: 7,
@@ -203,7 +204,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Never Been Fall In Love'
+        condition: 'Never Been Fall In Love',
+        status: 'Normal'
     },
     {
         id: 8,
@@ -217,7 +219,8 @@ export const items = [
         usage: 'Available',
         rating: 4.5,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 9,
@@ -231,7 +234,8 @@ export const items = [
         usage: 'Available',
         rating: 2.5,
         ownerId: false,
-        condition: 'One Time Used'
+        condition: 'One Time Used',
+        status: 'Normal'
     },
     {
         id: 10,
@@ -245,7 +249,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: true,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 11,
@@ -259,7 +264,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: true,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 12,
@@ -273,7 +279,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: true,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 13,
@@ -287,7 +294,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 14,
@@ -301,7 +309,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 15,
@@ -315,7 +324,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 16,
@@ -329,7 +339,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Used'
+        condition: 'Used',
+        status: 'Normal'
     },
     {
         id: 17,
@@ -343,7 +354,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 18,
@@ -357,7 +369,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 19,
@@ -371,7 +384,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
     {
         id: 20,
@@ -385,7 +399,8 @@ export const items = [
         usage: 'Available',
         rating: 5.0,
         ownerId: false,
-        condition: 'Brand New'
+        condition: 'Brand New',
+        status: 'Normal'
     },
 ]
 

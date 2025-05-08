@@ -16,7 +16,7 @@ export default function SwitchRolePage() {
         setIsSwitching(true)
         await new Promise(resolve => setTimeout(resolve, 1000))
         dispatch({ type: 'app/swithRole' })
-        navigate('/app/my-items')
+        navigate('/app/dashboard')
         setIsSwitching(false)
     }
 

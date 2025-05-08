@@ -14,7 +14,8 @@ import {
     AuthPage,
     WelcomePage,
     ComingSoonPage,
-    ProfilePage
+    ProfilePage,
+    DashboardPage
 } from '../pages/index';
 import { useApp } from '@/context/AppContextProvider'
 
@@ -33,7 +34,11 @@ export default function Router() {
             children: [
                 {
                     index: true,
-                    element: isRenter ? <Navigate to="items-feed" replace /> : <Navigate to="my-items" replace />
+                    element: isRenter ? <Navigate to="items-feed" replace /> : <Navigate to="dashboard" replace />
+                },
+                {
+                    path: 'dashboard',
+                    element: <DashboardPage />,
                 },
                 {
                     path: 'items-feed',
