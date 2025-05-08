@@ -54,7 +54,7 @@ export default function Hero() {
                     </div>
                     {
                         isMobMenuOpen && (
-                            <div id="menu" className="absolute lg:hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100">
+                            <div id="menu" className="absolute lg:hidden p-6 rounded-lg bg-darkViolet dark:bg-veryDarkBlue left-6 right-6 top-20 z-100">
                                 <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
                                     <a href="#home" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Home</a>
                                     <a href="#popular" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Popular</a>
@@ -62,7 +62,7 @@ export default function Hero() {
                                     <a href="#contact" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Contact</a>
                                     {
                                         isAuthenticated ?
-                                            <Profile textColor="text-white" /> : <>
+                                            <UserPanel textColor='text-white' /> : <>
                                                 <Link to="/auth" onClick={() => setIsMobMenuOpen(false)} className="w-full pt-6 text-center border-t border-gray-400">Login</Link>
                                                 <Link to="/auth?signup=true" onClick={() => setIsMobMenuOpen(false)} className="w-full text-center bg-primary rounded-full px-4 font-bold py-2 hover:bg-cyan-500 border-b-[4px] hover:border-t-[4px] hover:border-t-cyan-500 border-b-cyan-800 hover:border-b-0 cursor-pointer">Sign Up</Link>
                                             </>

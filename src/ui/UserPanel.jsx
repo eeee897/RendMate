@@ -4,12 +4,12 @@ import Profile from "./Profile"
 import { CiUser } from "react-icons/ci"
 import { MoonIcon, SunIcon } from "lucide-react"
 
-export default function UserPanel() {
+export default function UserPanel({ textColor }) {
     const { theme, toggleTheme } = useTheme()
 
     return (
         <div className="flex items-center gap-4">
-            <Profile />
+            <Profile textColor={textColor} />
             <div className="flex items-center gap-2">
                 <Link to={'/app/account'} className="btn-ghost">
                     <CiUser className="size-6 text-darkViolet dark:text-slate-50" />
