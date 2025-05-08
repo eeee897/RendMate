@@ -12,13 +12,13 @@ export default function UserPanel({ textColor }) {
             <Profile textColor={textColor} />
             <div className="flex items-center gap-2">
                 <Link to={'/app/account'} className="btn-ghost">
-                    <CiUser className="size-6 text-darkViolet dark:text-slate-50" />
+                    <CiUser className="size-6 " />
                 </Link>
                 <button type="button" onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')} className="btn-ghost">
                     {
                         theme === 'dark' ?
-                            <SunIcon className="size-5 text-darkViolet dark:text-slate-50" /> :
-                            <MoonIcon className="size-5 text-darkViolet dark:text-slate-50" />
+                            <SunIcon className="size-5 " /> :
+                            <MoonIcon className="size-5 " />
                     }
                 </button>
             </div>

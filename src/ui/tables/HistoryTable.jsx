@@ -1,10 +1,10 @@
-import React from 'react'
-import { dummyStatusData, PAGE_SIZE } from '../../utils/constants'
 import { Star } from 'lucide-react'
-import Pagination from '../paginations/Pagination'
+import React from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { dummyHistoryData, PAGE_SIZE } from '../../utils/constants'
 import Modal from '../modal/Modal'
 import ReviewModal from '../modal/ReviewModal'
+import Pagination from '../paginations/Pagination'
 
 export default function HistoryTable() {
     const [searchParams] = useSearchParams()
@@ -13,7 +13,7 @@ export default function HistoryTable() {
 
     const from = (page - 1) * PAGE_SIZE
     const to = from + PAGE_SIZE
-    const paginatedData = dummyStatusData?.slice(from, to)
+    const paginatedData = dummyHistoryData?.slice(from, to)
 
     return (
         <>
@@ -25,8 +25,9 @@ export default function HistoryTable() {
                             <th className="table-head">RENTER</th>
                             <th className="table-head">REQUESTED ON</th>
                             <th className="table-head">DURATION</th>
-                            <th className="table-head">AMOUNT</th>
                             <th className="table-head">STATUS</th>
+                            <th className="table-head">AMOUNT</th>
+                            <th className="table-head">REVIEW</th>
                         </tr>
                     </thead>
                     <tbody className="table-body">
@@ -65,6 +66,11 @@ export default function HistoryTable() {
                                     </div>
                                 </td>
                                 <td className="table-cell">
+                                    <div className="flex statuss-center text-green-600 gap-x-2">
+                                        {status.status}
+                                    </div>
+                                </td>
+                                <td className="table-cell">
                                     <div className="flex statuss-center gap-x-2">
                                         {status.totalPrice} THB
                                     </div>
@@ -87,7 +93,7 @@ export default function HistoryTable() {
                     </tbody>
                 </table>
             </div>
-            <Pagination count={dummyStatusData.length} />
+            <Pagination count={dummyHistoryData.length} />
         </>
     )
 }

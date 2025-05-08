@@ -1,22 +1,52 @@
-import { Check, Frown, Loader, Star } from 'lucide-react'
-import React from 'react'
+import { useApp } from '@/context/AppContextProvider'
+import { Star } from 'lucide-react'
+import React, { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { dummyStatusData, PAGE_SIZE } from '../../utils/constants'
+import { dummyStatusDataLender, dummyStatusDataRenter, PAGE_SIZE } from '../../utils/constants'
+import LenderStatusBtns from '../btns/LenderStatusBtns'
+import RenterStatusBtns from '../btns/RenterStatusBtns'
 import Pagination from '../paginations/Pagination'
-import toast from 'react-hot-toast'
 
 export default function StatusTable() {
+    const { isRenter } = useApp()
     const [searchParams] = useSearchParams()
-    const filterValue = searchParams.get('status') ?? 'lend'
-
-    let filteredData;
-    if (filterValue === 'rent') filteredData = dummyStatusData.filter(st => st.mine)
-    if (filterValue === 'lend') filteredData = dummyStatusData.filter(st => !st.mine)
+    const [statusData, setStatusData] = useState(isRenter ? dummyStatusDataRenter : dummyStatusDataLender)
 
     const page = searchParams.get('page') ? Number(searchParams.get('page')) : 1
     const from = (page - 1) * PAGE_SIZE
     const to = from + PAGE_SIZE
-    const paginatedData = filteredData?.slice(from, to)
+    const paginatedData = statusData?.slice(from, to)
+
+    const onHandleDelete = (id) => {
+        setStatusData(prev => prev.filter(data => data.id !== id))
+    }
+
+    const onHandleClickLender = (id) => {
+        setStatusData(prev =>
+            prev.map(data => {
+                if (data.id !== id) return data
+
+                let newStatus = data.status
+                if (data.status === 'Pending') newStatus = 'Packaging'
+                else if (data.status === 'Packaging') newStatus = 'Delivered'
+
+                return { ...data, status: newStatus }
+            })
+        )
+    }
+    const onHandleClickRenter = (id) => {
+        setStatusData(prev =>
+            prev.map(data => {
+                if (data.id !== id) return data
+
+                let newStatus = data.status
+                if (data.status === 'Pending') newStatus = 'Packaging'
+                else if (data.status === 'Packaging') newStatus = 'Delivered'
+
+                return { ...data, status: newStatus }
+            })
+        )
+    }
 
     return (
         <>
@@ -73,59 +103,14 @@ export default function StatusTable() {
                                     </div>
                                 </td>
                                 <td className="table-cell">
-                                    {
-                                        st.status === 'Rejected' ?
-                                            <div className="flex flex-col gap-y-2">
-                                                <button className="border-red-600 flex items-center gap-2 justify-center border rounded-lg text-red-600 font-bold py-1">
-                                                    <Frown className='w-4 h-4' />
-                                                    <span>
-                                                        Rejected
-                                                    </span>
-                                                </button>
-                                            </div> :
-                                            <div className="flex flex-col gap-y-2">
-                                                {st.isConfirmed ?
-                                                    <>
-                                                        <button className="border-green-600 flex items-center gap-2 justify-center border rounded-lg text-green-600 font-bold py-1">
-                                                            <Check className='w-4 h-4' />
-                                                            <span>
-                                                                Accepted
-                                                            </span>
-                                                        </button>
-                                                        {
-                                                            !st.receieved ?
-                                                                <button className="border-yellow-600 flex items-center justify-center gap-2 border rounded-lg text-yellow-600 font-bold py-1">
-                                                                    <Loader className='w-4 h-4' />
-                                                                    <span>
-                                                                        Pending
-                                                                    </span>
-                                                                </button> :
-                                                                <button className="border-green-600 flex items-center gap-2 justify-center border rounded-lg text-green-600 font-bold py-1">
-                                                                    <Check className='w-4 h-4' />
-                                                                    <span>
-                                                                        O.Received
-                                                                    </span>
-                                                                </button>
-                                                        }
-                                                    </> :
-                                                    <>
-                                                        <button onClick={() => toast.success('Action performed successfully.')} className="bg-green-600 rounded-lg cursor-pointer hover:bg-green-700 border-b-[3px] border-b-green-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-green-700 text-white font-bold py-1">
-                                                            Accept
-                                                        </button>
-                                                        <button onClick={() => toast.success('Action performed successfully.')} className="bg-red-600 rounded-lg cursor-pointer hover:bg-red-700 border-b-[3px] border-b-red-800 hover:border-b-0 hover:border-t-[3px] hover:border-t-red-700 text-white font-bold py-1">
-                                                            Reject
-                                                        </button>
-                                                    </>
-                                                }
-                                            </div>
-                                    }
+                                    {isRenter ? <RenterStatusBtns st={st} onHandleClick={onHandleClickRenter} onHandleDelete={onHandleDelete} /> : <LenderStatusBtns st={st} onHandleClick={onHandleClickLender} onHandleDelete={onHandleDelete} />}
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
-            <Pagination count={filteredData.length} />
+            <Pagination count={statusData.length} />
         </>
     )
 }

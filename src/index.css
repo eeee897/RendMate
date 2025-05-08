@@ -74,7 +74,7 @@
     }
 
     .btn-ghost {
-        @apply flex items-center justify-center flex-shrink-0 h-10 p-2 transition-colors rounded-lg gap-x-2 text-slate-400 hover:bg-[#9AE3E3] cursor-pointer hover:text-slate-50 dark:hover:bg-[#3B3054] dark:hover:text-slate-300;
+        @apply flex items-center justify-center flex-shrink-0 h-10 p-2 transition-colors rounded-lg gap-x-2 text-gray-500 hover:bg-[#9AE3E3] cursor-pointer hover:text-slate-50 dark:hover:bg-[#3B3054] dark:hover:text-slate-300;
     }
 
     .link {
