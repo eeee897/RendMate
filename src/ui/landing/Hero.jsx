@@ -2,7 +2,6 @@ import { useApp } from '@/context/AppContextProvider';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../Logo';
-import Profile from '../Profile';
 import UserPanel from '../UserPanel';
 
 export default function Hero() {
@@ -54,7 +53,7 @@ export default function Hero() {
                     </div>
                     {
                         isMobMenuOpen && (
-                            <div id="menu" className="absolute lg:hidden p-6 rounded-lg bg-darkViolet dark:bg-veryDarkBlue left-6 right-6 top-20 z-100">
+                            <div id="menu" className="absolute lg:hidden p-6 rounded-lg bg-darkViolet  left-6 right-6 top-20 z-100">
                                 <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
                                     <a href="#home" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Home</a>
                                     <a href="#popular" onClick={() => setIsMobMenuOpen(false)} className="hover:text-primary">Popular</a>
