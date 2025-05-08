@@ -2,17 +2,21 @@ import verify from '@/assets/animations/verify.lottie'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import { useContext } from 'react'
 import { ModalContext } from './Modal'
+import { XIcon } from 'lucide-react'
 
-export default function VerifyModal() {
+export default function VerifyModal({ onCloseModal }) {
     const { open, close } = useContext(ModalContext)
 
     const handleVerifyClick = () => {
-        close() // close 'verify-modal'
-        open('verify-start') // open 'verify-start'
+        close()
+        open('verify-start')
     }
 
     return (
-        <div className='bg-slate-50 p-5 flex flex-col space-y-4 items-center justify-center rounded-lg lg:w-[450px] dark:bg-veryDarkViolet'>
+        <div className='bg-slate-50 relative p-5 flex flex-col space-y-4 items-center justify-center rounded-lg lg:w-[450px] dark:bg-veryDarkViolet'>
+            <button type='button' onClick={onCloseModal} className='absolute top-5 right-5 cursor-pointer hover:border hover:border-primary border border-transparent dark:text-slate-50  rounded-lg p-1 transition duration-300'>
+                <XIcon />
+            </button>
             <DotLottieReact
                 src={verify}
                 loop
