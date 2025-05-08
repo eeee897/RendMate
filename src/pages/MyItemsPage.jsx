@@ -1,16 +1,16 @@
 import React from 'react'
-import Modal from '../ui/modal/Modal'
-import CreateEditItemModal from '../ui/modal/CreateEditItemModal'
-import ItemsList from '../ui/ItemsList'
-import { items } from '@/utils/constants'
-import AddNewItemBtn from '../ui/btns/AddNewItemBtn'
-import Title from '../ui/Title'
 import { useApp } from '../context/AppContextProvider'
-import VerifyModal from '../ui/modal/VerifyModal'
+import AddNewItemBtn from '../ui/btns/AddNewItemBtn'
+import ItemsList from '../ui/ItemsList'
+import CreateEditItemModal from '../ui/modal/CreateEditItemModal'
+import Modal from '../ui/modal/Modal'
 import VerificationProcessModal from '../ui/modal/VerificationProcessModal'
+import VerifyModal from '../ui/modal/VerifyModal'
+import Title from '../ui/Title'
 
 export default function MyItemsPage() {
-    const owenerItem = items.filter(item => item.ownerId)
+    const { allItems } = useApp()
+    const owenerItem = allItems.filter(item => item.ownerId)
     const { isVerified } = useApp()
 
     return (
@@ -35,7 +35,7 @@ export default function MyItemsPage() {
                     </Modal.Window>
                 </Modal>
             </div>
-            <ItemsList items={owenerItem} />
+            <ItemsList itemsList={owenerItem} />
         </section>
     )
 }

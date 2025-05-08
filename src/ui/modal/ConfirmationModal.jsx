@@ -1,8 +1,8 @@
-import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useApp } from "../../context/AppContextProvider";
+import toast from "react-hot-toast";
 
-export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }) {
+export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type, itemId = '' }) {
     const navigate = useNavigate();
     const { dispatch } = useApp()
 
@@ -10,6 +10,34 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
     if (type === 'logout') confirm = { title: "Logout", subTitle: 'logout' }
     if (type === 'delete') confirm = { title: "Delete", subTitle: `delete "${name}"` }
     if (type === 'disabled') confirm = { title: "Disable", subTitle: `disable "${name}"` }
+    if (type === 'un-disabled') confirm = { title: "Undisable", subTitle: `undisable "${name}"` }
+
+    const onAction = () => {
+        if (type === 'logout') {
+            dispatch({ type: 'app/log-out' })
+            navigate('/', { replace: true })
+            onCloseModal()
+            return
+        }
+        if (type === 'delete') {
+            dispatch({ type: 'app/delete-item', payload: itemId })
+            toast.success('Item deleted successfully.')
+            onCloseModal()
+            return
+        }
+        if (type === 'disabled') {
+            dispatch({ type: 'app/disable-item', payload: itemId })
+            toast.success('Item disabled successfully.')
+            onCloseModal()
+            return
+        }
+        if (type === 'un-disabled') {
+            dispatch({ type: 'app/undisable-item', payload: itemId })
+            toast.success('Item disabled successfully.')
+            onCloseModal()
+            return
+        }
+    }
 
     return (
         <div className='bg-slate-50 p-5 rounded-lg lg:w-[450px] dark:bg-veryDarkViolet'>
@@ -20,16 +48,7 @@ export default function ConfirmDeleteItemModal({ onCloseModal, name = '', type }
                     Cancel
                 </button>
                 <button
-                    onClick={
-                        type === 'logout' ? () => {
-                            dispatch({ type: 'app/log-out' })
-                            navigate('/', { replace: true })
-                            onCloseModal()
-                        } : () => {
-                            toast.success('Action performed successfully.')
-                            onCloseModal()
-                        }
-                    }
+                    onClick={onAction}
                     type='submit'
                     className={`${type === 'logout' ? 'bg-primary border-primary hover:bg-cyan-500 hover:border-cyan-500' : 'bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700'} px-4 py-2 rounded-lg  text-white font-bold border cursor-pointer transition duration-300`}>
                     Confrim

@@ -7,6 +7,7 @@ import ImagePreviewModal from './modal/ImagePreviewModal'
 import Modal from './modal/Modal'
 import { Link } from 'react-router-dom'
 import { useApp } from '../context/AppContextProvider'
+import defaultImage from '@/assets/item_images/default_image.jpg'
 
 export default function Item({ item }) {
     const { isAuthenticated } = useApp()
@@ -17,11 +18,11 @@ export default function Item({ item }) {
                 {/* Image */}
                 <div className='w-64 bg-grayishViolet rounded-s-lg'>
                     <Modal.Opens open={'image-preview'}>
-                        <img src={item.image} className='w-full h-full object-center cursor-pointer hover:scale-105 transition duration-300 rounded-s-lg' alt={`${item.name}_image`} />
+                        <img src={item.image || defaultImage} className='w-full h-full object-center cursor-pointer hover:scale-105 transition duration-300 rounded-s-lg' alt={`${item.name}_image`} />
                     </Modal.Opens>
 
                     <Modal.Window name={'image-preview'} padding={false}>
-                        <ImagePreviewModal image={item.image} />
+                        <ImagePreviewModal image={item.image || defaultImage} />
                     </Modal.Window>
                 </div>
                 {/* Info */}
@@ -50,7 +51,7 @@ export default function Item({ item }) {
 
                             {/* Delete Form */}
                             <Modal.Window name='delete' width='450px' padding={false}>
-                                <ConfirmationModal name={item.name} type={'delete'} />
+                                <ConfirmationModal name={item.name} type={'delete'} itemId={item.id} />
                             </Modal.Window>
                         </div>
                     </div>
@@ -85,13 +86,16 @@ export default function Item({ item }) {
 
                         {item.ownerId ?
                             <>
-                                <Modal.Opens open={'disabled'}>
+                                <Modal.Opens open={item.status === 'Normal' ? 'disabled' : 'un-disabled'}>
                                     <button className='px-4 p-1.5 bg-red-600 rounded-full text-sm hover:bg-red-700 border-b-[3px] border-b-red-800 font-bold cursor-pointer text-white hover:border-b-0 hover:border-t-[3px] hover:border-t-red-700'>
-                                        Disabled
+                                        {item.status === 'Normal' ? 'Disable' : 'Undisable'}
                                     </button>
                                 </Modal.Opens>
                                 <Modal.Window name={'disabled'}>
-                                    <ConfirmationModal name={item.name} type={'disabled'} />
+                                    <ConfirmationModal name={item.name} type={'disabled'} itemId={item.id} />
+                                </Modal.Window>
+                                <Modal.Window name={'un-disabled'}>
+                                    <ConfirmationModal name={item.name} type={'un-disabled'} itemId={item.id} />
                                 </Modal.Window>
                             </>
                             :

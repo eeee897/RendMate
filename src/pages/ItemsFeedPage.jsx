@@ -1,4 +1,3 @@
-import { items } from '@/utils/constants'
 import React from 'react'
 import usePageTitle from '../hooks/usePageTitle'
 import ItemsList from '../ui/ItemsList'
@@ -16,7 +15,7 @@ export default function ItemsFeedPage() {
                 <Searchbar />
                 <CommonOperations filterFieldValue={'usage'} />
             </div>
-            <ItemsList items={items} />
+            <ItemsList />
         </section>
     )
 }

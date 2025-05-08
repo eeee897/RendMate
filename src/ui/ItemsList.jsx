@@ -6,17 +6,21 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import empty from '@/assets/animations/empty.lottie'
 import NumberPagination from './paginations/NumberPagination'
 import { PAGE_SIZE } from '../utils/constants'
+import { useApp } from '@/context/AppContextProvider'
 
-export default function ItemsList({ items }) {
+export default function ItemsList({ itemsList = [] }) {
+    const { allItems } = useApp()
     const [searchParams] = useSearchParams()
+
+    const items = allItems.filter(item => item.status === 'Normal')
 
     //? filter
     const filterValue = searchParams.get('usage') || 'all'
 
     let filteredItems;
-    if (filterValue === 'all') filteredItems = items
-    if (filterValue === 'available') filteredItems = items?.filter(item => item.usage === 'Available')
-    if (filterValue === 'taken') filteredItems = items?.filter(item => item.usage === 'Taken')
+    if (filterValue === 'all') filteredItems = itemsList.length ? itemsList : items
+    if (filterValue === 'available') filteredItems = itemsList.length ? itemsList?.filter(item => item.usage === 'Available') : items?.filter(item => item.usage === 'Available')
+    if (filterValue === 'taken') filteredItems = itemsList.length ? itemsList.filter(item => item.usage === 'Taken') : items?.filter(item => item.usage === 'Taken')
 
     //? sort
     const sortByValue = searchParams.get('sortBy') || 'sortField-asc'

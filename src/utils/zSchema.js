@@ -43,3 +43,14 @@ export const registerFormFieldsSchema = z.object({
         });
     }
 })
+
+export const addNewItemFormFieldsSchema = z.object({
+    image: z.any().optional(),
+    name: z.string().min(1, 'Name is required'),
+    description: z.string().min(1, 'Description is required'),
+    rentalPrice: z.string().min(1, 'Price is required'),
+    deposit: z.string().min(1, 'Deposit is required'),
+    // extras: z.array(z.string()).optional(),
+    location: z.string().min(1, 'Location is required'),
+    condition: z.string().min(1, 'Condition is required'),
+})
