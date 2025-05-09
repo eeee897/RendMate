@@ -1,5 +1,5 @@
 import npc from '@/assets/item_images/npc.jpg'
-import shark from '@/assets/item_images/shark.jpg'
+import ken from '@/assets/item_images/ken.jpg'
 import fish from '@/assets/item_images/fish.jpg'
 import { PlusCircle, XCircleIcon } from 'lucide-react'
 import { messages } from '../utils/constants'
@@ -9,7 +9,7 @@ export default function ChatBox({ currentChat, chatClose }) {
     const currentMessages = messages[currentChat]
     const current = {
         '1': { img: npc, name: 'Swam Yi Phyo' },
-        '2': { img: shark, name: 'Ken Carson' },
+        '2': { img: ken, name: 'Ken Carson' },
         '3': { img: fish, name: 'Trefish Skot' },
     }
 

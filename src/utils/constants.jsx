@@ -21,7 +21,7 @@ import tuna from '@/assets/item_images/tuna.jpg'
 import coma from '@/assets/item_images/coma.jpg'
 import jordan from '@/assets/item_images/jordan.jpg'
 import fish from '@/assets/item_images/fish.jpg'
-import shark from '@/assets/item_images/shark.jpg'
+import ken from '@/assets/item_images/ken.jpg'
 
 export const PAGE_SIZE = 8
 
@@ -573,7 +573,7 @@ export const chatsData = [
         id: 2,
         message: 'You: SCHYEAH SCHYEAH SCHYEAH',
         name: 'Ken Carson',
-        image: shark,
+        image: ken,
         date: '3h'
     },
     {
@@ -664,91 +664,91 @@ export const messages = {
             message: 'Huh',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 2,
             message: 'Huh, Huh, Huh, Huh',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 3,
             message: 'Huh, Huh, Huh, Huh, Huh, Huh, Huh',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 4,
             message: 'Huh, Huh, Huh, Huh, Huh, Huh, Huh',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 5,
             message: 'PROMETHAZINE HABIT, LEAN HABIT, CODEINE HABIT',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 6,
             message: 'KICKSTAND YEAH, BIKER, YEAH, YEAH, I\'M LEANIN\'',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 7,
             message: 'I CHOP THE TOP OF THE MCLEAREN,',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 8,
             message: 'THIS AIN\'T NO LAMBORGHINI',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 9,
             message: 'MY WHITE HO GOT BIG TITIES',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 10,
             message: 'SHE REMIND ME OF',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 11,
             message: 'What do you want to rent from me?!!!',
             isYou: true,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 12,
             message: 'SYDNEY SWEENEY, SYDENY SWEENEY',
             isYou: false,
             date: '5h ago',
-            image: shark
+            image: ken
         },
         {
             id: 13,
             message: 'SCHYEAH SCHYEAH SCHYEAH',
             isYou: true,
             date: '5h ago',
-            image: shark
+            image: ken
         },
     ],
     '3': [
@@ -775,41 +775,48 @@ export const messages = {
         },
         {
             id: 4,
-            message: 'I need a bit',
+            message: '01-324-124-1234',
             isYou: false,
             date: '5h ago',
             image: fish
         },
         {
             id: 5,
-            message: 'If you do you can meet Kanye East',
+            message: 'I need a bit',
             isYou: false,
             date: '5h ago',
             image: fish
         },
         {
             id: 6,
-            message: 'He\'s with me',
+            message: 'If you do you can meet Kanye East',
             isYou: false,
             date: '5h ago',
             image: fish
         },
         {
             id: 7,
-            message: 'hello this is YEE!!!!!!!!!!',
+            message: 'He\'s with me',
             isYou: false,
             date: '5h ago',
             image: fish
         },
         {
             id: 8,
+            message: 'hello this is YEE!!!!!!!!!!',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 9,
             message: '🥷 How do i know ur the real travis scott',
             isYou: true,
             date: '5h ago',
             image: fish
         },
         {
-            id: 9,
+            id: 10,
             message: 'Fin fin fin fin fin fin',
             isYou: false,
             date: '5h ago',
