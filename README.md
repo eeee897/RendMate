@@ -26,6 +26,8 @@ Users can act as:
   - Track rental history and provide reviews.
 
 - **Lender**
+  - Can do CRUD for each item to rent.
+  - Before upload very first item as Lender, users need to verify themselves.
   - List items for rent with detailed descriptions and images.
   - Accept or reject rental requests.
   - Track earnings and feedback from renters.
@@ -41,6 +43,7 @@ Users can toggle their role at `/switch-role`.
 | `/`              | Landing page with showcase of popular items. |
 | `/login` & `/register` | Required to access platform features. |
 | `/account`       | Update profile (username, avatar, password). |
+| `/dashboard`       | Trach monthly incomes and today activities with real-time data-visualization charts |
 | `/items-feed`    | View, search, filter, and sort rentable items (by name, usage, price). Supports pagination. |
 | `/my-items`      | Manage your own listed items (add, edit, delete, disable). Requires lender role. |
 | `/status`        | View rental request statuses (pending, accepted, rejected, received). Filter by sent or received requests. |
@@ -53,6 +56,7 @@ Users can toggle their role at `/switch-role`.
 ### 🔒 Protected Routes
 
 Accessible only when the user is authenticated:
+- `/dashboard`
 - `/items-feed`
 - `/my-items`
 - `/status`
@@ -76,17 +80,8 @@ Accessible only when the user is authenticated:
 
 ---
 
-## 🧪 Future Enhancements
-
-- [ ] Full Supabase backend (auth, real-time DB, storage).
-- [ ] Review and rating system improvement.
-- [ ] Admin panel for platform moderation.
-- [ ✔️ ] Dark/Light mode toggle.
-
----
-
 ## 🌐 Live Demo
-Check out the live version of RentMate: 
+Check out the live version of RentMate: https://rentmate-xi.vercel.app/
 
 ---
 
