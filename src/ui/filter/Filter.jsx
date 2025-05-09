@@ -20,7 +20,7 @@ export default function Filter({ filterField, options }) {
                         disabled={opt.value === currentValue}
                         onClick={() => handleClick(opt.value)}
                         type="button"
-                        className={`${currentValue === opt.value && 'bg-primary text-white'} dark:text-slate-50 hover:bg-primary hover:text-white transition duration-300 disabled:cursor-not-allowed px-2 font-medium rounded-md cursor-pointer`}
+                        className={`${currentValue === opt.value && 'bg-primary text-white'} dark:text-slate-50 hover:bg-primary hover:text-white transition duration-300 disabled:cursor-not-allowed text-sm md:text-base px-2 font-medium rounded-md cursor-pointer`}
                     >
                         {opt.label}
                     </button>

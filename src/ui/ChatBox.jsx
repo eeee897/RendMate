@@ -39,7 +39,7 @@ export default function ChatBox({ currentChat, chatClose }) {
                                 </>
                             ) : (
                                 <div className="flex items-center justify-end w-full">
-                                    <p className="p-2 rounded-lg bg-primary text-slate-50 font-bold">{msg.message}</p>
+                                    <p className="p-2 rounded-lg bg-primary dark:bg-darkViolet text-slate-50 font-bold">{msg.message}</p>
                                 </div>
                             )}
                         </div>

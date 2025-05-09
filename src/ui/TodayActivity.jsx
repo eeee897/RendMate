@@ -19,7 +19,7 @@ export default function TodayActivity() {
                 <h2 className="text-2xl font-bold dark:text-slate-50">Today Activities</h2>
                 {
                     tdyAct.length ?
-                        <div className="h-64 overflow-y-scroll">
+                        <div className="h-[275px] overflow-y-scroll">
                             {
                                 tdyAct.map((data, index) => (
                                     <div key={index} className="flex items-center justify-between px-2 py-3 border-b border-b-slate-300 dark:border-b-veryDarkBlue last:border-b-0 dark:text-slate-50">
@@ -33,9 +33,12 @@ export default function TodayActivity() {
                                                 </p>
                                             </div>
                                         </div>
-                                        <span className="text-darkViolet text-[13px] w-1/4 dark:text-slate-50">{data.days}</span>
-                                        <span className="w-1/4 text-[13px] italic font-thin text-gray-500 dark:text-grayishViolet text-end">{data.created_at}</span>
-                                        <Menus.Toggle id={data.id} />
+                                        <span className="text-darkViolet hidden md:block text-[11px] md:text-[13px] w-1/4 dark:text-slate-50">{data.days}</span>
+                                        <div className="flex items-center">
+                                            <span className="text-[13px] italic hidden md:block font-thin text-gray-500 dark:text-grayishViolet text-end">{data.created_at}</span>
+                                            <span className="text-darkViolet md:hidden text-[11px] md:text-[13px] dark:text-slate-50">{data.days}</span>
+                                            <Menus.Toggle id={data.id} />
+                                        </div>
 
                                         <Menus.List id={data.id}>
                                             <Menus.Button onClick={() => onHandleClick(data.id, 'Accept')} icon={<PackageCheck className="text-green-600 w-4 h-4" />}>Acept</Menus.Button>

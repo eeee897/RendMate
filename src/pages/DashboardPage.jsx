@@ -30,13 +30,13 @@ export default function DashboardPage() {
             <div className='flex items-center justify-end'>
                 <CommonOperations filterFieldValue='last' />
             </div>
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-                <Stat label={'Items'} value={allItems.length} icon={<HiOutlineBriefcase className='text-2xl text-blue-700 dark:text-[#e0f2fe]' />} bgColor={'bg-blue-100 dark:bg-[#075985]'} />
-                <Stat label={'Sales'} value={formatCurrency(checkPoint(filterValue)?.sales)} icon={<HiOutlineBanknotes className='text-2xl text-green-700 dark:text-[#dcfce7]' />} bgColor={'bg-green-100 dark:bg-[#166534]'} />
-                <Stat label={'Orders'} value={checkPoint(filterValue)?.order} icon={<HiOutlineAnnotation className='text-2xl text-indigo-700 dark:text-[#e0e7ff]' />} bgColor={'bg-indigo-100 dark:bg-[#3730a3]'} />
-                <Stat label={'Fullfillment Rate'} value={checkPoint(filterValue)?.rate} icon={<HiOutlineChartBar className='text-2xl text-yellow-700 dark:text-[#fef9c3]' />} bgColor={'bg-yellow-100 dark:bg-[#854d0e]'} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 xl:grid-cols-4">
+                <Stat label={'Items'} value={allItems.length} icon={<HiOutlineBriefcase className='text-3xl text-blue-700 dark:text-[#e0f2fe]' />} bgColor={'bg-blue-100 dark:bg-[#075985]'} />
+                <Stat label={'Sales'} value={formatCurrency(checkPoint(filterValue)?.sales)} icon={<HiOutlineBanknotes className='text-2xl md:text-3xl text-green-700 dark:text-[#dcfce7]' />} bgColor={'bg-green-100 dark:bg-[#166534]'} />
+                <Stat label={'Orders'} value={checkPoint(filterValue)?.order} icon={<HiOutlineAnnotation className='text-2xl md:text-3xl text-indigo-700 dark:text-[#e0e7ff]' />} bgColor={'bg-indigo-100 dark:bg-[#3730a3]'} />
+                <Stat label={'Fullfillment Rate'} value={checkPoint(filterValue)?.rate} icon={<HiOutlineChartBar className='text-2xl md:text-3xl text-yellow-700 dark:text-[#fef9c3]' />} bgColor={'bg-yellow-100 dark:bg-[#854d0e]'} />
             </div>
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
                 <TodayActivity />
                 <RentDurationChart />
             </div>

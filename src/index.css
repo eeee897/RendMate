@@ -151,7 +151,7 @@
 }
 
 .recharts-default-tooltip {
-    @apply !rounded-lg !border !border-slate-300 !bg-white transition-colors dark:!border-slate-700 dark:!bg-slate-900;
+    @apply !rounded-lg !border !border-slate-300 !bg-slate-50 transition-colors dark:!border-[#35323E] dark:!bg-[#3B3054];
 }
 
 .recharts-tooltip-label {
@@ -159,7 +159,7 @@
 }
 
 .recharts-tooltip-item {
-    @apply text-base font-medium !text-blue-500 dark:!text-blue-600;
+    @apply text-base font-medium !text-[#2ACFCF] dark:!text-[#2ACFCF];
 }
 
 .hero {
