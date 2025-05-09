@@ -26,7 +26,7 @@ export default function TodayActivity() {
                                         <div className="flex items-center gap-1 w-2/4">
                                             <img src={data.image} className="w-9 border border-slate-300 h-9 rounded-full" />
                                             <div className="flex flex-col">
-                                                <h3 className="font-bold text-sm text-darkViolet dark:text-slate-50">{data.itemName}</h3>
+                                                <h3 className="font-bold text-darkViolet dark:text-slate-50">{data.itemName}</h3>
                                                 <p className="flex items-center gap-1">
                                                     <Star className="size-3.5 fill-yellow-600 stroke-yellow-600" />
                                                     <span className="text-xs text-gray-600 mt-0.5 dark:text-grayishViolet">{data.rating}</span>
@@ -36,7 +36,7 @@ export default function TodayActivity() {
                                         <span className="text-darkViolet hidden md:block text-[11px] md:text-[13px] w-1/4 dark:text-slate-50">{data.days}</span>
                                         <div className="flex items-center">
                                             <span className="text-[13px] italic hidden md:block font-thin text-gray-500 dark:text-grayishViolet text-end">{data.created_at}</span>
-                                            <span className="text-darkViolet md:hidden text-[11px] md:text-[13px] dark:text-slate-50">{data.days}</span>
+                                            <span className="text-darkViolet md:hidden text-sm dark:text-slate-50">{data.days}</span>
                                             <Menus.Toggle id={data.id} />
                                         </div>
 
