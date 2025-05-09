@@ -1,24 +1,24 @@
-# RentMate 🛠️📦
+# RentMate 📦
 
 **RentMate** is a responsive web application that enables users to rent and lend everyday items in a seamless and secure way. The platform supports two user roles — **Renter** and **Lender**, and each user can switch roles anytime.
 
 ![User Interface](./public/preview.png)
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [Features](#-features)
-  - [Dual Role System](#-dual-role-system)
-  - [Platform Pages & User Flow](#️-platform-pages--user-flow)
-  - [Protected Routes](#-protected-routes)
-- [Tech Stack](#-tech-stack)
-- [Future Enhancements](#-future-enhancements)
+- [Features](#features)
+  - [Dual Role System](#dual-role-system)
+  - [Platform Pages & User Flow](#️platform-pages--user-flow)
+  - [Protected Routes](#protected-routes)
+- [Tech Stack](#tech-stack)
+- [Future Enhancements](#future-enhancements)
 - [Live Demo](#-live-demo)
 - [How to Get Started](#how-to-get-started)
 - [License](#license)
 
-## 📌 Features
+## Features
 
-### 🔄 Dual Role System
+### Dual Role System
 Users can act as:
 - **Renter**
   - Browse and search listed items.
@@ -36,14 +36,14 @@ Users can toggle their role at `/switch-role`.
 
 ---
 
-### 🖥️ Platform Pages & User Flow
+### Platform Pages & User Flow
 
 | Path             | Description |
 |------------------|-------------|
 | `/`              | Landing page with showcase of popular items. |
 | `/login` & `/register` | Required to access platform features. |
 | `/account`       | Update profile (username, avatar, password). |
-| `/dashboard`       | Trach monthly incomes and today activities with real-time data-visualization charts |
+| `/dashboard`       | Track monthly incomes and today activities with real-time data-visualization charts |
 | `/items-feed`    | View, search, filter, and sort rentable items (by name, usage, price). Supports pagination. |
 | `/my-items`      | Manage your own listed items (add, edit, delete, disable). Requires lender role. |
 | `/status`        | View rental request statuses (pending, accepted, rejected, received). Filter by sent or received requests. |
@@ -53,7 +53,7 @@ Users can toggle their role at `/switch-role`.
 
 ---
 
-### 🔒 Protected Routes
+### Protected Routes
 
 Accessible only when the user is authenticated:
 - `/dashboard`
@@ -66,7 +66,7 @@ Accessible only when the user is authenticated:
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer | Tools |
 |-------|-------|
@@ -76,6 +76,7 @@ Accessible only when the user is authenticated:
 | **State & Auth** | Context API |
 | **Responsiveness** | Mobile-first design |
 | **Dark/Light Mode** | Theme support planned |
+| **Beautiful Charts** | Recharts for data-visualization |
 | **Backend (Planned)** | Supabase for database, authentication, and storage |
 
 ---
