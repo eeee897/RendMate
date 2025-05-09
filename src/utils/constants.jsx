@@ -698,5 +698,49 @@ export const helpSections = [
         desc: 'Almost as exciting as interior decorating',
     },
 ];
+export const fakeTodayData = [
+    {
+        id: 1,
+        itemName: 'VR',
+        image: VR,
+        rating: 5.0,
+        days: '2 days rent',
+        created_at: '1h ago'
+    },
+    {
+        id: 2,
+        itemName: 'Dike',
+        image: Dike,
+        rating: 5.0,
+        days: '7 days rent',
+        created_at: '1h ago'
+    },
+    {
+        id: 3,
+        itemName: 'Tralalero Nike Shoe',
+        image: tralalero,
+        rating: 5.0,
+        days: '3 days rent',
+        duration: '',
+        created_at: '1h ago'
+    },
+    {
+        id: 4,
+        itemName: 'Poly Station',
+        image: ps5,
+        rating: 5.0,
+        days: '2 days rent',
+        created_at: '2h ago'
+    },
+    {
+        id: 5,
+        itemName: 'Dike',
+        image: Dike,
+        rating: 5.0,
+        days: '30 days rent',
+        duration: '',
+        created_at: '3h ago'
+    },
+]
 
 

@@ -55,7 +55,7 @@ export default function ItemsList({ itemsList = [] }) {
                 autoplay
                 style={{ width: '500px', height: '300px' }}
             />
-            <h1 className='text-lg sm:text-xl md:text-2xl text-darkViolet font-bold'>Oops. No items found...</h1>
+            <h1 className='text-lg sm:text-xl md:text-2xl text-darkViolet dark:text-slate-50 font-bold'>Oops. No items found...</h1>
         </div>
     )
 

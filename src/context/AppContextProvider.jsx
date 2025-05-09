@@ -1,11 +1,12 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useReducer } from "react"
-import { items } from "../utils/constants"
+import { fakeTodayData, items } from "../utils/constants"
 
 const AppContext = createContext()
 
 const initialState = {
     allItems: items,
+    tdyAct: fakeTodayData,
     user: {},
     isAuthenticated: false,
     isRenter: true,
@@ -32,16 +33,18 @@ const appReducer = (state, action) => {
             return { ...state, allItems: state.allItems.map(item => item.id === action.payload ? { ...item, status: 'Disabled' } : item) }
         case "app/undisable-item":
             return { ...state, allItems: state.allItems.map(item => item.id === action.payload ? { ...item, status: 'Normal' } : item) }
+        case "app/delete-tdy-act":
+            return { ...state, tdyAct: state.tdyAct.filter(item => item.id !== action.payload) }
         default:
             return state
     }
 }
 
 export default function AppContextProvider({ children }) {
-    const [{ allItems, user, isAuthenticated, isRenter, isVerified }, dispatch] = useReducer(appReducer, initialState)
+    const [{ allItems, tdyAct, user, isAuthenticated, isRenter, isVerified }, dispatch] = useReducer(appReducer, initialState)
 
     return (
-        <AppContext.Provider value={{ allItems, user, isAuthenticated, isRenter, isVerified, dispatch }}>
+        <AppContext.Provider value={{ allItems, tdyAct, user, isAuthenticated, isRenter, isVerified, dispatch }}>
             {children}
         </AppContext.Provider>
     )
