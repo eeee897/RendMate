@@ -3,12 +3,13 @@ import React, { useRef, useState } from 'react'
 import toast from 'react-hot-toast';
 
 export default function ImageDropDown() {
+    const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
     const inputRef = useRef();
     const [file, setFile] = useState(null);
 
     const handleFileChange = (e) => {
         const selected = e.target.files[0];
-        if (selected && selected.type === "image/png") {
+        if (selected && allowedTypes.includes(selected.type)) {
             setFile(selected);
         } else {
             toast.error("Please select a valid image.");
@@ -19,7 +20,7 @@ export default function ImageDropDown() {
     const handleDrop = (e) => {
         e.preventDefault();
         const dropped = e.dataTransfer.files[0];
-        if (dropped && dropped.type === "image/*") {
+        if (dropped && allowedTypes.includes(dropped.type)) {
             setFile(dropped);
         } else {
             toast.error('Only Image files (jpg, jpeg, png) are allowed.');

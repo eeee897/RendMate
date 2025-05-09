@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
 import ChatBox from '../ui/ChatBox';
 import ChatsList from '../ui/ChatsList';
 import SelectChat from '../ui/SelectChat';
 import Title from '../ui/Title';
-import usePageTitle from '../hooks/usePageTitle';
 
 export default function ChatsPage() {
     usePageTitle('Chats')
@@ -25,7 +25,7 @@ export default function ChatsPage() {
             <Title text="Chats" />
             <div className="flex flex-col md:flex-row gap-4 overflow-hidden">
                 <ChatsList isActive={isActive} chatOpen={chatOpen} />
-                {showChatBox ? <ChatBox chatClose={chatClose} /> : <SelectChat />}
+                {showChatBox ? <ChatBox chatClose={chatClose} currentChat={isActive} /> : <SelectChat />}
             </div>
         </section>
     );

@@ -20,6 +20,8 @@ import tralalero from '@/assets/item_images/tralalero.jpg'
 import tuna from '@/assets/item_images/tuna.jpg'
 import coma from '@/assets/item_images/coma.jpg'
 import jordan from '@/assets/item_images/jordan.jpg'
+import fish from '@/assets/item_images/fish.jpg'
+import shark from '@/assets/item_images/shark.jpg'
 
 export const PAGE_SIZE = 8
 
@@ -569,92 +571,252 @@ export const chatsData = [
     },
     {
         id: 2,
-        message: 'Ok then I will take it',
-        name: 'Swam Yi Phyo',
-        image: NPC,
-        date: '1h'
+        message: 'You: SCHYEAH SCHYEAH SCHYEAH',
+        name: 'Ken Carson',
+        image: shark,
+        date: '3h'
     },
     {
         id: 3,
-        message: 'Ok then I will take it',
-        name: 'Swam Yi Phyo',
-        image: NPC,
-        date: '1h'
+        message: 'Fin fin fin fin fin fin',
+        name: 'Trefish Skot',
+        image: fish,
+        date: '5h'
     },
 ]
 
-export const messages = [
-    {
-        id: 1,
-        message: 'Hello',
-        isYou: false,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 2,
-        message: 'Hi',
-        isYou: true,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 3,
-        message: 'I want to rent that dike.',
-        isYou: false,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 4,
-        message: '250 THB per day',
-        isYou: true,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 5,
-        message: 'How many days? 1 day - 250, 1 month - 2000',
-        isYou: true,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 6,
-        message: '1 month',
-        isYou: false,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 7,
-        message: 'Okay',
-        isYou: true,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 8,
-        message: 'You have to transfer deposit 50 THB',
-        isYou: true,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 9,
-        message: 'Thank you',
-        isYou: true,
-        date: '1h ago',
-        image: NPC
-    },
-    {
-        id: 10,
-        message: 'Ok then I will take it',
-        isYou: false,
-        date: '1h ago',
-        image: NPC
-    },
-]
+export const messages = {
+    '1': [
+        {
+            id: 1,
+            message: 'Hello',
+            isYou: false,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 2,
+            message: 'Hi',
+            isYou: true,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 3,
+            message: 'I want to rent that dike.',
+            isYou: false,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 4,
+            message: '250 THB per day',
+            isYou: true,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 5,
+            message: 'How many days? 1 day - 250, 1 month - 2000',
+            isYou: true,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 6,
+            message: '1 month',
+            isYou: false,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 7,
+            message: 'Okay',
+            isYou: true,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 8,
+            message: 'You have to transfer deposit 50 THB',
+            isYou: true,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 9,
+            message: 'Thank you',
+            isYou: true,
+            date: '1h ago',
+            image: NPC
+        },
+        {
+            id: 10,
+            message: 'Ok then I will take it',
+            isYou: false,
+            date: '1h ago',
+            image: NPC
+        },
+    ],
+    '2': [
+        {
+            id: 1,
+            message: 'Huh',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 2,
+            message: 'Huh, Huh, Huh, Huh',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 3,
+            message: 'Huh, Huh, Huh, Huh, Huh, Huh, Huh',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 4,
+            message: 'Huh, Huh, Huh, Huh, Huh, Huh, Huh',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 5,
+            message: 'PROMETHAZINE HABIT, LEAN HABIT, CODEINE HABIT',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 6,
+            message: 'KICKSTAND YEAH, BIKER, YEAH, YEAH, I\'M LEANIN\'',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 7,
+            message: 'I CHOP THE TOP OF THE MCLEAREN,',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 8,
+            message: 'THIS AIN\'T NO LAMBORGHINI',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 9,
+            message: 'MY WHITE HO GOT BIG TITIES',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 10,
+            message: 'SHE REMIND ME OF',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 11,
+            message: 'What do you want to rent from me?!!!',
+            isYou: true,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 12,
+            message: 'SYDNEY SWEENEY, SYDENY SWEENEY',
+            isYou: false,
+            date: '5h ago',
+            image: shark
+        },
+        {
+            id: 13,
+            message: 'SCHYEAH SCHYEAH SCHYEAH',
+            isYou: true,
+            date: '5h ago',
+            image: shark
+        },
+    ],
+    '3': [
+        {
+            id: 1,
+            message: 'Hello',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 2,
+            message: 'Im trefish skot i need 2000 THB to get back to Amerika',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 3,
+            message: 'Send on promptpay',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 4,
+            message: 'I need a bit',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 5,
+            message: 'If you do you can meet Kanye East',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 6,
+            message: 'He\'s with me',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 7,
+            message: 'hello this is YEE!!!!!!!!!!',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 8,
+            message: '🥷 How do i know ur the real travis scott',
+            isYou: true,
+            date: '5h ago',
+            image: fish
+        },
+        {
+            id: 9,
+            message: 'Fin fin fin fin fin fin',
+            isYou: false,
+            date: '5h ago',
+            image: fish
+        },
+    ]
+}
 
 export const helpSections = [
     {

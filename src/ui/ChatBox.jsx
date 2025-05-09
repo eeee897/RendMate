@@ -1,16 +1,25 @@
 import npc from '@/assets/item_images/npc.jpg'
+import shark from '@/assets/item_images/shark.jpg'
+import fish from '@/assets/item_images/fish.jpg'
 import { PlusCircle, XCircleIcon } from 'lucide-react'
 import { messages } from '../utils/constants'
 import toast from 'react-hot-toast'
 
-export default function ChatBox({ chatClose }) {
+export default function ChatBox({ currentChat, chatClose }) {
+    const currentMessages = messages[currentChat]
+    const current = {
+        '1': { img: npc, name: 'Swam Yi Phyo' },
+        '2': { img: shark, name: 'Ken Carson' },
+        '3': { img: fish, name: 'Trefish Skot' },
+    }
+
     return (
         <div className="w-full md:w-2/3 flex flex-col h-full rounded-lg pb-5 md:pb-0">
             {/* Header */}
             <div className="flex border dark:border-veryDarkBlue border-grayishViolet border-b-0 rounded-b-none rounded-lg items-center justify-between gap-2 shadow-md p-3">
                 <div className='flex items-center gap-2'>
-                    <img src={npc} alt="" className="w-14 h-14 rounded-lg" />
-                    <h1 className="font-bold text-xl dark:text-slate-50">Swam Yi Phyo</h1>
+                    <img src={current[currentChat].img} alt="" className="w-14 h-14 rounded-lg" />
+                    <h1 className="font-bold text-xl dark:text-slate-50">{current[currentChat].name}</h1>
                 </div>
                 <XCircleIcon
                     type='button'
@@ -20,7 +29,7 @@ export default function ChatBox({ chatClose }) {
 
             {/* Messages */}
             <div className="flex-1 border border-grayishViolet dark:border-veryDarkBlue border-t-0 overflow-y-auto p-3 space-y-2">
-                {messages.map(msg => (
+                {currentMessages?.map(msg => (
                     <div key={msg.id}>
                         <div className="flex items-center gap-2">
                             {!msg.isYou ? (
