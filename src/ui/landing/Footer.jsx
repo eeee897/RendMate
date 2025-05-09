@@ -1,10 +1,7 @@
-import facebook from '@/assets/socials/icon-facebook.svg'
-import instagram from '@/assets/socials/icon-instagram.svg'
-import twitter from '@/assets/socials/icon-twitter.svg'
-import pinterest from '@/assets/socials/icon-pinterest.svg'
 import { Link } from 'react-router-dom'
 import Copyright from '../Copyright'
 import Logo from '../Logo'
+import SocialIcons from '../SocialIcons'
 
 export default function Footer() {
     return (
@@ -51,7 +48,7 @@ export default function Footer() {
 
 
                 <div className='flex flex-col items-center md:items-start gap-4'>
-                    <div className="flex items-center space-x-6">
+                    {/* <div className="flex items-center space-x-6">
                         <Link to={'/coming-soon'} className="">
                             <img src={facebook} alt="" className="ficon" />
                         </Link>
@@ -64,7 +61,8 @@ export default function Footer() {
                         <Link to={'/coming-soon'} className="">
                             <img src={pinterest} alt="" className="ficon" />
                         </Link>
-                    </div>
+                    </div> */}
+                    <SocialIcons />
                     <Copyright textColor='text-white' />
                 </div>
             </div>

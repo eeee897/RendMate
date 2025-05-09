@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { helpSections } from "../utils/constants";
-import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import support from '@/assets/animations/support.lottie'
 import Copyright from "../ui/Copyright";
 import usePageTitle from "../hooks/usePageTitle";
+import SocialIcons from "../ui/SocialIcons";
 
 export default function NeedHelpPage() {
     usePageTitle('Need Help')
@@ -62,16 +62,7 @@ export default function NeedHelpPage() {
                 <Copyright />
                 <div className="flex items-center gap-2">
                     <p className="font-black text-darkViolet dark:text-slate-50">Other ways to find help: </p>
-                    <div className="flex items-center gap-2">
-                        <a target="_blank" className='flex items-center justify-center dark:bg-grayishViolet w-7 h-7 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white'
-                            href={'https://www.facebook.com/share/12K662nTcjn/?mibextid=wwXIfr'}><FaFacebookF className="size-4" /></a>
-                        <a target="_blank" className='flex items-center justify-center dark:bg-grayishViolet w-7 h-7 rounded-full bg-gray-200 hover:bg-pink-500 hover:text-white'
-                            href={'https://www.instagram.com/fisheeeshhh/'}><FaInstagram className="size-4" /></a>
-                        <a target="_blank" className='flex items-center justify-center dark:bg-grayishViolet w-7 h-7 rounded-full bg-gray-200 hover:bg-blue-400 hover:text-white'
-                            href={'https://www.linkedin.com/in/syp-dev'}><FaTwitter className="size-4" /></a>
-                        <a target="_blank" className='flex items-center justify-center dark:bg-grayishViolet w-7 h-7 rounded-full bg-gray-200 hover:bg-red-600 hover:text-white'
-                            href={'https://www.linkedin.com/in/syp-dev'}><FaPinterest className="size-4" /></a>
-                    </div>
+                    <SocialIcons />
                 </div>
             </div>
         </section>
