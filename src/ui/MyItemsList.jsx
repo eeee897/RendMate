@@ -31,8 +31,8 @@ export default function MyItemsList() {
             />
             <div className='flex group cursor-pointer items-center gap-2'>
                 <h1 className='text-lg sm:text-xl md:text-2xl text-darkViolet dark:text-slate-50 font-bold'>No items yet. Add some!</h1>
-                <MoveUp className='transition-transform hidden md:block duration-300 mb-2 group-hover:rotate-[45deg]' />
-                <MoveUp className='transition-transform duration-300 group-hover:-translate-y-2.5 mb-2 md:hidden block' />
+                <MoveUp className='transition-transform text-darkViolet dark:text-slate-50 hidden md:block duration-300 mb-2 group-hover:rotate-[45deg]' />
+                <MoveUp className='transition-transform text-darkViolet dark:text-slate-50 duration-300 group-hover:-translate-y-2.5 mb-2 md:hidden block' />
             </div>
         </div>
     )
